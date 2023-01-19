@@ -74,10 +74,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="codePool.vb" />
-    <Compile Include="MainMenu.Designer.vb">
-      <DependentUpon>MainMenu.vb</DependentUpon>
+    <Compile Include="LogIn.Designer.vb">
+      <DependentUpon>LogIn.vb</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu.vb">
+    <Compile Include="LogIn.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
