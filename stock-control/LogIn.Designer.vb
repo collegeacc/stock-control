@@ -31,19 +31,20 @@ Partial Class LogIn
         '
         'btnForgotPassword
         '
-        Me.btnForgotPassword.Location = New System.Drawing.Point(154, 234)
+        Me.btnForgotPassword.Location = New System.Drawing.Point(116, 190)
+        Me.btnForgotPassword.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnForgotPassword.Name = "btnForgotPassword"
-        Me.btnForgotPassword.Size = New System.Drawing.Size(139, 23)
+        Me.btnForgotPassword.Size = New System.Drawing.Size(104, 19)
         Me.btnForgotPassword.TabIndex = 37
-        Me.btnForgotPassword.Text = "Forgot Passoword"
+        Me.btnForgotPassword.Text = "Forgot Password"
         Me.btnForgotPassword.UseVisualStyleBackColor = True
         '
         'txtBoxPassword
         '
-        Me.txtBoxPassword.Location = New System.Drawing.Point(154, 205)
-        Me.txtBoxPassword.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtBoxPassword.Location = New System.Drawing.Point(116, 167)
+        Me.txtBoxPassword.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtBoxPassword.Name = "txtBoxPassword"
-        Me.txtBoxPassword.Size = New System.Drawing.Size(447, 22)
+        Me.txtBoxPassword.Size = New System.Drawing.Size(336, 20)
         Me.txtBoxPassword.TabIndex = 33
         Me.txtBoxPassword.Text = "Password"
         Me.txtBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -51,42 +52,45 @@ Partial Class LogIn
         '
         'txtBoxUsername
         '
-        Me.txtBoxUsername.Location = New System.Drawing.Point(154, 175)
-        Me.txtBoxUsername.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtBoxUsername.Location = New System.Drawing.Point(116, 142)
+        Me.txtBoxUsername.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtBoxUsername.Name = "txtBoxUsername"
-        Me.txtBoxUsername.Size = New System.Drawing.Size(447, 22)
+        Me.txtBoxUsername.Size = New System.Drawing.Size(336, 20)
         Me.txtBoxUsername.TabIndex = 32
         Me.txtBoxUsername.Text = "Username"
         Me.txtBoxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnHideShow
         '
-        Me.btnHideShow.Location = New System.Drawing.Point(607, 204)
+        Me.btnHideShow.Location = New System.Drawing.Point(455, 166)
+        Me.btnHideShow.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnHideShow.Name = "btnHideShow"
-        Me.btnHideShow.Size = New System.Drawing.Size(102, 23)
+        Me.btnHideShow.Size = New System.Drawing.Size(76, 19)
         Me.btnHideShow.TabIndex = 38
         Me.btnHideShow.Text = "Hide/Show"
         Me.btnHideShow.UseVisualStyleBackColor = True
         '
         'btnLogIn
         '
-        Me.btnLogIn.Location = New System.Drawing.Point(313, 265)
+        Me.btnLogIn.Location = New System.Drawing.Point(235, 215)
+        Me.btnLogIn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnLogIn.Name = "btnLogIn"
-        Me.btnLogIn.Size = New System.Drawing.Size(153, 37)
+        Me.btnLogIn.Size = New System.Drawing.Size(115, 30)
         Me.btnLogIn.TabIndex = 39
         Me.btnLogIn.Text = "Log In"
         Me.btnLogIn.UseVisualStyleBackColor = True
         '
         'LogIn
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(600, 366)
         Me.Controls.Add(Me.btnLogIn)
         Me.Controls.Add(Me.btnHideShow)
         Me.Controls.Add(Me.btnForgotPassword)
         Me.Controls.Add(Me.txtBoxPassword)
         Me.Controls.Add(Me.txtBoxUsername)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "LogIn"
         Me.Text = "Log-In"
         Me.ResumeLayout(False)
