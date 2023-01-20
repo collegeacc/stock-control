@@ -1,7 +1,11 @@
 ﻿Public Class LogIn
     Dim forgotMode As Boolean = False
     Private Sub LogIn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        conn.Open()
+        sql = "SELECT * FROM tblEmployee"
+        da = New OleDb.OleDbDataAdapter(Sql, conn)
+        da.Fill(ds, "Employee")
+        MaxRows = ds.Tables("Employee").Rows.Count
     End Sub
     Private Sub HideShow(sender As Object, e As EventArgs) Handles btnHideShow.Click
         If txtBoxPassword.UseSystemPasswordChar = True Then
@@ -39,17 +43,24 @@
                 MsgBox("Error, this is the wrong answer")
             End If
         Else
-
-            If txtBoxUsername.Text = "Username" Then ' this is all dumby code, will be replaced
-                If txtBoxPassword.Text = "Password" Then
-                    MsgBox("yay correct")
-                Else
-                    MsgBox("oh no incorrect")
+            'Log-In mode
+            curRow = 0
+            Dim userFound As Boolean = False
+            While curRow < MaxRows
+                If (txtBoxUsername.Text = ds.Tables("Employee").Rows(curRow).Item(1)) Then
+                    If (txtBoxPassword.Text = ds.Tables("Employee").Rows(curRow).Item(2)) Then
+                        Me.Hide()
+                        MainMenu.Show()
+                        userFound = True
+                    End If
                 End If
-            Else
-                MsgBox("oh no incorrect")
-            End If
+                curRow = curRow + 1
+            End While
 
+            If userFound = False Then
+                MsgBox("Error, username or password incorrect")
+
+            End If
         End If
     End Sub
 
