@@ -22,9 +22,104 @@ Partial Class MainMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lblName = New System.Windows.Forms.Label()
+        Me.lblUsername = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.pbBtnOrder = New System.Windows.Forms.PictureBox()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        CType(Me.pbBtnOrder, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Brown
+        Me.Panel1.Controls.Add(Me.lblName)
+        Me.Panel1.Controls.Add(Me.lblUsername)
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1257, 140)
+        Me.Panel1.TabIndex = 0
+        '
+        'lblName
+        '
+        Me.lblName.AutoSize = True
+        Me.lblName.Location = New System.Drawing.Point(1025, 94)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(144, 16)
+        Me.lblName.TabIndex = 2
+        Me.lblName.Text = "First & Last Name Failed"
+        '
+        'lblUsername
+        '
+        Me.lblUsername.AutoSize = True
+        Me.lblUsername.Location = New System.Drawing.Point(1025, 58)
+        Me.lblUsername.Name = "lblUsername"
+        Me.lblUsername.Size = New System.Drawing.Size(111, 16)
+        Me.lblUsername.TabIndex = 1
+        Me.lblUsername.Text = "Username Failed"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.stock_control.My.Resources.Resources.PLACEHOLDERLOGO
+        Me.PictureBox1.Location = New System.Drawing.Point(22, 26)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(88, 84)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.Brown
+        Me.Panel2.Controls.Add(Me.pbBtnOrder)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel2.Location = New System.Drawing.Point(0, 140)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(140, 513)
+        Me.Panel2.TabIndex = 1
+        '
+        'pbBtnOrder
+        '
+        Me.pbBtnOrder.Image = Global.stock_control.My.Resources.Resources.orderplacholder
+        Me.pbBtnOrder.Location = New System.Drawing.Point(18, 41)
+        Me.pbBtnOrder.Name = "pbBtnOrder"
+        Me.pbBtnOrder.Size = New System.Drawing.Size(91, 74)
+        Me.pbBtnOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbBtnOrder.TabIndex = 0
+        Me.pbBtnOrder.TabStop = False
+        '
+        'MainMenu
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackColor = System.Drawing.Color.IndianRed
+        Me.ClientSize = New System.Drawing.Size(1257, 653)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel1)
+        Me.IsMdiContainer = True
+        Me.MinimumSize = New System.Drawing.Size(1275, 700)
+        Me.Name = "MainMenu"
         Me.Text = "MainMenu"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        CType(Me.pbBtnOrder, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
     End Sub
+
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents lblName As Label
+    Friend WithEvents lblUsername As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents pbBtnOrder As PictureBox
 End Class

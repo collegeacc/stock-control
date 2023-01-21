@@ -1,9 +1,15 @@
-﻿Public Class LogIn
+﻿Module SUsername
+    Public userLoggedIn As String
+End Module
+
+Public Class LogIn
     Dim forgotMode As Boolean = False
+
+
     Private Sub LogIn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conn.Open()
         sql = "SELECT * FROM tblEmployee"
-        da = New OleDb.OleDbDataAdapter(Sql, conn)
+        da = New OleDb.OleDbDataAdapter(sql, conn)
         da.Fill(ds, "Employee")
         MaxRows = ds.Tables("Employee").Rows.Count
     End Sub
@@ -19,7 +25,7 @@
         forgotMode = True
         btnLogIn.Text = "Request Password"
         txtBoxUsername.Text = "Security Question" 'change to actual question once database is added
-            txtBoxPassword.Text = "Enter Answer Here"
+        txtBoxPassword.Text = "Enter Answer Here"
         txtBoxPassword.UseSystemPasswordChar = False
         Dim firstClickUser As Boolean = True 'this is to avoid the user from accidentaly removing the data inside the security question box
         txtBoxUsername.Enabled = False
@@ -49,9 +55,13 @@
             While curRow < MaxRows
                 If (txtBoxUsername.Text = ds.Tables("Employee").Rows(curRow).Item(1)) Then
                     If (txtBoxPassword.Text = ds.Tables("Employee").Rows(curRow).Item(2)) Then
+                        userLoggedIn = ds.Tables("Employee").Rows(curRow).Item(1)
+                        MsgBox(userLoggedIn)
                         Me.Hide()
                         MainMenu.Show()
                         userFound = True
+                        Exit While
+
                     End If
                 End If
                 curRow = curRow + 1
@@ -62,6 +72,10 @@
 
             End If
         End If
+
+
+
+
     End Sub
 
     Dim firstClickUser As Boolean = False
