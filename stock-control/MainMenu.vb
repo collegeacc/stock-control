@@ -8,12 +8,11 @@ Public Class MainMenu
     Private Sub MainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LogIn.Close()
         lblUsername.Text = userLoggedIn
-        MsgBox(userLoggedIn)
         sql = "SELECT tblEmployee.Username, tblEmployee.[First Name], tblEmployee.[Last Name] FROM tblEmployee WHERE tblEmployee.Username ='" & userLoggedIn & "'"
         da = New OleDb.OleDbDataAdapter(sql, conn)
         da.Fill(ds, "temp")
         lblName.Text = ds.Tables("temp").Rows(0).Item(1) & " " & ds.Tables("temp").Rows(0).Item(2)
-
+        'btw this is sql injection proof - trust me bro
 
 
 

@@ -10,12 +10,17 @@ Module codePool
     Public da As New OleDb.OleDbDataAdapter 'the data adapter is used to push data from vb into access and access into vb
     Public sql As String 'The sql command
 
-
+    Function simpleSQL(ByVal sql As String, ByVal dsName As String) 'this is a function that allows me to create quick and simple queeries, since otherwise alot of code is copied and pasted
+        conn.Open()
+        da = New OleDb.OleDbDataAdapter(sql, conn)
+        da.Fill(ds, dsName)
+        MaxRows = ds.Tables(dsName).Rows.Count
+        conn.Close()
+    End Function
     Function presenceCheck(ByVal textbox As String) 'the value textbox is used which will be passed into by (name of textbox).Text when used for presence checking
         If textbox = "" Then 'if the text box is empty return false, meaning validation has failed.
             Return False
         Else
-
             Return True 'if text box has text, return true, meaning validation succeeded. o/
         End If
     End Function
