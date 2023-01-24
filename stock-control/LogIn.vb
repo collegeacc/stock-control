@@ -8,6 +8,10 @@ Public Class LogIn
 
     Private Sub LogIn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         simpleSQL("SELECT * FROM tblEmployee", "Employee")
+
+
+
+
     End Sub
     Private Sub HideShow(sender As Object, e As EventArgs) Handles btnHideShow.Click
         If txtBoxPassword.UseSystemPasswordChar = True Then
@@ -36,7 +40,7 @@ Public Class LogIn
             pass = False
         End If
     End Sub
-    Private Sub btnLogIn_Click(sender As Object, e As EventArgs) Handles btnLogIn.Click
+    Private Sub btnLogIn_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Call verification()
         If pass = False Then
             MsgBox("Please enter information in the text boxes")
@@ -49,7 +53,7 @@ Public Class LogIn
                     txtBoxPassword.Text = "Password" 'changes the password box to the users correct password
                     txtBoxUsername.Text = "Enter your username"
                     forgotMode = False
-                    btnLogIn.Text = "Log-In"
+                    btnLogin.Text = "Log-In"
                     MsgBox("Correct, your password has been entered into the password box automatically, do not share this with anyone")
                     Dim firstClickUser As Boolean = False
                     txtBoxUsername.Enabled = True
@@ -104,5 +108,11 @@ Public Class LogIn
             firstClickPass = True
         End If
     End Sub
+
+    Private Sub txtBoxUsername_TextChanged(sender As Object, e As EventArgs) Handles txtBoxUsername.TextChanged
+
+    End Sub
+
+
 
 End Class
