@@ -30,18 +30,20 @@ Partial Class LogIn
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.btnLogin = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnLogin, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnForgotPassword
         '
-        Me.btnForgotPassword.Location = New System.Drawing.Point(528, 167)
-        Me.btnForgotPassword.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnForgotPassword.Location = New System.Drawing.Point(439, 168)
+        Me.btnForgotPassword.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnForgotPassword.Name = "btnForgotPassword"
-        Me.btnForgotPassword.Size = New System.Drawing.Size(96, 19)
+        Me.btnForgotPassword.Size = New System.Drawing.Size(128, 23)
         Me.btnForgotPassword.TabIndex = 37
         Me.btnForgotPassword.Text = "Forgot Password"
         Me.btnForgotPassword.UseVisualStyleBackColor = True
@@ -50,10 +52,10 @@ Partial Class LogIn
         '
         Me.txtBoxPassword.BackColor = System.Drawing.Color.IndianRed
         Me.txtBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBoxPassword.Location = New System.Drawing.Point(401, 124)
-        Me.txtBoxPassword.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtBoxPassword.Location = New System.Drawing.Point(448, 142)
+        Me.txtBoxPassword.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtBoxPassword.Name = "txtBoxPassword"
-        Me.txtBoxPassword.Size = New System.Drawing.Size(203, 13)
+        Me.txtBoxPassword.Size = New System.Drawing.Size(338, 15)
         Me.txtBoxPassword.TabIndex = 33
         Me.txtBoxPassword.Text = "Password"
         Me.txtBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -63,20 +65,20 @@ Partial Class LogIn
         '
         Me.txtBoxUsername.BackColor = System.Drawing.Color.IndianRed
         Me.txtBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBoxUsername.Location = New System.Drawing.Point(401, 96)
-        Me.txtBoxUsername.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtBoxUsername.Location = New System.Drawing.Point(448, 108)
+        Me.txtBoxUsername.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtBoxUsername.Name = "txtBoxUsername"
-        Me.txtBoxUsername.Size = New System.Drawing.Size(203, 13)
+        Me.txtBoxUsername.Size = New System.Drawing.Size(338, 15)
         Me.txtBoxUsername.TabIndex = 32
         Me.txtBoxUsername.Text = "Username"
         Me.txtBoxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnHideShow
         '
-        Me.btnHideShow.Location = New System.Drawing.Point(548, 144)
-        Me.btnHideShow.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnHideShow.Location = New System.Drawing.Point(693, 168)
+        Me.btnHideShow.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnHideShow.Name = "btnHideShow"
-        Me.btnHideShow.Size = New System.Drawing.Size(76, 19)
+        Me.btnHideShow.Size = New System.Drawing.Size(101, 23)
         Me.btnHideShow.TabIndex = 38
         Me.btnHideShow.Text = "Hide/Show"
         Me.btnHideShow.UseVisualStyleBackColor = True
@@ -86,64 +88,81 @@ Partial Class LogIn
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = Global.stock_control.My.Resources.Resources.sjr_logo
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(-79, -45)
+        Me.PictureBox1.Location = New System.Drawing.Point(-105, -55)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(449, 498)
+        Me.PictureBox1.Size = New System.Drawing.Size(599, 679)
         Me.PictureBox1.TabIndex = 40
         Me.PictureBox1.TabStop = False
         '
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.stock_control.My.Resources.Resources.text_box
-        Me.PictureBox2.Location = New System.Drawing.Point(392, 91)
+        Me.PictureBox2.Location = New System.Drawing.Point(438, 105)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(219, 23)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox2.Size = New System.Drawing.Size(356, 23)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 41
         Me.PictureBox2.TabStop = False
         '
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.stock_control.My.Resources.Resources.text_box
-        Me.PictureBox3.Location = New System.Drawing.Point(392, 119)
+        Me.PictureBox3.Location = New System.Drawing.Point(439, 139)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(219, 23)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox3.Size = New System.Drawing.Size(355, 23)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 42
         Me.PictureBox3.TabStop = False
         '
         'btnLogin
         '
         Me.btnLogin.Image = Global.stock_control.My.Resources.Resources.log_in
-        Me.btnLogin.Location = New System.Drawing.Point(467, 226)
+        Me.btnLogin.Location = New System.Drawing.Point(511, 197)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(149, 39)
-        Me.btnLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.btnLogin.Size = New System.Drawing.Size(222, 61)
+        Me.btnLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btnLogin.TabIndex = 43
         Me.btnLogin.TabStop = False
         '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox4.Image = Global.stock_control.My.Resources.Resources.title
+        Me.PictureBox4.Location = New System.Drawing.Point(418, 12)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(414, 57)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox4.TabIndex = 44
+        Me.PictureBox4.TabStop = False
+        '
         'LogIn
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.stock_control.My.Resources.Resources.background
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(635, 356)
-        Me.Controls.Add(Me.btnLogin)
+        Me.ClientSize = New System.Drawing.Size(847, 438)
+        Me.Controls.Add(Me.btnForgotPassword)
         Me.Controls.Add(Me.txtBoxPassword)
+        Me.Controls.Add(Me.txtBoxUsername)
         Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnHideShow)
-        Me.Controls.Add(Me.btnForgotPassword)
-        Me.Controls.Add(Me.txtBoxUsername)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "LogIn"
         Me.Text = "Log-In"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnLogin, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -157,4 +176,5 @@ Partial Class LogIn
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents btnLogin As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
 End Class

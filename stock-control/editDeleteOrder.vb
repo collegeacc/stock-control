@@ -1,4 +1,4 @@
-﻿Public Class orderSubForm
+﻿Public Class editDeleteOrder
 	Dim productList As New List(Of String)
 	Dim priceTotal As Decimal
 	Dim orderID As Int32
@@ -95,10 +95,5 @@
 		productList.Clear() 'clears the list so new product can be added
 	End Sub
 
-	Private Sub btnEditDelete_Click(sender As Object, e As EventArgs) Handles btnEditDelete.Click
-		With editDeleteOrder
-			.MdiParent = MainMenu
-			.Show()
-		End With
-	End Sub
+
 End Class

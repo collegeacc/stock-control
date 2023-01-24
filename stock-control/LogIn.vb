@@ -1,5 +1,6 @@
 ﻿Module SUsername
     Public userLoggedIn As String
+    Public employeeID As Int32
 End Module
 
 Public Class LogIn
@@ -68,6 +69,7 @@ Public Class LogIn
                     If (txtBoxUsername.Text = ds.Tables("Employee").Rows(curRow).Item(1)) Then
                         If (txtBoxPassword.Text = ds.Tables("Employee").Rows(curRow).Item(2)) Then
                             userLoggedIn = ds.Tables("Employee").Rows(curRow).Item(1)
+                            employeeID = ds.Tables("Employee").Rows(curRow).Item(0)
                             Me.Hide()
                             MainMenu.Show()
                             userFound = True

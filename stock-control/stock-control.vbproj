@@ -90,6 +90,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="codePool.vb" />
+    <Compile Include="editDeleteOrder.Designer.vb">
+      <DependentUpon>editDeleteOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="editDeleteOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LogIn.Designer.vb">
       <DependentUpon>LogIn.vb</DependentUpon>
     </Compile>
@@ -125,8 +131,16 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.vb" />
+    <Compile Include="_stock_controlDBDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_stock_controlDBDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="editDeleteOrder.resx">
+      <DependentUpon>editDeleteOrder.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.vb</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +169,17 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="_stock_controlDBDataSet.xsc">
+      <DependentUpon>_stock_controlDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_stock_controlDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_stock_controlDBDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_stock_controlDBDataSet.xss">
+      <DependentUpon>_stock_controlDBDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PLACEHOLDERLOGO.png" />
@@ -176,6 +201,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\log-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="stock-controlDB.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
