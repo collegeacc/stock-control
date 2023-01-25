@@ -33,7 +33,7 @@
 		While curRow < MaxRows
 			If ds.Tables("Products").Rows(curRow).Item(0) = cmbxProductName.SelectedValue Then 'if the selected product record has the same ID, then select the price and add it to the total
 				priceTotal = priceTotal + ds.Tables("Products").Rows(curRow).Item(2)
-				lblPriceTotal.Text = "Total Price: " & priceTotal
+				lblPriceTotal.Text = "Total Price: " & FormatCurrency(priceTotal)
 				Exit While
 			Else
 				curRow = curRow + 1
@@ -95,10 +95,50 @@
 		productList.Clear() 'clears the list so new product can be added
 	End Sub
 
-	Private Sub btnEditDelete_Click(sender As Object, e As EventArgs) Handles btnEditDelete.Click
-		With editDeleteOrder
-			.MdiParent = MainMenu
-			.Show()
-		End With
+	Private Sub btnEditDelete_Click(sender As Object, e As EventArgs) Handles btnEditDelete.Click 'may be replaced for automatically grabbing the user ID and then showing, but for right now the button will have to do
+		btnPrev.Visible = True
+		btnNext.Visible = True
+		DateTimePicker1.Visible = True
+		txtEmployeeID.Visible = True
+		txtOrderID.Visible = True
+		lblTut3.Visible = True
+		lblTut4.Visible = True
+		lblDate.Visible = True
+		lblEmp.Visible = True
+		lblOrder.Visible = True
+		'shows all of the admin tools
+
+		'now we are in edit and delete mode, this means we need to fill these data entry points with data from the order table (tblOrder)
+
+		simpleSQL("SELECT * FROM tblOrder", "DSOrder") 'this selects all of the order table, now the thing with editing orders is that when an order needs to be deleted, it needs to delete all respected entries in orderLine, this may be replaced by a query combing both tables but right now that is not necessary
+		Call NavigateRecords()
+	End Sub
+	Sub NavigateRecords()
+		txtOrderID.Text = ds.Tables("DSOrder").Rows(curRow).Item(0)
+		txtEmployeeID.Text = ds.Tables("DSOrder").Rows(curRow).Item(2)
+		DateTimePicker1.Value = ds.Tables("DSOrder").Rows(curRow).Item(1)
+		cmbxPaymentType.SelectedItem = ds.Tables("DSOrder").Rows(curRow).Item(3)
+		priceTotal = ds.Tables("DSOrder").Rows(curRow).Item(4)
+		lblPriceTotal.Text = "Total Price: " & FormatCurrency(priceTotal)
+	End Sub
+
+	Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
+		curRow = curRow - 1
+		If curRow < 0 Then 'checks if the current row is lower than the first available row, which will always be 0, it then changes it back to 0 and exits the sub before the NavigateRecords sub can be called, this avoid an error
+			MsgBox("This is the first order")
+			curRow = 0
+			Exit Sub
+		End If
+		Call NavigateRecords()
+	End Sub
+
+	Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+		curRow = curRow + 1
+		If curRow > MaxRows - 1 Then 'checks if the current row is higher than the last available row, which will always be MaxRows, it then changes it to -1 itself so that an error does not occur
+			MsgBox("This is the last order")
+			curRow = curRow - 1
+			Exit Sub
+		End If
+		Call NavigateRecords()
 	End Sub
 End Class
