@@ -46,7 +46,7 @@ Partial Class orderSubForm
         'btnAddProduct
         '
         Me.btnAddProduct.Location = New System.Drawing.Point(24, 173)
-        Me.btnAddProduct.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAddProduct.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAddProduct.Name = "btnAddProduct"
         Me.btnAddProduct.Size = New System.Drawing.Size(92, 20)
         Me.btnAddProduct.TabIndex = 0
@@ -57,7 +57,7 @@ Partial Class orderSubForm
         '
         Me.cmbxProductName.FormattingEnabled = True
         Me.cmbxProductName.Location = New System.Drawing.Point(9, 149)
-        Me.cmbxProductName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbxProductName.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbxProductName.Name = "cmbxProductName"
         Me.cmbxProductName.Size = New System.Drawing.Size(131, 21)
         Me.cmbxProductName.TabIndex = 1
@@ -77,7 +77,7 @@ Partial Class orderSubForm
         Me.cmbxPaymentType.FormattingEnabled = True
         Me.cmbxPaymentType.Items.AddRange(New Object() {"Debit", "Cash", "PayPal"})
         Me.cmbxPaymentType.Location = New System.Drawing.Point(9, 111)
-        Me.cmbxPaymentType.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbxPaymentType.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbxPaymentType.Name = "cmbxPaymentType"
         Me.cmbxPaymentType.Size = New System.Drawing.Size(131, 21)
         Me.cmbxPaymentType.TabIndex = 4
@@ -95,7 +95,7 @@ Partial Class orderSubForm
         'btnNewOrder
         '
         Me.btnNewOrder.Location = New System.Drawing.Point(9, 207)
-        Me.btnNewOrder.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnNewOrder.Margin = New System.Windows.Forms.Padding(2)
         Me.btnNewOrder.Name = "btnNewOrder"
         Me.btnNewOrder.Size = New System.Drawing.Size(130, 25)
         Me.btnNewOrder.TabIndex = 6
@@ -125,11 +125,11 @@ Partial Class orderSubForm
         'btnEditDelete
         '
         Me.btnEditDelete.Location = New System.Drawing.Point(162, 207)
-        Me.btnEditDelete.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnEditDelete.Margin = New System.Windows.Forms.Padding(2)
         Me.btnEditDelete.Name = "btnEditDelete"
         Me.btnEditDelete.Size = New System.Drawing.Size(130, 25)
         Me.btnEditDelete.TabIndex = 9
-        Me.btnEditDelete.Text = "Edit or Delete an Order"
+        Me.btnEditDelete.Text = "View Orders"
         Me.btnEditDelete.UseVisualStyleBackColor = True
         '
         'lblTut4
@@ -168,7 +168,7 @@ Partial Class orderSubForm
         'txtEmployeeID
         '
         Me.txtEmployeeID.Location = New System.Drawing.Point(84, 35)
-        Me.txtEmployeeID.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtEmployeeID.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEmployeeID.Name = "txtEmployeeID"
         Me.txtEmployeeID.Size = New System.Drawing.Size(56, 20)
         Me.txtEmployeeID.TabIndex = 31
@@ -188,7 +188,7 @@ Partial Class orderSubForm
         'txtOrderID
         '
         Me.txtOrderID.Location = New System.Drawing.Point(9, 35)
-        Me.txtOrderID.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtOrderID.Margin = New System.Windows.Forms.Padding(2)
         Me.txtOrderID.Name = "txtOrderID"
         Me.txtOrderID.Size = New System.Drawing.Size(56, 20)
         Me.txtOrderID.TabIndex = 29
@@ -208,7 +208,7 @@ Partial Class orderSubForm
         'DateTimePicker1
         '
         Me.DateTimePicker1.Location = New System.Drawing.Point(9, 76)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(131, 20)
         Me.DateTimePicker1.TabIndex = 27
@@ -258,7 +258,7 @@ Partial Class orderSubForm
         Me.Controls.Add(Me.lblPriceTotal)
         Me.Controls.Add(Me.cmbxProductName)
         Me.Controls.Add(Me.btnAddProduct)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "orderSubForm"
         Me.Text = "Order"
         Me.ResumeLayout(False)

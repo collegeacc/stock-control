@@ -3,8 +3,10 @@
 	Dim priceTotal As Decimal
 	Dim orderID As Int32
 
+
 	Private Sub orderSubForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 		Call fillCmbx()
+
 	End Sub
 	Public Sub fillCmbx()
 		simpleSQL("SELECT tblProducts.ProductID, tblProducts.[Product Name], tblProducts.Price FROM tblProducts;", "Products")
