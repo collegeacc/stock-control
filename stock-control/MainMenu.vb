@@ -105,16 +105,31 @@ Public Class MainMenu
     '        conn.Close()
     '    End Sub
 
+    Sub swapVisible()
+        If Chart1.Visible = True Then
+            Chart1.Visible = False
+            cmbxProduct.Visible = False
+            txtStock.Visible = False
+            lblSelectProduct.Visible = False
+            lblStock.Visible = False
+        Else
+            Chart1.Visible = True
+            cmbxProduct.Visible = True
+            txtStock.Visible = True
+            lblSelectProduct.Visible = True
+            lblStock.Visible = True
+        End If
+    End Sub
 
     Private Sub pbBtnOrder_Click(sender As Object, e As EventArgs) Handles pbBtnOrder.Click
-        If firstOpen = True Then
-            Me.IsMdiContainer = True
-            For Each ctl As Control In Me.Controls 'changes the ugly Mdi colour to the colour that the form is actually set to
-                If TypeOf ctl Is MdiClient Then
-                    ctl.BackColor = Me.BackColor
-                End If
-            Next ctl
-        End If
+        firstOpen = False
+        Call swapVisible()
+        Me.IsMdiContainer = True
+        For Each ctl As Control In Me.Controls 'changes the ugly Mdi colour to the colour that the form is actually set to
+            If TypeOf ctl Is MdiClient Then
+                ctl.BackColor = Me.BackColor
+            End If
+        Next ctl
         'Here the Mdi container is set up so that a user can have multiple of these windows open if they so choose
         With orderSubForm
             'sets the current multiple-document interface(MDI) parent form of this form
@@ -130,5 +145,12 @@ Public Class MainMenu
 
     Private Sub cmbxProduct_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmbxProduct.SelectedValueChanged
         txtStock.Text = cmbxProduct.SelectedValue.ToString
+    End Sub
+
+    Private Sub pbMainMenu_Click(sender As Object, e As EventArgs) Handles pbMainMenu.Click
+        If firstOpen = False Then
+            Call swapVisible()
+            Me.IsMdiContainer = False
+        End If
     End Sub
 End Class

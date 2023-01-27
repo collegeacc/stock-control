@@ -200,6 +200,7 @@
     <None Include="Resources\title.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\house-and-home-icon-symbol-sign-free-png.png" />
     <Content Include="stock-controlDB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

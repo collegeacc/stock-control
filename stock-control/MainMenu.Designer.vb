@@ -23,15 +23,13 @@ Partial Class MainMenu
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblName = New System.Windows.Forms.Label()
         Me.lblUsername = New System.Windows.Forms.Label()
-        Me.pbLogo = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.pbBtnOrder = New System.Windows.Forms.PictureBox()
         Me.cmbxProduct = New System.Windows.Forms.ComboBox()
         Me.lblSelectProduct = New System.Windows.Forms.Label()
         Me.txtStock = New System.Windows.Forms.TextBox()
@@ -40,18 +38,23 @@ Partial Class MainMenu
         Me.TblProductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me._stock_controlDBDataSet = New stock_control._stock_controlDBDataSet()
         Me.TblProductsTableAdapter = New stock_control._stock_controlDBDataSetTableAdapters.tblProductsTableAdapter()
+        Me.pbBtnOrder = New System.Windows.Forms.PictureBox()
+        Me.pbMainMenu = New System.Windows.Forms.PictureBox()
+        Me.pbLogo = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.pbBtnOrder, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblProductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me._stock_controlDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbBtnOrder, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbMainMenu, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Brown
+        Me.Panel1.Controls.Add(Me.pbMainMenu)
         Me.Panel1.Controls.Add(Me.lblName)
         Me.Panel1.Controls.Add(Me.lblUsername)
         Me.Panel1.Controls.Add(Me.pbLogo)
@@ -82,18 +85,6 @@ Partial Class MainMenu
         Me.lblUsername.TabIndex = 1
         Me.lblUsername.Text = "Username Failed"
         '
-        'pbLogo
-        '
-        Me.pbLogo.BackColor = System.Drawing.Color.Transparent
-        Me.pbLogo.Image = Global.stock_control.My.Resources.Resources.sjr_logo
-        Me.pbLogo.Location = New System.Drawing.Point(2, 0)
-        Me.pbLogo.Margin = New System.Windows.Forms.Padding(2)
-        Me.pbLogo.Name = "pbLogo"
-        Me.pbLogo.Size = New System.Drawing.Size(109, 135)
-        Me.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbLogo.TabIndex = 0
-        Me.pbLogo.TabStop = False
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Brown
@@ -104,17 +95,6 @@ Partial Class MainMenu
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(140, 397)
         Me.Panel2.TabIndex = 1
-        '
-        'pbBtnOrder
-        '
-        Me.pbBtnOrder.Image = Global.stock_control.My.Resources.Resources.orderplacholder
-        Me.pbBtnOrder.Location = New System.Drawing.Point(14, 33)
-        Me.pbBtnOrder.Margin = New System.Windows.Forms.Padding(2)
-        Me.pbBtnOrder.Name = "pbBtnOrder"
-        Me.pbBtnOrder.Size = New System.Drawing.Size(104, 60)
-        Me.pbBtnOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbBtnOrder.TabIndex = 0
-        Me.pbBtnOrder.TabStop = False
         '
         'cmbxProduct
         '
@@ -153,23 +133,23 @@ Partial Class MainMenu
         'Chart1
         '
         Me.Chart1.BackColor = System.Drawing.Color.Transparent
-        ChartArea4.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea4)
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
         Me.Chart1.DataSource = Me.TblProductsBindingSource
-        Legend4.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend4)
+        Legend1.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend1)
         Me.Chart1.Location = New System.Drawing.Point(99, 145)
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate
-        Series4.ChartArea = "ChartArea1"
-        Series4.CustomProperties = "LabelStyle=Bottom, DrawingStyle=Wedge"
-        Series4.Font = New System.Drawing.Font("Microsoft Sans Serif", 2.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Series4.Legend = "Legend1"
-        Series4.Name = "Stock"
-        Series4.XValueMember = "Product Name"
-        Series4.YValueMembers = "Stock"
-        Series4.YValuesPerPoint = 6
-        Me.Chart1.Series.Add(Series4)
+        Series1.ChartArea = "ChartArea1"
+        Series1.CustomProperties = "LabelStyle=Bottom, DrawingStyle=Wedge"
+        Series1.Font = New System.Drawing.Font("Microsoft Sans Serif", 2.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series1.Legend = "Legend1"
+        Series1.Name = "Stock"
+        Series1.XValueMember = "Product Name"
+        Series1.YValueMembers = "Stock"
+        Series1.YValuesPerPoint = 6
+        Me.Chart1.Series.Add(Series1)
         Me.Chart1.Size = New System.Drawing.Size(979, 245)
         Me.Chart1.TabIndex = 6
         Me.Chart1.Text = "Chart1"
@@ -187,6 +167,39 @@ Partial Class MainMenu
         'TblProductsTableAdapter
         '
         Me.TblProductsTableAdapter.ClearBeforeFill = True
+        '
+        'pbBtnOrder
+        '
+        Me.pbBtnOrder.Image = Global.stock_control.My.Resources.Resources.orderplacholder
+        Me.pbBtnOrder.Location = New System.Drawing.Point(14, 33)
+        Me.pbBtnOrder.Margin = New System.Windows.Forms.Padding(2)
+        Me.pbBtnOrder.Name = "pbBtnOrder"
+        Me.pbBtnOrder.Size = New System.Drawing.Size(104, 60)
+        Me.pbBtnOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbBtnOrder.TabIndex = 0
+        Me.pbBtnOrder.TabStop = False
+        '
+        'pbMainMenu
+        '
+        Me.pbMainMenu.Image = Global.stock_control.My.Resources.Resources.house_and_home_icon_symbol_sign_free_png
+        Me.pbMainMenu.Location = New System.Drawing.Point(160, 90)
+        Me.pbMainMenu.Name = "pbMainMenu"
+        Me.pbMainMenu.Size = New System.Drawing.Size(41, 40)
+        Me.pbMainMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbMainMenu.TabIndex = 3
+        Me.pbMainMenu.TabStop = False
+        '
+        'pbLogo
+        '
+        Me.pbLogo.BackColor = System.Drawing.Color.Transparent
+        Me.pbLogo.Image = Global.stock_control.My.Resources.Resources.sjr_logo
+        Me.pbLogo.Location = New System.Drawing.Point(2, 0)
+        Me.pbLogo.Margin = New System.Windows.Forms.Padding(2)
+        Me.pbLogo.Name = "pbLogo"
+        Me.pbLogo.Size = New System.Drawing.Size(109, 135)
+        Me.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbLogo.TabIndex = 0
+        Me.pbLogo.TabStop = False
         '
         'MainMenu
         '
@@ -207,12 +220,13 @@ Partial Class MainMenu
         Me.Text = "MainMenu"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
-        CType(Me.pbBtnOrder, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblProductsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me._stock_controlDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbBtnOrder, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbMainMenu, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -232,4 +246,5 @@ Partial Class MainMenu
     Friend WithEvents _stock_controlDBDataSet As _stock_controlDBDataSet
     Friend WithEvents TblProductsBindingSource As BindingSource
     Friend WithEvents TblProductsTableAdapter As _stock_controlDBDataSetTableAdapters.tblProductsTableAdapter
+    Friend WithEvents pbMainMenu As PictureBox
 End Class
