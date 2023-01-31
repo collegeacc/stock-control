@@ -4,9 +4,9 @@ Imports System.Windows.Forms.DataVisualization.Charting
 Public Class MainMenu
     Public accessLevel As Integer
     Dim firstOpen As Boolean = True
-    Private Sub frmProgram_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
-        Application.Exit() 'closes everything when form is closed
-    End Sub
+    'Private Sub frmProgram_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+    '    Application.Exit() 'closes everything when form is closed
+    'End Sub
 
 
 
@@ -25,12 +25,12 @@ Public Class MainMenu
         Chart1.ChartAreas(0).AxisX.Interval = 1
 
         LogIn.Close()
-        lblUsername.Text = userLoggedIn
-        sql = "SELECT tblEmployee.Username, tblEmployee.[First Name], tblEmployee.[Last Name] FROM tblEmployee WHERE tblEmployee.Username ='" & userLoggedIn & "'"
-        da = New OleDb.OleDbDataAdapter(sql, conn)
-        da.Fill(ds, "temp")
-        lblName.Text = ds.Tables("temp").Rows(0).Item(1) & " " & ds.Tables("temp").Rows(0).Item(2)
-        'btw this is sql injection proof - trust me bro
+        'lblUsername.Text = userLoggedIn
+        'sql = "SELECT tblEmployee.Username, tblEmployee.[First Name], tblEmployee.[Last Name] FROM tblEmployee WHERE tblEmployee.Username ='" & userLoggedIn & "'"
+        'da = New OleDb.OleDbDataAdapter(sql, conn)
+        'da.Fill(ds, "temp")
+        'lblName.Text = ds.Tables("temp").Rows(0).Item(1) & " " & ds.Tables("temp").Rows(0).Item(2)
+        ''btw this is sql injection proof - trust me bro
 
         simpleSQL("SELECT tblEmployee.EmployeeID, tblEmployee.[Access Level] FROM tblEmployee;", "accessLevels")
         While curRow < MaxRows
@@ -47,7 +47,7 @@ Public Class MainMenu
         End If
 
         If accessLevel = 0 Then 'this is for customer, will be set up later
-            pbBtnOrder.Visible = False
+            'pbBtnOrder.Visible = False
         ElseIf accessLevel > 1 Then 'all things users with access level 1 and above can do
             'hide everything except the order button
 
@@ -121,7 +121,7 @@ Public Class MainMenu
         End If
     End Sub
 
-    Private Sub pbBtnOrder_Click(sender As Object, e As EventArgs) Handles pbBtnOrder.Click
+    Private Sub pbBtnOrder_Click(sender As Object, e As EventArgs)
         firstOpen = False
         Call swapVisible()
         Me.IsMdiContainer = True
@@ -147,10 +147,12 @@ Public Class MainMenu
         txtStock.Text = cmbxProduct.SelectedValue.ToString
     End Sub
 
-    Private Sub pbMainMenu_Click(sender As Object, e As EventArgs) Handles pbMainMenu.Click
+    Private Sub pbMainMenu_Click(sender As Object, e As EventArgs)
         If firstOpen = False Then
             Call swapVisible()
             Me.IsMdiContainer = False
         End If
     End Sub
+
+
 End Class

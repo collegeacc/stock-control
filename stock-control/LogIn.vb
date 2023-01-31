@@ -9,10 +9,6 @@ Public Class LogIn
 
     Private Sub LogIn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         simpleSQL("SELECT * FROM tblEmployee", "Employee")
-
-
-
-
     End Sub
     Private Sub HideShow(sender As Object, e As EventArgs) Handles btnHideShow.Click
         If txtBoxPassword.UseSystemPasswordChar = True Then
@@ -114,7 +110,5 @@ Public Class LogIn
     Private Sub txtBoxUsername_TextChanged(sender As Object, e As EventArgs) Handles txtBoxUsername.TextChanged
 
     End Sub
-
-
 
 End Class
