@@ -41,11 +41,12 @@ Partial Class orderSubForm
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.btnPrev = New System.Windows.Forms.Button()
         Me.btnNext = New System.Windows.Forms.Button()
+        Me.Overlay1 = New stock_control.overlay()
         Me.SuspendLayout()
         '
         'btnAddProduct
         '
-        Me.btnAddProduct.Location = New System.Drawing.Point(24, 173)
+        Me.btnAddProduct.Location = New System.Drawing.Point(191, 318)
         Me.btnAddProduct.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAddProduct.Name = "btnAddProduct"
         Me.btnAddProduct.Size = New System.Drawing.Size(92, 20)
@@ -56,7 +57,7 @@ Partial Class orderSubForm
         'cmbxProductName
         '
         Me.cmbxProductName.FormattingEnabled = True
-        Me.cmbxProductName.Location = New System.Drawing.Point(9, 149)
+        Me.cmbxProductName.Location = New System.Drawing.Point(176, 294)
         Me.cmbxProductName.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbxProductName.Name = "cmbxProductName"
         Me.cmbxProductName.Size = New System.Drawing.Size(131, 21)
@@ -65,7 +66,7 @@ Partial Class orderSubForm
         'lblPriceTotal
         '
         Me.lblPriceTotal.AutoSize = True
-        Me.lblPriceTotal.Location = New System.Drawing.Point(7, 133)
+        Me.lblPriceTotal.Location = New System.Drawing.Point(174, 278)
         Me.lblPriceTotal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblPriceTotal.Name = "lblPriceTotal"
         Me.lblPriceTotal.Size = New System.Drawing.Size(64, 13)
@@ -76,7 +77,7 @@ Partial Class orderSubForm
         '
         Me.cmbxPaymentType.FormattingEnabled = True
         Me.cmbxPaymentType.Items.AddRange(New Object() {"Debit", "Cash", "PayPal"})
-        Me.cmbxPaymentType.Location = New System.Drawing.Point(9, 111)
+        Me.cmbxPaymentType.Location = New System.Drawing.Point(176, 256)
         Me.cmbxPaymentType.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbxPaymentType.Name = "cmbxPaymentType"
         Me.cmbxPaymentType.Size = New System.Drawing.Size(131, 21)
@@ -85,7 +86,7 @@ Partial Class orderSubForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(7, 96)
+        Me.Label1.Location = New System.Drawing.Point(174, 241)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(75, 13)
@@ -94,7 +95,7 @@ Partial Class orderSubForm
         '
         'btnNewOrder
         '
-        Me.btnNewOrder.Location = New System.Drawing.Point(9, 207)
+        Me.btnNewOrder.Location = New System.Drawing.Point(176, 352)
         Me.btnNewOrder.Margin = New System.Windows.Forms.Padding(2)
         Me.btnNewOrder.Name = "btnNewOrder"
         Me.btnNewOrder.Size = New System.Drawing.Size(130, 25)
@@ -105,7 +106,7 @@ Partial Class orderSubForm
         'lblTut1
         '
         Me.lblTut1.AutoSize = True
-        Me.lblTut1.Location = New System.Drawing.Point(143, 142)
+        Me.lblTut1.Location = New System.Drawing.Point(310, 287)
         Me.lblTut1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTut1.Name = "lblTut1"
         Me.lblTut1.Size = New System.Drawing.Size(174, 26)
@@ -115,7 +116,7 @@ Partial Class orderSubForm
         'lblTut2
         '
         Me.lblTut2.AutoSize = True
-        Me.lblTut2.Location = New System.Drawing.Point(143, 114)
+        Me.lblTut2.Location = New System.Drawing.Point(310, 259)
         Me.lblTut2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTut2.Name = "lblTut2"
         Me.lblTut2.Size = New System.Drawing.Size(107, 13)
@@ -124,7 +125,7 @@ Partial Class orderSubForm
         '
         'btnEditDelete
         '
-        Me.btnEditDelete.Location = New System.Drawing.Point(162, 207)
+        Me.btnEditDelete.Location = New System.Drawing.Point(329, 352)
         Me.btnEditDelete.Margin = New System.Windows.Forms.Padding(2)
         Me.btnEditDelete.Name = "btnEditDelete"
         Me.btnEditDelete.Size = New System.Drawing.Size(130, 25)
@@ -135,7 +136,7 @@ Partial Class orderSubForm
         'lblTut4
         '
         Me.lblTut4.AutoSize = True
-        Me.lblTut4.Location = New System.Drawing.Point(143, 80)
+        Me.lblTut4.Location = New System.Drawing.Point(310, 225)
         Me.lblTut4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTut4.Name = "lblTut4"
         Me.lblTut4.Size = New System.Drawing.Size(74, 13)
@@ -146,7 +147,7 @@ Partial Class orderSubForm
         'lblTut3
         '
         Me.lblTut3.AutoSize = True
-        Me.lblTut3.Location = New System.Drawing.Point(143, 35)
+        Me.lblTut3.Location = New System.Drawing.Point(310, 180)
         Me.lblTut3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTut3.Name = "lblTut3"
         Me.lblTut3.Size = New System.Drawing.Size(60, 13)
@@ -157,7 +158,7 @@ Partial Class orderSubForm
         'lblEmp
         '
         Me.lblEmp.AutoSize = True
-        Me.lblEmp.Location = New System.Drawing.Point(82, 20)
+        Me.lblEmp.Location = New System.Drawing.Point(249, 165)
         Me.lblEmp.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblEmp.Name = "lblEmp"
         Me.lblEmp.Size = New System.Drawing.Size(67, 13)
@@ -167,7 +168,7 @@ Partial Class orderSubForm
         '
         'txtEmployeeID
         '
-        Me.txtEmployeeID.Location = New System.Drawing.Point(84, 35)
+        Me.txtEmployeeID.Location = New System.Drawing.Point(251, 180)
         Me.txtEmployeeID.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEmployeeID.Name = "txtEmployeeID"
         Me.txtEmployeeID.Size = New System.Drawing.Size(56, 20)
@@ -177,7 +178,7 @@ Partial Class orderSubForm
         'lblOrder
         '
         Me.lblOrder.AutoSize = True
-        Me.lblOrder.Location = New System.Drawing.Point(4, 20)
+        Me.lblOrder.Location = New System.Drawing.Point(171, 165)
         Me.lblOrder.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblOrder.Name = "lblOrder"
         Me.lblOrder.Size = New System.Drawing.Size(47, 13)
@@ -187,7 +188,7 @@ Partial Class orderSubForm
         '
         'txtOrderID
         '
-        Me.txtOrderID.Location = New System.Drawing.Point(9, 35)
+        Me.txtOrderID.Location = New System.Drawing.Point(176, 180)
         Me.txtOrderID.Margin = New System.Windows.Forms.Padding(2)
         Me.txtOrderID.Name = "txtOrderID"
         Me.txtOrderID.Size = New System.Drawing.Size(56, 20)
@@ -197,7 +198,7 @@ Partial Class orderSubForm
         'lblDate
         '
         Me.lblDate.AutoSize = True
-        Me.lblDate.Location = New System.Drawing.Point(7, 55)
+        Me.lblDate.Location = New System.Drawing.Point(174, 200)
         Me.lblDate.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblDate.Name = "lblDate"
         Me.lblDate.Size = New System.Drawing.Size(30, 13)
@@ -207,7 +208,7 @@ Partial Class orderSubForm
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(9, 76)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(176, 221)
         Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(131, 20)
@@ -216,7 +217,7 @@ Partial Class orderSubForm
         '
         'btnPrev
         '
-        Me.btnPrev.Location = New System.Drawing.Point(162, 182)
+        Me.btnPrev.Location = New System.Drawing.Point(329, 327)
         Me.btnPrev.Name = "btnPrev"
         Me.btnPrev.Size = New System.Drawing.Size(62, 20)
         Me.btnPrev.TabIndex = 35
@@ -226,7 +227,7 @@ Partial Class orderSubForm
         '
         'btnNext
         '
-        Me.btnNext.Location = New System.Drawing.Point(230, 182)
+        Me.btnNext.Location = New System.Drawing.Point(397, 327)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(62, 20)
         Me.btnNext.TabIndex = 36
@@ -234,11 +235,21 @@ Partial Class orderSubForm
         Me.btnNext.UseVisualStyleBackColor = True
         Me.btnNext.Visible = False
         '
+        'Overlay1
+        '
+        Me.Overlay1.BackColor = System.Drawing.Color.Transparent
+        Me.Overlay1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Overlay1.Location = New System.Drawing.Point(0, 0)
+        Me.Overlay1.Name = "Overlay1"
+        Me.Overlay1.Size = New System.Drawing.Size(1224, 501)
+        Me.Overlay1.TabIndex = 38
+        '
         'orderSubForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(393, 255)
+        Me.BackColor = System.Drawing.Color.IndianRed
+        Me.ClientSize = New System.Drawing.Size(1224, 501)
         Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.btnPrev)
         Me.Controls.Add(Me.lblTut4)
@@ -258,6 +269,7 @@ Partial Class orderSubForm
         Me.Controls.Add(Me.lblPriceTotal)
         Me.Controls.Add(Me.cmbxProductName)
         Me.Controls.Add(Me.btnAddProduct)
+        Me.Controls.Add(Me.Overlay1)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "orderSubForm"
         Me.Text = "Order"
@@ -285,4 +297,5 @@ Partial Class orderSubForm
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents btnPrev As Button
     Friend WithEvents btnNext As Button
+    Friend WithEvents Overlay1 As overlay
 End Class

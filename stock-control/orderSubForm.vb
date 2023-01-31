@@ -6,12 +6,12 @@
 
 	Private Sub orderSubForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 		Call fillCmbx()
-
+		Me.Location = MainMenu.Location
 	End Sub
 	Public Sub fillCmbx()
-		simpleSQL("SELECT tblProducts.ProductID, tblProducts.[Product Name], tblProducts.Price FROM tblProducts;", "Products")
+		simpleSQL("SELECT tblProducts.ProductID, tblProducts.[Product Name], tblProducts.Price FROM tblProducts;", "ProductsPrice")
 		curRow = 0
-		cmbxProductName.DataSource = ds.Tables("Products")
+		cmbxProductName.DataSource = ds.Tables("ProductsPrice")
 		cmbxProductName.DisplayMember = "Product Name"
 		cmbxProductName.ValueMember = "ProductID"
 	End Sub
@@ -28,13 +28,13 @@
 
 
 	Private Sub btnAddProduct_Click(sender As Object, e As EventArgs) Handles btnAddProduct.Click
-		productList.Add(cmbxProductName.SelectedValue)
+		productList.Add(cmbxProductName.DisplayMember)
 		Dim product As String = productList(productList.Count - 1)
 		curRow = 0
 
 		While curRow < MaxRows
-			If ds.Tables("Products").Rows(curRow).Item(0) = cmbxProductName.SelectedValue Then 'if the selected product record has the same ID, then select the price and add it to the total
-				priceTotal = priceTotal + ds.Tables("Products").Rows(curRow).Item(2)
+			If ds.Tables("ProductsPrice").Rows(curRow).Item(0) = cmbxProductName.SelectedValue Then 'if the selected product record has the same ID, then select the price and add it to the total
+				priceTotal = priceTotal + ds.Tables("ProductsPrice").Rows(curRow).Item(2)
 				lblPriceTotal.Text = "Total Price: " & FormatCurrency(priceTotal)
 				Exit While
 			Else
@@ -143,4 +143,5 @@
 		End If
 		Call NavigateRecords()
 	End Sub
+
 End Class
