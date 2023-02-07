@@ -2,6 +2,7 @@
 
 Module codePool
 
+    Public openForm As String
     Public MaxRows As Integer 'maxiumum rows
     Public MaxCol As Integer
     Public curRow As Integer = 0 'current row

@@ -7,6 +7,10 @@
 	Private Sub orderSubForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 		Call fillCmbx()
 		Me.Location = MainMenu.Location
+		If MainMenu.accessLevel = 1 Then
+			btnEditDelete.Visible = False
+		End If
+
 	End Sub
 	Public Sub fillCmbx()
 		simpleSQL("SELECT tblProducts.ProductID, tblProducts.[Product Name], tblProducts.Price FROM tblProducts;", "ProductsPrice")
@@ -103,8 +107,6 @@
 		DateTimePicker1.Visible = True
 		txtEmployeeID.Visible = True
 		txtOrderID.Visible = True
-		lblTut3.Visible = True
-		lblTut4.Visible = True
 		lblDate.Visible = True
 		lblEmp.Visible = True
 		lblOrder.Visible = True

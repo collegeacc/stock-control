@@ -23,14 +23,12 @@ Partial Class overlay
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.pbBtnOrder = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.pbMainMenu = New System.Windows.Forms.PictureBox()
+        Me.pbBtnOrder = New System.Windows.Forms.PictureBox()
         Me.pbLogo = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
-        CType(Me.pbBtnOrder, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        CType(Me.pbMainMenu, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbBtnOrder, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -42,50 +40,39 @@ Partial Class overlay
         Me.Panel2.Location = New System.Drawing.Point(0, 140)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(140, 396)
+        Me.Panel2.Size = New System.Drawing.Size(148, 396)
         Me.Panel2.TabIndex = 3
-        '
-        'pbBtnOrder
-        '
-        Me.pbBtnOrder.Image = Global.stock_control.My.Resources.Resources.orderplacholder
-        Me.pbBtnOrder.Location = New System.Drawing.Point(14, 33)
-        Me.pbBtnOrder.Margin = New System.Windows.Forms.Padding(2)
-        Me.pbBtnOrder.Name = "pbBtnOrder"
-        Me.pbBtnOrder.Size = New System.Drawing.Size(104, 60)
-        Me.pbBtnOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbBtnOrder.TabIndex = 0
-        Me.pbBtnOrder.TabStop = False
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Brown
-        Me.Panel1.Controls.Add(Me.pbMainMenu)
         Me.Panel1.Controls.Add(Me.pbLogo)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(211, 140)
+        Me.Panel1.Size = New System.Drawing.Size(666, 140)
         Me.Panel1.TabIndex = 2
         '
-        'pbMainMenu
+        'pbBtnOrder
         '
-        Me.pbMainMenu.Image = Global.stock_control.My.Resources.Resources.house_and_home_icon_symbol_sign_free_png
-        Me.pbMainMenu.Location = New System.Drawing.Point(160, 90)
-        Me.pbMainMenu.Name = "pbMainMenu"
-        Me.pbMainMenu.Size = New System.Drawing.Size(41, 40)
-        Me.pbMainMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbMainMenu.TabIndex = 3
-        Me.pbMainMenu.TabStop = False
+        Me.pbBtnOrder.Image = Global.stock_control.My.Resources.Resources.Orders
+        Me.pbBtnOrder.Location = New System.Drawing.Point(8, 28)
+        Me.pbBtnOrder.Margin = New System.Windows.Forms.Padding(2)
+        Me.pbBtnOrder.Name = "pbBtnOrder"
+        Me.pbBtnOrder.Size = New System.Drawing.Size(133, 48)
+        Me.pbBtnOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.pbBtnOrder.TabIndex = 0
+        Me.pbBtnOrder.TabStop = False
         '
         'pbLogo
         '
         Me.pbLogo.BackColor = System.Drawing.Color.Transparent
         Me.pbLogo.Image = Global.stock_control.My.Resources.Resources.sjr_logo
-        Me.pbLogo.Location = New System.Drawing.Point(2, 0)
+        Me.pbLogo.Location = New System.Drawing.Point(14, 2)
         Me.pbLogo.Margin = New System.Windows.Forms.Padding(2)
         Me.pbLogo.Name = "pbLogo"
-        Me.pbLogo.Size = New System.Drawing.Size(109, 135)
+        Me.pbLogo.Size = New System.Drawing.Size(116, 138)
         Me.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbLogo.TabIndex = 0
         Me.pbLogo.TabStop = False
@@ -95,14 +82,16 @@ Partial Class overlay
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Transparent
+        Me.BackgroundImage = Global.stock_control.My.Resources.Resources.background
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "overlay"
-        Me.Size = New System.Drawing.Size(211, 536)
+        Me.Size = New System.Drawing.Size(666, 536)
         Me.Panel2.ResumeLayout(False)
-        CType(Me.pbBtnOrder, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
-        CType(Me.pbMainMenu, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbBtnOrder, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -111,6 +100,5 @@ Partial Class overlay
     Friend WithEvents Panel2 As Panel
     Friend WithEvents pbBtnOrder As PictureBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents pbMainMenu As PictureBox
     Friend WithEvents pbLogo As PictureBox
 End Class

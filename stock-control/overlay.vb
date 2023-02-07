@@ -7,9 +7,16 @@
     'End Sub
 
     Private Sub pbBtnOrder_Click(sender As Object, e As EventArgs) Handles pbBtnOrder.Click
+        openForm = "Order"
         ParentForm.Close()
         orderSubForm.Show()
     End Sub
 
-
+    Private Sub overlay_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Panel1.BackColor = ColorTranslator.FromHtml("#D35354") 'translates hexadecimal to the correct colour value
+        Panel2.BackColor = ColorTranslator.FromHtml("#D35354")
+        If openForm = "Order" Then
+            pbBtnOrder.Image = stock_control.My.Resources.Resources.pressedOrders
+        End If
+    End Sub
 End Class

@@ -43,7 +43,7 @@ Partial Class MainMenu
         'cmbxProduct
         '
         Me.cmbxProduct.FormattingEnabled = True
-        Me.cmbxProduct.Location = New System.Drawing.Point(997, 210)
+        Me.cmbxProduct.Location = New System.Drawing.Point(584, 434)
         Me.cmbxProduct.Name = "cmbxProduct"
         Me.cmbxProduct.Size = New System.Drawing.Size(119, 21)
         Me.cmbxProduct.TabIndex = 2
@@ -51,7 +51,7 @@ Partial Class MainMenu
         'lblSelectProduct
         '
         Me.lblSelectProduct.AutoSize = True
-        Me.lblSelectProduct.Location = New System.Drawing.Point(994, 193)
+        Me.lblSelectProduct.Location = New System.Drawing.Point(581, 417)
         Me.lblSelectProduct.Name = "lblSelectProduct"
         Me.lblSelectProduct.Size = New System.Drawing.Size(77, 13)
         Me.lblSelectProduct.TabIndex = 3
@@ -60,7 +60,7 @@ Partial Class MainMenu
         'txtStock
         '
         Me.txtStock.Enabled = False
-        Me.txtStock.Location = New System.Drawing.Point(1122, 210)
+        Me.txtStock.Location = New System.Drawing.Point(709, 434)
         Me.txtStock.Name = "txtStock"
         Me.txtStock.Size = New System.Drawing.Size(103, 20)
         Me.txtStock.TabIndex = 4
@@ -68,7 +68,7 @@ Partial Class MainMenu
         'lblStock
         '
         Me.lblStock.AutoSize = True
-        Me.lblStock.Location = New System.Drawing.Point(1119, 194)
+        Me.lblStock.Location = New System.Drawing.Point(706, 418)
         Me.lblStock.Name = "lblStock"
         Me.lblStock.Size = New System.Drawing.Size(35, 13)
         Me.lblStock.TabIndex = 5
@@ -82,7 +82,7 @@ Partial Class MainMenu
         Me.Chart1.DataSource = Me.TblProductsBindingSource
         Legend1.Name = "Legend1"
         Me.Chart1.Legends.Add(Legend1)
-        Me.Chart1.Location = New System.Drawing.Point(149, 143)
+        Me.Chart1.Location = New System.Drawing.Point(199, 153)
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate
         Series1.ChartArea = "ChartArea1"
@@ -115,6 +115,8 @@ Partial Class MainMenu
         'Overlay1
         '
         Me.Overlay1.BackColor = System.Drawing.Color.Transparent
+        Me.Overlay1.BackgroundImage = Global.stock_control.My.Resources.Resources.background
+        Me.Overlay1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Overlay1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Overlay1.Location = New System.Drawing.Point(0, 0)
         Me.Overlay1.Name = "Overlay1"

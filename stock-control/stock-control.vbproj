@@ -210,6 +210,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\house-and-home-icon-symbol-sign-free-png.png" />
+    <None Include="Resources\addproduct.png" />
+    <None Include="Resources\Orders.png" />
+    <None Include="Resources\pressedOrders.png" />
     <Content Include="stock-controlDB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

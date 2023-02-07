@@ -5,6 +5,7 @@ End Module
 
 Public Class LogIn
     Dim forgotMode As Boolean = False
+    Dim recoveryMode As Boolean = False
 
 
     Private Sub LogIn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -21,15 +22,14 @@ Public Class LogIn
     Private Sub btnForgotPassword_Click(sender As Object, e As EventArgs) Handles btnForgotPassword.Click
         forgotMode = True
         btnLogIn.Text = "Request Password"
-        txtBoxUsername.Text = "Security Question" 'change to actual question once database is added
-        txtBoxPassword.Text = "Enter Answer Here"
+        txtBoxUsername.Text = "Enter Username" 'change to actual question once database is added
+        txtBoxPassword.Text = "Press log-in to get question"
         txtBoxPassword.UseSystemPasswordChar = False
         Dim firstClickUser As Boolean = True 'this is to avoid the user from accidentaly removing the data inside the security question box
-        txtBoxUsername.Enabled = False
 
     End Sub
     Dim pass As Boolean = True
-    Private Sub verification()
+    Private Sub verification() 'checks if username and password box contains data
         pass = True
         If presenceCheck(txtBoxPassword.Text) = False Then
             pass = False
@@ -39,25 +39,30 @@ Public Class LogIn
     End Sub
     Private Sub btnLogIn_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Call verification()
+        Dim question As String
         If pass = False Then
             MsgBox("Please enter information in the text boxes")
         Else
 
             If forgotMode = True Then
 
-                If txtBoxPassword.Text = "Correct Answer" Then 'change to actual answer once database is added
-                    txtBoxPassword.UseSystemPasswordChar = False
-                    txtBoxPassword.Text = "Password" 'changes the password box to the users correct password
-                    txtBoxUsername.Text = "Enter your username"
-                    forgotMode = False
-                    btnLogin.Text = "Log-In"
-                    MsgBox("Correct, your password has been entered into the password box automatically, do not share this with anyone")
-                    Dim firstClickUser As Boolean = False
-                    txtBoxUsername.Enabled = True
-                Else
-                    MsgBox("Error, this is the wrong answer")
-                End If
-            Else
+
+                simpleSQL("SELECT tblEmployee.EmployeeID, tblEmployee.Username, tblEmployee.Password, tblPRecovery.SecID, tblPRecovery.[Security Question], tblEmployee.[Security Answer] FROM tblPRecovery INNER JOIN tblEmployee ON tblPRecovery.SecID = tblEmployee.SecID;", "DSRecovery")
+                curRow = 0
+                While curRow < MaxRows
+                    If (txtBoxUsername.Text = ds.Tables("DSRecovery").Rows(curRow).Item(1)) Then
+                        txtBoxUsername.Text = ds.Tables("DSRecovery").Rows(curRow).Item(4)
+                        recoveryMode = True
+                        forgotMode = False
+                        Exit While
+                    Else
+                        MsgBox("Please enter a valid username")
+                        Exit While
+                    End If
+                    curRow = curRow + 1
+                End While
+
+            ElseIf forgotMode = False And recoveryMode = False Then 'this is when the user is logging in normally, it checks if it is not in forgot mode and not in recovery mode
                 'Log-In mode
                 curRow = 0
                 Dim userFound As Boolean = False
@@ -78,10 +83,24 @@ Public Class LogIn
 
                 If userFound = False Then
                     MsgBox("Error, username or password incorrect")
+                End If
 
+            ElseIf recoveryMode = True Then 'this is executed when the user has been given their security question
+                If ds.Tables("DSRecovery").Rows(curRow).Item(5) = txtBoxPassword.Text Then
+                    txtBoxUsername.Text = ds.Tables("DSRecovery").Rows(curRow).Item(1)
+                    txtBoxPassword.Text = ds.Tables("DSRecovery").Rows(curRow).Item(2)
+                    forgotMode = False
+                    recoveryMode = False
+                    MsgBox("Correct answer, username and password have been added.")
+                    curRow = 0
+                Else
+                    MsgBox("Incorrect answer, username and password have not been added.")
+                    curRow = 0
+                    recoveryMode = False
                 End If
             End If
-        End If
+
+            End If
 
         'this is sql injection proof - trust me bro
 
