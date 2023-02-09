@@ -23,18 +23,21 @@ Partial Class overlay
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.pbBtnProducts = New System.Windows.Forms.PictureBox()
         Me.pbBtnOrder = New System.Windows.Forms.PictureBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.pbLogo = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
-        Me.Panel1.SuspendLayout()
+        CType(Me.pbBtnProducts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbBtnOrder, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Brown
+        Me.Panel2.Controls.Add(Me.pbBtnProducts)
         Me.Panel2.Controls.Add(Me.pbBtnOrder)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(0, 140)
@@ -42,6 +45,28 @@ Partial Class overlay
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(148, 396)
         Me.Panel2.TabIndex = 3
+        '
+        'pbBtnProducts
+        '
+        Me.pbBtnProducts.Image = Global.stock_control.My.Resources.Resources.products
+        Me.pbBtnProducts.Location = New System.Drawing.Point(8, 97)
+        Me.pbBtnProducts.Margin = New System.Windows.Forms.Padding(2)
+        Me.pbBtnProducts.Name = "pbBtnProducts"
+        Me.pbBtnProducts.Size = New System.Drawing.Size(133, 48)
+        Me.pbBtnProducts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.pbBtnProducts.TabIndex = 1
+        Me.pbBtnProducts.TabStop = False
+        '
+        'pbBtnOrder
+        '
+        Me.pbBtnOrder.Image = Global.stock_control.My.Resources.Resources.Orders1
+        Me.pbBtnOrder.Location = New System.Drawing.Point(8, 28)
+        Me.pbBtnOrder.Margin = New System.Windows.Forms.Padding(2)
+        Me.pbBtnOrder.Name = "pbBtnOrder"
+        Me.pbBtnOrder.Size = New System.Drawing.Size(134, 48)
+        Me.pbBtnOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.pbBtnOrder.TabIndex = 0
+        Me.pbBtnOrder.TabStop = False
         '
         'Panel1
         '
@@ -53,17 +78,6 @@ Partial Class overlay
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(666, 140)
         Me.Panel1.TabIndex = 2
-        '
-        'pbBtnOrder
-        '
-        Me.pbBtnOrder.Image = Global.stock_control.My.Resources.Resources.Orders
-        Me.pbBtnOrder.Location = New System.Drawing.Point(8, 28)
-        Me.pbBtnOrder.Margin = New System.Windows.Forms.Padding(2)
-        Me.pbBtnOrder.Name = "pbBtnOrder"
-        Me.pbBtnOrder.Size = New System.Drawing.Size(133, 48)
-        Me.pbBtnOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.pbBtnOrder.TabIndex = 0
-        Me.pbBtnOrder.TabStop = False
         '
         'pbLogo
         '
@@ -90,8 +104,9 @@ Partial Class overlay
         Me.Size = New System.Drawing.Size(666, 536)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
+        CType(Me.pbBtnProducts, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbBtnOrder, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -101,4 +116,5 @@ Partial Class overlay
     Friend WithEvents pbBtnOrder As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents pbLogo As PictureBox
+    Friend WithEvents pbBtnProducts As PictureBox
 End Class

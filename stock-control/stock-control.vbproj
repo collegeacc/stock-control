@@ -133,6 +133,12 @@
     <Compile Include="overlay.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="products.Designer.vb">
+      <DependentUpon>products.vb</DependentUpon>
+    </Compile>
+    <Compile Include="products.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Program.vb" />
     <Compile Include="_stock_controlDBDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="overlay.resx">
       <DependentUpon>overlay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="products.resx">
+      <DependentUpon>products.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -213,6 +222,8 @@
     <None Include="Resources\addproduct.png" />
     <None Include="Resources\Orders.png" />
     <None Include="Resources\pressedOrders.png" />
+    <None Include="Resources\products.png" />
+    <None Include="Resources\pressedProducts.png" />
     <Content Include="stock-controlDB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

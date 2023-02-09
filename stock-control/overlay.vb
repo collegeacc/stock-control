@@ -17,6 +17,15 @@
         Panel2.BackColor = ColorTranslator.FromHtml("#D35354")
         If openForm = "Order" Then
             pbBtnOrder.Image = stock_control.My.Resources.Resources.pressedOrders
+        ElseIf openForm = "Products" Then
+            pbBtnProducts.Image = stock_control.My.Resources.Resources.pressedProducts
         End If
+
+    End Sub
+
+    Private Sub pbBtnProducts_Click(sender As Object, e As EventArgs) Handles pbBtnProducts.Click
+        openForm = "Products"
+        ParentForm.Close()
+        products.Show()
     End Sub
 End Class
