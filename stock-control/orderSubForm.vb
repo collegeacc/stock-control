@@ -32,9 +32,14 @@
 
 
 	Private Sub btnAddProduct_Click(sender As Object, e As EventArgs) Handles btnAddProduct.Click
-		productList.Add(cmbxProductName.DisplayMember)
-		Dim product As String = productList(productList.Count - 1)
-		curRow = 0
+		Dim intCounter As Integer = 0
+
+		While intCounter < numQuant.Value
+			productList.Add(cmbxProductName.DisplayMember)
+			Dim product As String = productList(productList.Count - 1)
+			intCounter = intCounter + 1
+
+			curRow = 0
 
 		While curRow < MaxRows
 			If ds.Tables("ProductsPrice").Rows(curRow).Item(0) = cmbxProductName.SelectedValue Then 'if the selected product record has the same ID, then select the price and add it to the total
@@ -45,8 +50,8 @@
 				curRow = curRow + 1
 			End If
 		End While
-
-
+		End While
+		intCounter = 0
 	End Sub
 
 	Private Sub btnNewOrder_Click(sender As Object, e As EventArgs) Handles btnNewOrder.Click

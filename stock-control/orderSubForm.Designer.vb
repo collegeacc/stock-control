@@ -40,7 +40,9 @@ Partial Class orderSubForm
         Me.lblProd = New System.Windows.Forms.Label()
         Me.btnAddProduct = New System.Windows.Forms.PictureBox()
         Me.Overlay1 = New stock_control.overlay()
+        Me.numQuant = New System.Windows.Forms.NumericUpDown()
         CType(Me.btnAddProduct, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numQuant, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmbxProductName
@@ -219,12 +221,23 @@ Partial Class orderSubForm
         Me.Overlay1.Size = New System.Drawing.Size(667, 501)
         Me.Overlay1.TabIndex = 38
         '
+        'numQuant
+        '
+        Me.numQuant.Location = New System.Drawing.Point(312, 319)
+        Me.numQuant.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
+        Me.numQuant.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.numQuant.Name = "numQuant"
+        Me.numQuant.Size = New System.Drawing.Size(46, 20)
+        Me.numQuant.TabIndex = 41
+        Me.numQuant.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
         'orderSubForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.IndianRed
         Me.ClientSize = New System.Drawing.Size(667, 501)
+        Me.Controls.Add(Me.numQuant)
         Me.Controls.Add(Me.btnAddProduct)
         Me.Controls.Add(Me.lblProd)
         Me.Controls.Add(Me.btnNext)
@@ -246,6 +259,7 @@ Partial Class orderSubForm
         Me.Name = "orderSubForm"
         Me.Text = "Order"
         CType(Me.btnAddProduct, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numQuant, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -267,4 +281,5 @@ Partial Class orderSubForm
     Friend WithEvents Overlay1 As overlay
     Friend WithEvents lblProd As Label
     Friend WithEvents btnAddProduct As PictureBox
+    Friend WithEvents numQuant As NumericUpDown
 End Class
