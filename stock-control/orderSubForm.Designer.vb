@@ -22,6 +22,7 @@ Partial Class orderSubForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(orderSubForm))
         Me.cmbxProductName = New System.Windows.Forms.ComboBox()
         Me.lblPriceTotal = New System.Windows.Forms.Label()
         Me.cmbxPaymentType = New System.Windows.Forms.ComboBox()
@@ -210,6 +211,7 @@ Partial Class orderSubForm
         'Overlay1
         '
         Me.Overlay1.BackColor = System.Drawing.Color.Transparent
+        Me.Overlay1.BackgroundImage = CType(resources.GetObject("Overlay1.BackgroundImage"), System.Drawing.Image)
         Me.Overlay1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Overlay1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Overlay1.Location = New System.Drawing.Point(0, 0)
