@@ -6,7 +6,6 @@
 
 	Private Sub orderSubForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 		Call fillCmbx()
-		Me.Location = MainMenu.Location
 		If MainMenu.accessLevel = 1 Then
 			btnEditDelete.Visible = False
 		End If
