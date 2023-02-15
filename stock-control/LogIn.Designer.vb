@@ -85,6 +85,7 @@ Partial Class LogIn
         '
         'PictureBox1
         '
+
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = Global.stock_control.My.Resources.Resources.sjr_logo
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
