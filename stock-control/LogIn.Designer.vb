@@ -41,7 +41,7 @@ Partial Class LogIn
         'btnForgotPassword
         '
         Me.btnForgotPassword.Location = New System.Drawing.Point(416, 158)
-        Me.btnForgotPassword.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnForgotPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.btnForgotPassword.Name = "btnForgotPassword"
         Me.btnForgotPassword.Size = New System.Drawing.Size(96, 19)
         Me.btnForgotPassword.TabIndex = 37
@@ -53,7 +53,7 @@ Partial Class LogIn
         Me.txtBoxPassword.BackColor = System.Drawing.Color.IndianRed
         Me.txtBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtBoxPassword.Location = New System.Drawing.Point(423, 137)
-        Me.txtBoxPassword.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtBoxPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtBoxPassword.Name = "txtBoxPassword"
         Me.txtBoxPassword.Size = New System.Drawing.Size(254, 13)
         Me.txtBoxPassword.TabIndex = 33
@@ -66,7 +66,7 @@ Partial Class LogIn
         Me.txtBoxUsername.BackColor = System.Drawing.Color.IndianRed
         Me.txtBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtBoxUsername.Location = New System.Drawing.Point(423, 110)
-        Me.txtBoxUsername.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtBoxUsername.Margin = New System.Windows.Forms.Padding(2)
         Me.txtBoxUsername.Name = "txtBoxUsername"
         Me.txtBoxUsername.Size = New System.Drawing.Size(254, 13)
         Me.txtBoxUsername.TabIndex = 32
@@ -76,7 +76,7 @@ Partial Class LogIn
         'btnHideShow
         '
         Me.btnHideShow.Location = New System.Drawing.Point(607, 158)
-        Me.btnHideShow.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnHideShow.Margin = New System.Windows.Forms.Padding(2)
         Me.btnHideShow.Name = "btnHideShow"
         Me.btnHideShow.Size = New System.Drawing.Size(76, 19)
         Me.btnHideShow.TabIndex = 38
@@ -85,7 +85,6 @@ Partial Class LogIn
         '
         'PictureBox1
         '
-
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = Global.stock_control.My.Resources.Resources.sjr_logo
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
@@ -117,6 +116,7 @@ Partial Class LogIn
         '
         'btnLogin
         '
+        Me.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnLogin.Image = Global.stock_control.My.Resources.Resources.log_in
         Me.btnLogin.Location = New System.Drawing.Point(470, 182)
         Me.btnLogin.Name = "btnLogin"
@@ -130,7 +130,7 @@ Partial Class LogIn
         Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox4.Image = Global.stock_control.My.Resources.Resources.title
         Me.PictureBox4.Location = New System.Drawing.Point(314, 10)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(414, 57)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -153,7 +153,7 @@ Partial Class LogIn
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnHideShow)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "LogIn"
         Me.Text = "Log-In"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

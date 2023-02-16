@@ -88,7 +88,7 @@ Partial Class orderSubForm
         '
         'btnNewOrder
         '
-        Me.btnNewOrder.Location = New System.Drawing.Point(154, 432)
+        Me.btnNewOrder.Location = New System.Drawing.Point(166, 373)
         Me.btnNewOrder.Margin = New System.Windows.Forms.Padding(2)
         Me.btnNewOrder.Name = "btnNewOrder"
         Me.btnNewOrder.Size = New System.Drawing.Size(187, 57)
@@ -98,7 +98,7 @@ Partial Class orderSubForm
         '
         'btnEditDelete
         '
-        Me.btnEditDelete.Location = New System.Drawing.Point(423, 432)
+        Me.btnEditDelete.Location = New System.Drawing.Point(452, 373)
         Me.btnEditDelete.Margin = New System.Windows.Forms.Padding(2)
         Me.btnEditDelete.Name = "btnEditDelete"
         Me.btnEditDelete.Size = New System.Drawing.Size(190, 55)
@@ -202,6 +202,7 @@ Partial Class orderSubForm
         '
         'btnAddProduct
         '
+        Me.btnAddProduct.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAddProduct.Image = Global.stock_control.My.Resources.Resources.addproduct
         Me.btnAddProduct.Location = New System.Drawing.Point(166, 309)
         Me.btnAddProduct.Name = "btnAddProduct"
@@ -218,7 +219,7 @@ Partial Class orderSubForm
         Me.Overlay1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Overlay1.Location = New System.Drawing.Point(0, 0)
         Me.Overlay1.Name = "Overlay1"
-        Me.Overlay1.Size = New System.Drawing.Size(667, 501)
+        Me.Overlay1.Size = New System.Drawing.Size(800, 461)
         Me.Overlay1.TabIndex = 38
         '
         'numQuant
@@ -236,7 +237,7 @@ Partial Class orderSubForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.IndianRed
-        Me.ClientSize = New System.Drawing.Size(667, 501)
+        Me.ClientSize = New System.Drawing.Size(800, 461)
         Me.Controls.Add(Me.numQuant)
         Me.Controls.Add(Me.btnAddProduct)
         Me.Controls.Add(Me.lblProd)

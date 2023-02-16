@@ -57,6 +57,7 @@ Partial Class overlay
         '
         'pbBtnUserManag
         '
+        Me.pbBtnUserManag.Cursor = System.Windows.Forms.Cursors.Hand
         Me.pbBtnUserManag.Image = Global.stock_control.My.Resources.Resources.userManag
         Me.pbBtnUserManag.Location = New System.Drawing.Point(8, 268)
         Me.pbBtnUserManag.Margin = New System.Windows.Forms.Padding(2)
@@ -68,6 +69,7 @@ Partial Class overlay
         '
         'pbBtnSuppliers
         '
+        Me.pbBtnSuppliers.Cursor = System.Windows.Forms.Cursors.Hand
         Me.pbBtnSuppliers.Image = Global.stock_control.My.Resources.Resources.suppliers
         Me.pbBtnSuppliers.Location = New System.Drawing.Point(8, 208)
         Me.pbBtnSuppliers.Margin = New System.Windows.Forms.Padding(2)
@@ -79,6 +81,7 @@ Partial Class overlay
         '
         'pbBtnStatistics
         '
+        Me.pbBtnStatistics.Cursor = System.Windows.Forms.Cursors.Hand
         Me.pbBtnStatistics.Image = Global.stock_control.My.Resources.Resources.statistics
         Me.pbBtnStatistics.Location = New System.Drawing.Point(8, 148)
         Me.pbBtnStatistics.Margin = New System.Windows.Forms.Padding(2)
@@ -90,6 +93,7 @@ Partial Class overlay
         '
         'pbBtnProducts
         '
+        Me.pbBtnProducts.Cursor = System.Windows.Forms.Cursors.Hand
         Me.pbBtnProducts.Image = Global.stock_control.My.Resources.Resources.products
         Me.pbBtnProducts.Location = New System.Drawing.Point(8, 88)
         Me.pbBtnProducts.Margin = New System.Windows.Forms.Padding(2)
@@ -101,6 +105,7 @@ Partial Class overlay
         '
         'pbBtnOrder
         '
+        Me.pbBtnOrder.Cursor = System.Windows.Forms.Cursors.Hand
         Me.pbBtnOrder.Image = Global.stock_control.My.Resources.Resources.Orders1
         Me.pbBtnOrder.Location = New System.Drawing.Point(8, 28)
         Me.pbBtnOrder.Margin = New System.Windows.Forms.Padding(2)
@@ -124,6 +129,7 @@ Partial Class overlay
         'pbLogo
         '
         Me.pbLogo.BackColor = System.Drawing.Color.Transparent
+        Me.pbLogo.Cursor = System.Windows.Forms.Cursors.Hand
         Me.pbLogo.Image = Global.stock_control.My.Resources.Resources.sjr_logo
         Me.pbLogo.Location = New System.Drawing.Point(14, 2)
         Me.pbLogo.Margin = New System.Windows.Forms.Padding(2)

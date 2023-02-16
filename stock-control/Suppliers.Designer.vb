@@ -34,14 +34,14 @@ Partial Class Suppliers
         Me.Overlay1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Overlay1.Location = New System.Drawing.Point(0, 0)
         Me.Overlay1.Name = "Overlay1"
-        Me.Overlay1.Size = New System.Drawing.Size(800, 450)
+        Me.Overlay1.Size = New System.Drawing.Size(800, 461)
         Me.Overlay1.TabIndex = 0
         '
         'Suppliers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 461)
         Me.Controls.Add(Me.Overlay1)
         Me.Name = "Suppliers"
         Me.Text = "Suppliers"

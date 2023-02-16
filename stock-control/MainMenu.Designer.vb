@@ -138,7 +138,7 @@ Partial Class MainMenu
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MinimumSize = New System.Drawing.Size(960, 574)
         Me.Name = "MainMenu"
-        Me.Text = "MainMenu"
+        Me.Text = "Main Menu"
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblProductsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me._stock_controlDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()

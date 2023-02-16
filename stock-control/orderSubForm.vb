@@ -34,8 +34,7 @@
 		Dim intCounter As Integer = 0
 
 		While intCounter < numQuant.Value
-			productList.Add(cmbxProductName.DisplayMember)
-			Dim product As String = productList(productList.Count - 1)
+			productList.Add(cmbxProductName.SelectedValue)
 			intCounter = intCounter + 1
 
 			curRow = 0
@@ -92,6 +91,7 @@
 			ds.Tables("DSOrderLine").Rows.Add(dsNewRow)
 			dsNewRow.Item("OrderLineID") = 0
 			dsNewRow.Item("OrderID") = orderID 'adds the ID of the current order
+			MsgBox(productList(intCounter))
 			dsNewRow.Item("ProductID") = productList(intCounter) 'adds the ID of one of the selected products
 			da.Update(ds, "DSOrderLine")
 			intCounter = intCounter + 1
