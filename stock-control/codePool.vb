@@ -6,7 +6,7 @@ Module codePool
     Public MaxRows As Integer 'maxiumum rows
     Public MaxCol As Integer
     Public curRow As Integer = 0 'current row
-    Public conn As New OleDbConnection("Provider=microsoft.ACE.OLEDB.12.0;Data Source=..\stock-controlDB.accdb")
+    Public conn As New OleDbConnection("Provider=microsoft.ACE.OLEDB.12.0;Data Source=..\..\stock-controlDB.accdb")
     Public ds As New DataSet 'whenever a table moves from access it becomes a dataset when in vb
     Public da As New OleDb.OleDbDataAdapter 'the data adapter is used to push data from vb into access and access into vb
     Public sql As String 'The sql command
