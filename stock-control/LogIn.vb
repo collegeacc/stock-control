@@ -52,7 +52,7 @@ Public Class LogIn
                 While curRow < MaxRows
                     If (txtBoxUsername.Text = ds.Tables("DSRecovery").Rows(curRow).Item(1)) Then
                         txtBoxUsername.Text = ds.Tables("DSRecovery").Rows(curRow).Item(4)
-                        txtBoxPassword.Text = "Pleasd enter answer"
+                        txtBoxPassword.Text = "Please enter answer"
                         recoveryMode = True
                         forgotMode = False
                         Exit While
