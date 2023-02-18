@@ -1,7 +1,6 @@
 ﻿Public Class overlay
 
     Private Sub overlay_Load(sender As Object, e As EventArgs) Handles Me.Load
-
         Select Case openForm
             Case "Order"
                 pbBtnOrder.Image = stock_control.My.Resources.Resources.pressedOrders 'this case is when the order form is clicked, this shows the pressed in button to show that the current form is infact the order form.
@@ -49,5 +48,13 @@
         openForm = "Users"
         ParentForm.Close()
         userMgmt.Show()
+    End Sub
+
+    Private Sub pbLogo_MouseHover(sender As Object, e As EventArgs) Handles pbLogo.MouseHover
+        pbLogo.Image = stock_control.My.Resources.Resources.sjr_logo_black 'makes the logo black to show it is a button more clearly
+    End Sub
+
+    Private Sub pbLogo_MouseLeave(sender As Object, e As EventArgs) Handles pbLogo.MouseLeave
+        pbLogo.Image = stock_control.My.Resources.Resources.sjr_logo
     End Sub
 End Class

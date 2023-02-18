@@ -47,6 +47,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>sjrlogo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFrameworkCore.Jet.Data, Version=3.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFrameworkCore.Jet.Data.3.1.1\lib\net461\EntityFrameworkCore.Jet.Data.dll</HintPath>
@@ -257,6 +260,8 @@
     <None Include="Resources\pressedSuppliers.png" />
     <None Include="Resources\userManag.png" />
     <None Include="Resources\pressedUserManag.png" />
+    <None Include="Resources\sjr_logo_black.png" />
+    <Content Include="sjrlogo.ico" />
     <Content Include="stock-controlDB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

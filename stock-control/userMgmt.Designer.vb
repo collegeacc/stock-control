@@ -43,6 +43,7 @@ Partial Class userMgmt
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 461)
         Me.Controls.Add(Me.Overlay1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "userMgmt"
         Me.Text = "User Management"
         Me.ResumeLayout(False)

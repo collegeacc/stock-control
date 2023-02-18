@@ -29,6 +29,7 @@ Partial Class overlay
         Me.pbBtnProducts = New System.Windows.Forms.PictureBox()
         Me.pbBtnOrder = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lblSJR = New System.Windows.Forms.Label()
         Me.pbLogo = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
         CType(Me.pbBtnUserManag, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -118,6 +119,7 @@ Partial Class overlay
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.lblSJR)
         Me.Panel1.Controls.Add(Me.pbLogo)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -125,6 +127,17 @@ Partial Class overlay
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(666, 140)
         Me.Panel1.TabIndex = 2
+        '
+        'lblSJR
+        '
+        Me.lblSJR.AutoSize = True
+        Me.lblSJR.Font = New System.Drawing.Font("Museo Slab 700", 47.99999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSJR.ForeColor = System.Drawing.Color.White
+        Me.lblSJR.Location = New System.Drawing.Point(144, 32)
+        Me.lblSJR.Name = "lblSJR"
+        Me.lblSJR.Size = New System.Drawing.Size(479, 77)
+        Me.lblSJR.TabIndex = 1
+        Me.lblSJR.Text = "St John Rigby"
         '
         'pbLogo
         '
@@ -158,6 +171,7 @@ Partial Class overlay
         CType(Me.pbBtnProducts, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbBtnOrder, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -171,4 +185,5 @@ Partial Class overlay
     Friend WithEvents pbBtnStatistics As PictureBox
     Friend WithEvents pbBtnSuppliers As PictureBox
     Friend WithEvents pbBtnUserManag As PictureBox
+    Friend WithEvents lblSJR As Label
 End Class

@@ -26,6 +26,7 @@ Partial Class MainMenu
         Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainMenu))
         Me.cmbxProduct = New System.Windows.Forms.ComboBox()
         Me.lblSelectProduct = New System.Windows.Forms.Label()
         Me.txtStock = New System.Windows.Forms.TextBox()
@@ -135,6 +136,7 @@ Partial Class MainMenu
         Me.Controls.Add(Me.lblSelectProduct)
         Me.Controls.Add(Me.Chart1)
         Me.Controls.Add(Me.Overlay1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MinimumSize = New System.Drawing.Size(960, 574)
         Me.Name = "MainMenu"

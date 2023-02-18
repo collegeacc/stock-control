@@ -45,7 +45,7 @@ Partial Class products
         Me.Overlay1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Overlay1.Location = New System.Drawing.Point(0, 0)
         Me.Overlay1.Name = "Overlay1"
-        Me.Overlay1.Size = New System.Drawing.Size(800, 450)
+        Me.Overlay1.Size = New System.Drawing.Size(800, 461)
         Me.Overlay1.TabIndex = 0
         '
         'lblProductName
@@ -147,7 +147,7 @@ Partial Class products
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 461)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.txtProductName)
         Me.Controls.Add(Me.cmbxSupplier)
@@ -158,6 +158,7 @@ Partial Class products
         Me.Controls.Add(Me.lblSupplier)
         Me.Controls.Add(Me.lblProductName)
         Me.Controls.Add(Me.Overlay1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "products"
         Me.Text = "products"
         CType(Me.numQuant, System.ComponentModel.ISupportInitialize).EndInit()

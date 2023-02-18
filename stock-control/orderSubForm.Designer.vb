@@ -256,6 +256,7 @@ Partial Class orderSubForm
         Me.Controls.Add(Me.lblPriceTotal)
         Me.Controls.Add(Me.cmbxProductName)
         Me.Controls.Add(Me.Overlay1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "orderSubForm"
         Me.Text = "Order"
