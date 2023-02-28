@@ -24,6 +24,7 @@ Partial Class Statistics
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Statistics))
         Me.Overlay1 = New stock_control.overlay()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Overlay1
@@ -37,11 +38,21 @@ Partial Class Statistics
         Me.Overlay1.Size = New System.Drawing.Size(800, 461)
         Me.Overlay1.TabIndex = 0
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(417, 328)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Statistics
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 461)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Overlay1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Statistics"
@@ -51,4 +62,5 @@ Partial Class Statistics
     End Sub
 
     Friend WithEvents Overlay1 As overlay
+    Friend WithEvents Button1 As Button
 End Class
