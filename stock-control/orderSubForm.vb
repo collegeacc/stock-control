@@ -39,8 +39,8 @@
 
 			curRow = 0
 
-		While curRow < MaxRows
-			If ds.Tables("ProductsPrice").Rows(curRow).Item(0) = cmbxProductName.SelectedValue Then 'if the selected product record has the same ID, then select the price and add it to the total
+			While curRow < MaxRows
+				If ds.Tables("ProductsPrice").Rows(curRow).Item(0) = cmbxProductName.SelectedValue Then 'if the selected product record has the same ID, then select the price and add it to the total
 				priceTotal = priceTotal + ds.Tables("ProductsPrice").Rows(curRow).Item(2)
 				lblPriceTotal.Text = "Total Price: " & FormatCurrency(priceTotal)
 				Exit While
