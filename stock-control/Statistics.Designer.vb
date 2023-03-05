@@ -23,9 +23,18 @@ Partial Class Statistics
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Statistics))
-        Me.Overlay1 = New stock_control.overlay()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Overlay1 = New stock_control.overlay()
         Me.SuspendLayout()
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(417, 328)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Overlay1
         '
@@ -37,15 +46,6 @@ Partial Class Statistics
         Me.Overlay1.Name = "Overlay1"
         Me.Overlay1.Size = New System.Drawing.Size(800, 461)
         Me.Overlay1.TabIndex = 0
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(417, 328)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Statistics
         '

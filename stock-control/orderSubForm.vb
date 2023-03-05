@@ -1,5 +1,6 @@
 ﻿Public Class orderSubForm
 	Dim productList As New List(Of String)
+	Dim productListName As New List(Of String)
 	Dim priceTotal As Decimal
 	Dim orderID As Int32
 
@@ -16,7 +17,7 @@
 		curRow = 0
 		cmbxProductName.DataSource = ds.Tables("ProductsPrice")
 		cmbxProductName.DisplayMember = "Product Name"
-		cmbxProductName.ValueMember = "ProductID"
+		cmbxProductName.ValueMember = "Product Name"
 	End Sub
 
 	Function validation() 'validation cannot use the usual functions since nothing is a text box
@@ -33,19 +34,30 @@
 	Private Sub btnAddProduct_Click(sender As Object, e As EventArgs) Handles btnAddProduct.Click
 		Dim intCounter As Integer = 0
 
-		While intCounter < numQuant.Value
-			productList.Add(cmbxProductName.SelectedValue)
-			intCounter = intCounter + 1
 
+		While intCounter < MaxRows 'linear searches for the correct ID, adds the ID to the list
+			If ds.Tables("ProductsPrice").Rows(intCounter).Item(1) = cmbxProductName.SelectedValue Then
+				productList.Add(ds.Tables("ProductsPrice").Rows(intCounter).Item(0))
+				Exit While
+			End If
+			intCounter = intCounter + 1
+		End While
+		intCounter = 0
+		While intCounter < numQuant.Value
+			intCounter = intCounter + 1
+			listBoxName.DataSource = Nothing
+			productListName.Add(cmbxProductName.SelectedValue)
+			listBoxName.DataSource = productListName
+			listBoxName.DisplayMember = (0)
 			curRow = 0
 
-		While curRow < MaxRows
-			If ds.Tables("ProductsPrice").Rows(curRow).Item(0) = cmbxProductName.SelectedValue Then 'if the selected product record has the same ID, then select the price and add it to the total
-				priceTotal = priceTotal + ds.Tables("ProductsPrice").Rows(curRow).Item(2)
-				lblPriceTotal.Text = "Total Price: " & FormatCurrency(priceTotal)
-				Exit While
-			Else
-				curRow = curRow + 1
+			While curRow < MaxRows
+				If ds.Tables("ProductsPrice").Rows(curRow).Item(0) = productList(productList.Count - 1) Then 'if the selected product record has the same ID, then select the price and add it to the total
+					priceTotal = priceTotal + ds.Tables("ProductsPrice").Rows(curRow).Item(2)
+					lblPriceTotal.Text = "Total Price: " & FormatCurrency(priceTotal)
+					Exit While
+				Else
+					curRow = curRow + 1
 			End If
 		End While
 		End While

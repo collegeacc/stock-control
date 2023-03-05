@@ -39,8 +39,9 @@ Partial Class orderSubForm
         Me.btnNext = New System.Windows.Forms.Button()
         Me.lblProd = New System.Windows.Forms.Label()
         Me.btnAddProduct = New System.Windows.Forms.PictureBox()
-        Me.Overlay1 = New stock_control.overlay()
         Me.numQuant = New System.Windows.Forms.NumericUpDown()
+        Me.Overlay1 = New stock_control.overlay()
+        Me.listBoxName = New System.Windows.Forms.ListBox()
         CType(Me.btnAddProduct, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numQuant, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -211,6 +212,16 @@ Partial Class orderSubForm
         Me.btnAddProduct.TabIndex = 40
         Me.btnAddProduct.TabStop = False
         '
+        'numQuant
+        '
+        Me.numQuant.Location = New System.Drawing.Point(312, 319)
+        Me.numQuant.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
+        Me.numQuant.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.numQuant.Name = "numQuant"
+        Me.numQuant.Size = New System.Drawing.Size(46, 20)
+        Me.numQuant.TabIndex = 41
+        Me.numQuant.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
         'Overlay1
         '
         Me.Overlay1.BackColor = System.Drawing.Color.Transparent
@@ -222,15 +233,13 @@ Partial Class orderSubForm
         Me.Overlay1.Size = New System.Drawing.Size(800, 461)
         Me.Overlay1.TabIndex = 38
         '
-        'numQuant
+        'listBoxName
         '
-        Me.numQuant.Location = New System.Drawing.Point(312, 319)
-        Me.numQuant.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
-        Me.numQuant.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.numQuant.Name = "numQuant"
-        Me.numQuant.Size = New System.Drawing.Size(46, 20)
-        Me.numQuant.TabIndex = 41
-        Me.numQuant.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.listBoxName.FormattingEnabled = True
+        Me.listBoxName.Location = New System.Drawing.Point(313, 159)
+        Me.listBoxName.Name = "listBoxName"
+        Me.listBoxName.Size = New System.Drawing.Size(120, 95)
+        Me.listBoxName.TabIndex = 42
         '
         'orderSubForm
         '
@@ -238,6 +247,7 @@ Partial Class orderSubForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.IndianRed
         Me.ClientSize = New System.Drawing.Size(800, 461)
+        Me.Controls.Add(Me.listBoxName)
         Me.Controls.Add(Me.numQuant)
         Me.Controls.Add(Me.btnAddProduct)
         Me.Controls.Add(Me.lblProd)
@@ -284,4 +294,5 @@ Partial Class orderSubForm
     Friend WithEvents lblProd As Label
     Friend WithEvents btnAddProduct As PictureBox
     Friend WithEvents numQuant As NumericUpDown
+    Friend WithEvents listBoxName As ListBox
 End Class
