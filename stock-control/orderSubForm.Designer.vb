@@ -42,6 +42,7 @@ Partial Class orderSubForm
         Me.numQuant = New System.Windows.Forms.NumericUpDown()
         Me.Overlay1 = New stock_control.overlay()
         Me.listBoxName = New System.Windows.Forms.ListBox()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         CType(Me.btnAddProduct, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numQuant, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -241,12 +242,23 @@ Partial Class orderSubForm
         Me.listBoxName.Size = New System.Drawing.Size(120, 95)
         Me.listBoxName.TabIndex = 42
         '
+        'btnUpdate
+        '
+        Me.btnUpdate.Location = New System.Drawing.Point(502, 307)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
+        Me.btnUpdate.TabIndex = 47
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
+        Me.btnUpdate.Visible = False
+        '
         'orderSubForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.IndianRed
         Me.ClientSize = New System.Drawing.Size(800, 461)
+        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.listBoxName)
         Me.Controls.Add(Me.numQuant)
         Me.Controls.Add(Me.btnAddProduct)
@@ -295,4 +307,5 @@ Partial Class orderSubForm
     Friend WithEvents btnAddProduct As PictureBox
     Friend WithEvents numQuant As NumericUpDown
     Friend WithEvents listBoxName As ListBox
+    Friend WithEvents btnUpdate As Button
 End Class

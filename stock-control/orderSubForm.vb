@@ -125,6 +125,7 @@
 		lblDate.Visible = True
 		lblEmp.Visible = True
 		lblOrder.Visible = True
+		btnUpdate.Visible = True
 		'shows all of the admin tools
 
 		'now we are in edit and delete mode, this means we need to fill these data entry points with data from the order table (tblOrder)
@@ -161,4 +162,33 @@
 		Call NavigateRecords()
 	End Sub
 
+	Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+		Dim cb As New OleDb.OleDbCommandBuilder(da)
+
+		If presenceCheck(txtOrderID.Text) And presenceCheck(txtEmployeeID.Text) = True Then
+
+			' sql will not work without prefixes and suffixes
+			cb.QuotePrefix = "["
+			cb.QuoteSuffix = "]"
+
+			'Updates the dataset to whats written in the text boxes            
+			ds.Tables("DSOrder").Rows(curRow).Item(0) = 0 'autonumber cringe
+			ds.Tables("DSOrder").Rows(curRow).Item(1) = DateTimePicker1.Value
+			ds.Tables("DSOrder").Rows(curRow).Item(2) = txtEmployeeID.Text
+
+			da.Update(ds, "DSOrder") 'Updates the database with new data
+
+			MsgBox("Data updated") 'this message gives user confimation that an action has taken place (Data updated)
+		Else
+			MsgBox("Please enter data in all fields")
+		End If
+	End Sub
+
+	'Private Sub listBoxName_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listBoxName.SelectedIndexChanged
+
+	'	productList.Remove(listBoxName.SelectedIndex)
+	'		productListName.Remove(listBoxName.SelectedItem)
+	'		listBoxName.DataSource = Nothing 'refreshing datasource
+	'	listBoxName.DataSource = productListName
+	'End Sub
 End Class
