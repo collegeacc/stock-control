@@ -237,6 +237,25 @@ FROM tblProducts INNER JOIN (tblOrder INNER JOIN tblOrderLine ON tblOrder.OrderI
 
 	End Sub
 
+	Private Sub listBoxNameView_MouseClick(sender As Object, e As MouseEventArgs) Handles listBoxNameView.MouseClick
+		While curRow < MaxRows
+			If ds.Tables("ProductsPrice").Rows(curRow).Item(1) = listBoxName.SelectedItem Then 'if the selected product record has the same ID, then select the price and add it to the total
+				priceTotal = priceTotal - ds.Tables("ProductsPrice").Rows(curRow).Item(2)
+				lblPriceTotal.Text = "Total Price: " & FormatCurrency(priceTotal)
+				Exit While
+			Else
+				curRow = curRow + 1
+			End If
+		End While
+		productList.Remove(listBoxName.SelectedIndex)
+		productListName.Remove(listBoxName.SelectedItem)
+		listBoxName.DataSource = Nothing 'refreshing datasource
+		listBoxName.DataSource = productListName
+		curRow = 0
+	End Sub
+
+
+
 	'Private Sub listBoxName_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listBoxName.SelectedIndexChanged
 
 	'	productList.Remove(listBoxName.SelectedIndex)
