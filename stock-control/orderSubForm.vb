@@ -126,20 +126,55 @@
 		lblEmp.Visible = True
 		lblOrder.Visible = True
 		btnUpdate.Visible = True
+		lblProd.Visible = False
+		btnAddProduct.Visible = False
+		numQuant.Visible = False
+		btnNewOrder.Visible = False
+
+		cmbxProductName.Visible = False
+		listBoxName.Visible = False
+		lblPriceTotal.Location = New Point(643, 280)
+		cmbxPaymentType.Location = New Point(313, 209)
+		Label1.Location = New Point(347, 188)
+		'lblPriceTotal.Location = (643, 280)
 		'shows all of the admin tools
 
 		'now we are in edit and delete mode, this means we need to fill these data entry points with data from the order table (tblOrder)
 
 		simpleSQL("SELECT * FROM tblOrder", "DSOrder") 'this selects all of the order table, now the thing with editing orders is that when an order needs to be deleted, it needs to delete all respected entries in orderLine, this may be replaced by a query combing both tables but right now that is not necessary
+
 		Call NavigateRecords()
 	End Sub
 	Sub NavigateRecords()
-		txtOrderID.Text = ds.Tables("DSOrder").Rows(curRow).Item(0)
-		txtEmployeeID.Text = ds.Tables("DSOrder").Rows(curRow).Item(2)
-		DateTimePicker1.Value = ds.Tables("DSOrder").Rows(curRow).Item(1)
-		cmbxPaymentType.SelectedItem = ds.Tables("DSOrder").Rows(curRow).Item(3)
-		priceTotal = ds.Tables("DSOrder").Rows(curRow).Item(4)
-		lblPriceTotal.Text = "Total Price: " & FormatCurrency(priceTotal)
+		Try
+
+			listBoxNameView.DataSource = Nothing
+
+			txtOrderID.Text = ds.Tables("DSOrder").Rows(curRow).Item(0)
+			txtEmployeeID.Text = ds.Tables("DSOrder").Rows(curRow).Item(2)
+			DateTimePicker1.Value = ds.Tables("DSOrder").Rows(curRow).Item(1)
+			cmbxPaymentType.SelectedItem = ds.Tables("DSOrder").Rows(curRow).Item(3)
+			priceTotal = ds.Tables("DSOrder").Rows(curRow).Item(4)
+			lblPriceTotal.Text = "Total Price: " & FormatCurrency(priceTotal)
+
+			simpleSQL("SELECT tblOrder.OrderID, tblOrderLine.OrderLineID, tblOrderLine.ProductID, tblProducts.[Product Name]
+FROM tblProducts INNER JOIN (tblOrder INNER JOIN tblOrderLine ON tblOrder.OrderID = tblOrderLine.OrderID) ON tblProducts.ProductID = tblOrderLine.ProductID WHERE tblOrder.OrderID = " & ds.Tables("DSOrder").Rows(curRow).Item(0) & ";
+", "DSListNameView")
+
+			listBoxNameView.DataSource = ds.Tables("DSListNameView")
+			listBoxNameView.DisplayMember = "Product Name"
+
+			ds.Tables.Remove("DSListNameView")
+
+			'Dim foundRows() As Data.DataRow
+			'foundRows = ds.Tables("DSListNameView").Select("OrderID = '" & ds.Tables("DSOrder").Rows(curRow).Item(0) & "'")
+			''("OrderID = '" & ds.Tables("DSOrder").Rows(curRow).Item(0) & "'")
+			'listBoxNameView.DataSource = foundRows
+		Catch ex As Exception
+			MsgBox("There are no more orders")
+			curRow = curRow - 1
+			Call NavigateRecords()
+		End Try
 	End Sub
 
 	Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
@@ -184,6 +219,24 @@
 		End If
 	End Sub
 
+	Private Sub listBoxName_MouseClick(sender As Object, e As MouseEventArgs) Handles listBoxName.MouseClick
+		While curRow < MaxRows
+			If ds.Tables("ProductsPrice").Rows(curRow).Item(1) = listBoxName.SelectedItem Then 'if the selected product record has the same ID, then select the price and add it to the total
+				priceTotal = priceTotal - ds.Tables("ProductsPrice").Rows(curRow).Item(2)
+				lblPriceTotal.Text = "Total Price: " & FormatCurrency(priceTotal)
+				Exit While
+			Else
+				curRow = curRow + 1
+			End If
+		End While
+		productList.Remove(listBoxName.SelectedIndex)
+		productListName.Remove(listBoxName.SelectedItem)
+		listBoxName.DataSource = Nothing 'refreshing datasource
+		listBoxName.DataSource = productListName
+		curRow = 0
+
+	End Sub
+
 	'Private Sub listBoxName_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listBoxName.SelectedIndexChanged
 
 	'	productList.Remove(listBoxName.SelectedIndex)
@@ -191,4 +244,5 @@
 	'		listBoxName.DataSource = Nothing 'refreshing datasource
 	'	listBoxName.DataSource = productListName
 	'End Sub
+
 End Class

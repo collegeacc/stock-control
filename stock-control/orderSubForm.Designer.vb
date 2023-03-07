@@ -40,9 +40,10 @@ Partial Class orderSubForm
         Me.lblProd = New System.Windows.Forms.Label()
         Me.btnAddProduct = New System.Windows.Forms.PictureBox()
         Me.numQuant = New System.Windows.Forms.NumericUpDown()
-        Me.Overlay1 = New stock_control.overlay()
         Me.listBoxName = New System.Windows.Forms.ListBox()
         Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.listBoxNameView = New System.Windows.Forms.ListBox()
+        Me.Overlay1 = New stock_control.overlay()
         CType(Me.btnAddProduct, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numQuant, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -223,17 +224,6 @@ Partial Class orderSubForm
         Me.numQuant.TabIndex = 41
         Me.numQuant.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
-        'Overlay1
-        '
-        Me.Overlay1.BackColor = System.Drawing.Color.Transparent
-        Me.Overlay1.BackgroundImage = CType(resources.GetObject("Overlay1.BackgroundImage"), System.Drawing.Image)
-        Me.Overlay1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Overlay1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Overlay1.Location = New System.Drawing.Point(0, 0)
-        Me.Overlay1.Name = "Overlay1"
-        Me.Overlay1.Size = New System.Drawing.Size(800, 461)
-        Me.Overlay1.TabIndex = 38
-        '
         'listBoxName
         '
         Me.listBoxName.FormattingEnabled = True
@@ -252,12 +242,32 @@ Partial Class orderSubForm
         Me.btnUpdate.UseVisualStyleBackColor = True
         Me.btnUpdate.Visible = False
         '
+        'listBoxNameView
+        '
+        Me.listBoxNameView.FormattingEnabled = True
+        Me.listBoxNameView.Location = New System.Drawing.Point(647, 159)
+        Me.listBoxNameView.Name = "listBoxNameView"
+        Me.listBoxNameView.Size = New System.Drawing.Size(120, 95)
+        Me.listBoxNameView.TabIndex = 48
+        '
+        'Overlay1
+        '
+        Me.Overlay1.BackColor = System.Drawing.Color.Transparent
+        Me.Overlay1.BackgroundImage = CType(resources.GetObject("Overlay1.BackgroundImage"), System.Drawing.Image)
+        Me.Overlay1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Overlay1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Overlay1.Location = New System.Drawing.Point(0, 0)
+        Me.Overlay1.Name = "Overlay1"
+        Me.Overlay1.Size = New System.Drawing.Size(800, 461)
+        Me.Overlay1.TabIndex = 38
+        '
         'orderSubForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.IndianRed
         Me.ClientSize = New System.Drawing.Size(800, 461)
+        Me.Controls.Add(Me.listBoxNameView)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.listBoxName)
         Me.Controls.Add(Me.numQuant)
@@ -308,4 +318,5 @@ Partial Class orderSubForm
     Friend WithEvents numQuant As NumericUpDown
     Friend WithEvents listBoxName As ListBox
     Friend WithEvents btnUpdate As Button
+    Friend WithEvents listBoxNameView As ListBox
 End Class
