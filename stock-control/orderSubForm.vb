@@ -3,6 +3,7 @@
 	Dim productListName As New List(Of String)
 	Dim priceTotal As Decimal
 	Dim orderID As Int32
+	Dim productMaxRow As Integer
 
 
 	Private Sub orderSubForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -10,7 +11,8 @@
 		If MainMenu.accessLevel = 1 Then
 			btnEditDelete.Visible = False
 		End If
-
+		simpleSQL2("SELECT * FROM tblProducts", "DStblProducts")
+		productMaxRow = MaxRows2
 	End Sub
 	Public Sub fillCmbx()
 		simpleSQL("SELECT tblProducts.ProductID, tblProducts.[Product Name], tblProducts.Price FROM tblProducts;", "ProductsPrice")
@@ -37,10 +39,24 @@
 
 		While intCounter < MaxRows 'linear searches for the correct ID, adds the ID to the list
 			If ds.Tables("ProductsPrice").Rows(intCounter).Item(1) = cmbxProductName.SelectedValue Then
-				productList.Add(ds.Tables("ProductsPrice").Rows(intCounter).Item(0))
+
+
+
+				If ds2.Tables("DStblProducts").Rows(intCounter).Item(4) > 0 Then
+					productList.Add(ds.Tables("ProductsPrice").Rows(intCounter).Item(0))
+					ds2.Tables("DStblProducts").Rows(intCounter).Item(4) = ds2.Tables("DStblProducts").Rows(intCounter).Item(4) - numQuant.Value
+				Else
+					MsgBox("This item is currently out of stock, we have added the remainder of available stock, we apologise for the inconvenience")
+					Exit Sub
+				End If
+
+
+
+
+
 				Exit While
-			End If
-			intCounter = intCounter + 1
+				End If
+				intCounter = intCounter + 1
 		End While
 		intCounter = 0
 		While intCounter < numQuant.Value
@@ -82,6 +98,11 @@
 			dsNewRow.Item("Payment Type") = cmbxPaymentType.SelectedItem
 			dsNewRow.Item("Cost") = priceTotal 'this is the total price of all added items
 			da.Update(ds, "DSOrder")
+
+			Dim cb2 As New OleDb.OleDbCommandBuilder(da2)
+			cb2.QuotePrefix = "["
+			cb2.QuoteSuffix = "]"
+			da2.Update(ds2, "DStblProducts")
 
 			'orderLine section :)
 			simpleSQL("SELECT OrderID FROM tblOrder", "orderID")
@@ -126,6 +147,7 @@
 		lblEmp.Visible = True
 		lblOrder.Visible = True
 		btnUpdate.Visible = True
+		listBoxNameView.Visible = True
 		lblProd.Visible = False
 		btnAddProduct.Visible = False
 		numQuant.Visible = False
@@ -235,6 +257,20 @@ FROM tblProducts INNER JOIN (tblOrder INNER JOIN tblOrderLine ON tblOrder.OrderI
 		listBoxName.DataSource = productListName
 		curRow = 0
 
+
+
+		Dim intCounter As Integer
+		While intCounter < productMaxRow 'linear searches for the correct ID, adds the ID to the list
+			If ds.Tables("ProductsPrice").Rows(intCounter).Item(1) = listBoxName.SelectedItem Then
+
+				ds2.Tables("DStblProducts").Rows(intCounter).Item(4) = ds2.Tables("DStblProducts").Rows(intCounter).Item(4) + 1
+
+				Exit While
+			End If
+			intCounter = intCounter + 1
+		End While
+
+
 	End Sub
 
 	Private Sub listBoxNameView_MouseClick(sender As Object, e As MouseEventArgs) Handles listBoxNameView.MouseClick
@@ -252,6 +288,11 @@ FROM tblProducts INNER JOIN (tblOrder INNER JOIN tblOrderLine ON tblOrder.OrderI
 		listBoxName.DataSource = Nothing 'refreshing datasource
 		listBoxName.DataSource = productListName
 		curRow = 0
+
+
+
+
+
 	End Sub
 
 

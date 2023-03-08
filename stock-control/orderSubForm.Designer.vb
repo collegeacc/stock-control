@@ -249,6 +249,7 @@ Partial Class orderSubForm
         Me.listBoxNameView.Name = "listBoxNameView"
         Me.listBoxNameView.Size = New System.Drawing.Size(120, 95)
         Me.listBoxNameView.TabIndex = 48
+        Me.listBoxNameView.Visible = False
         '
         'Overlay1
         '
