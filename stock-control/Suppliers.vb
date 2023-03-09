@@ -2,7 +2,12 @@
 Public Class Suppliers
 	Private Sub Suppliers_Load(sender As Object, e As EventArgs) Handles Me.Load
 		simpleSQL("SELECT * FROM tblSupplier", "DSSupplier")
+
+		If accessLevel = 2 Then
+			btnEditDelete.Visible = False
+		End If
 	End Sub
+
 
 	Private Sub newRecord()
 		Dim cb As New OleDb.OleDbCommandBuilder(da)

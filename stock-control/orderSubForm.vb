@@ -1,4 +1,6 @@
-﻿Public Class orderSubForm
+﻿Imports System.ComponentModel
+
+Public Class orderSubForm
 	Dim productList As New List(Of String)
 	Dim productListName As New List(Of String)
 	Dim priceTotal As Decimal
@@ -7,6 +9,9 @@
 
 
 	Private Sub orderSubForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+		If accessLevel > 1 Then
+			btnEditDelete.Visible = True
+		End If
 		Call fillCmbx()
 		If MainMenu.accessLevel = 1 Then
 			btnEditDelete.Visible = False
@@ -55,8 +60,8 @@
 
 
 				Exit While
-				End If
-				intCounter = intCounter + 1
+			End If
+			intCounter = intCounter + 1
 		End While
 		intCounter = 0
 		While intCounter < numQuant.Value
@@ -74,8 +79,8 @@
 					Exit While
 				Else
 					curRow = curRow + 1
-			End If
-		End While
+				End If
+			End While
 		End While
 		intCounter = 0
 	End Sub
@@ -97,6 +102,7 @@
 			dsNewRow.Item("EmployeeID") = employeeID 'this is the current user logged in
 			dsNewRow.Item("Payment Type") = cmbxPaymentType.SelectedItem
 			dsNewRow.Item("Cost") = priceTotal 'this is the total price of all added items
+			dsNewRow.Item("StudentID") = maskTxtStudentID.Text
 			da.Update(ds, "DSOrder")
 
 			Dim cb2 As New OleDb.OleDbCommandBuilder(da2)
@@ -138,6 +144,7 @@
 	End Sub
 
 	Private Sub btnEditDelete_Click(sender As Object, e As EventArgs) Handles btnEditDelete.Click 'may be replaced for automatically grabbing the user ID and then showing, but for right now the button will have to do
+		curRow = 0
 		btnPrev.Visible = True
 		btnNext.Visible = True
 		DateTimePicker1.Visible = True
@@ -148,11 +155,13 @@
 		lblOrder.Visible = True
 		btnUpdate.Visible = True
 		listBoxNameView.Visible = True
+
+		lblStudentID.Visible = False
+		maskTxtStudentID.Visible = False
 		lblProd.Visible = False
 		btnAddProduct.Visible = False
 		numQuant.Visible = False
 		btnNewOrder.Visible = False
-
 		cmbxProductName.Visible = False
 		listBoxName.Visible = False
 		lblPriceTotal.Location = New Point(643, 280)
@@ -294,6 +303,11 @@ FROM tblProducts INNER JOIN (tblOrder INNER JOIN tblOrderLine ON tblOrder.OrderI
 
 
 	End Sub
+
+
+
+
+
 
 
 

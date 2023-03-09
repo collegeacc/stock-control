@@ -83,7 +83,7 @@ Partial Class MainMenu
         Me.Chart1.DataSource = Me.TblProductsBindingSource
         Legend1.Name = "Legend1"
         Me.Chart1.Legends.Add(Legend1)
-        Me.Chart1.Location = New System.Drawing.Point(199, 153)
+        Me.Chart1.Location = New System.Drawing.Point(200, 153)
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate
         Series1.ChartArea = "ChartArea1"

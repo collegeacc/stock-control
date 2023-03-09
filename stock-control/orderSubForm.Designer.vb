@@ -38,20 +38,22 @@ Partial Class orderSubForm
         Me.btnPrev = New System.Windows.Forms.Button()
         Me.btnNext = New System.Windows.Forms.Button()
         Me.lblProd = New System.Windows.Forms.Label()
-        Me.btnAddProduct = New System.Windows.Forms.PictureBox()
         Me.numQuant = New System.Windows.Forms.NumericUpDown()
         Me.listBoxName = New System.Windows.Forms.ListBox()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.listBoxNameView = New System.Windows.Forms.ListBox()
+        Me.btnAddProduct = New System.Windows.Forms.PictureBox()
+        Me.lblStudentID = New System.Windows.Forms.Label()
+        Me.maskTxtStudentID = New System.Windows.Forms.MaskedTextBox()
         Me.Overlay1 = New stock_control.overlay()
-        CType(Me.btnAddProduct, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numQuant, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnAddProduct, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmbxProductName
         '
         Me.cmbxProductName.FormattingEnabled = True
-        Me.cmbxProductName.Location = New System.Drawing.Point(166, 283)
+        Me.cmbxProductName.Location = New System.Drawing.Point(166, 236)
         Me.cmbxProductName.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbxProductName.Name = "cmbxProductName"
         Me.cmbxProductName.Size = New System.Drawing.Size(139, 21)
@@ -72,7 +74,7 @@ Partial Class orderSubForm
         '
         Me.cmbxPaymentType.FormattingEnabled = True
         Me.cmbxPaymentType.Items.AddRange(New Object() {"Debit", "Cash", "PayPal"})
-        Me.cmbxPaymentType.Location = New System.Drawing.Point(166, 211)
+        Me.cmbxPaymentType.Location = New System.Drawing.Point(166, 182)
         Me.cmbxPaymentType.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbxPaymentType.Name = "cmbxPaymentType"
         Me.cmbxPaymentType.Size = New System.Drawing.Size(139, 21)
@@ -82,7 +84,7 @@ Partial Class orderSubForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(162, 174)
+        Me.Label1.Location = New System.Drawing.Point(162, 159)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(112, 21)
@@ -91,6 +93,7 @@ Partial Class orderSubForm
         '
         'btnNewOrder
         '
+        Me.btnNewOrder.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnNewOrder.Location = New System.Drawing.Point(166, 373)
         Me.btnNewOrder.Margin = New System.Windows.Forms.Padding(2)
         Me.btnNewOrder.Name = "btnNewOrder"
@@ -101,6 +104,7 @@ Partial Class orderSubForm
         '
         'btnEditDelete
         '
+        Me.btnEditDelete.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnEditDelete.Location = New System.Drawing.Point(452, 373)
         Me.btnEditDelete.Margin = New System.Windows.Forms.Padding(2)
         Me.btnEditDelete.Name = "btnEditDelete"
@@ -108,6 +112,7 @@ Partial Class orderSubForm
         Me.btnEditDelete.TabIndex = 9
         Me.btnEditDelete.Text = "View Orders"
         Me.btnEditDelete.UseVisualStyleBackColor = True
+        Me.btnEditDelete.Visible = False
         '
         'lblEmp
         '
@@ -174,6 +179,7 @@ Partial Class orderSubForm
         '
         'btnPrev
         '
+        Me.btnPrev.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnPrev.Location = New System.Drawing.Point(467, 281)
         Me.btnPrev.Name = "btnPrev"
         Me.btnPrev.Size = New System.Drawing.Size(69, 20)
@@ -184,6 +190,7 @@ Partial Class orderSubForm
         '
         'btnNext
         '
+        Me.btnNext.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnNext.Location = New System.Drawing.Point(544, 281)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(69, 20)
@@ -196,23 +203,12 @@ Partial Class orderSubForm
         '
         Me.lblProd.AutoSize = True
         Me.lblProd.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.lblProd.Location = New System.Drawing.Point(162, 246)
+        Me.lblProd.Location = New System.Drawing.Point(162, 211)
         Me.lblProd.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblProd.Name = "lblProd"
         Me.lblProd.Size = New System.Drawing.Size(135, 21)
         Me.lblProd.TabIndex = 39
         Me.lblProd.Text = "Select product(s)"
-        '
-        'btnAddProduct
-        '
-        Me.btnAddProduct.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAddProduct.Image = Global.stock_control.My.Resources.Resources.addproduct
-        Me.btnAddProduct.Location = New System.Drawing.Point(166, 309)
-        Me.btnAddProduct.Name = "btnAddProduct"
-        Me.btnAddProduct.Size = New System.Drawing.Size(139, 40)
-        Me.btnAddProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.btnAddProduct.TabIndex = 40
-        Me.btnAddProduct.TabStop = False
         '
         'numQuant
         '
@@ -234,6 +230,7 @@ Partial Class orderSubForm
         '
         'btnUpdate
         '
+        Me.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnUpdate.Location = New System.Drawing.Point(502, 307)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
@@ -250,6 +247,36 @@ Partial Class orderSubForm
         Me.listBoxNameView.Size = New System.Drawing.Size(120, 95)
         Me.listBoxNameView.TabIndex = 48
         Me.listBoxNameView.Visible = False
+        '
+        'btnAddProduct
+        '
+        Me.btnAddProduct.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAddProduct.Image = Global.stock_control.My.Resources.Resources.addproduct
+        Me.btnAddProduct.Location = New System.Drawing.Point(166, 309)
+        Me.btnAddProduct.Name = "btnAddProduct"
+        Me.btnAddProduct.Size = New System.Drawing.Size(139, 40)
+        Me.btnAddProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnAddProduct.TabIndex = 40
+        Me.btnAddProduct.TabStop = False
+        '
+        'lblStudentID
+        '
+        Me.lblStudentID.AutoSize = True
+        Me.lblStudentID.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.lblStudentID.Location = New System.Drawing.Point(162, 259)
+        Me.lblStudentID.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblStudentID.Name = "lblStudentID"
+        Me.lblStudentID.Size = New System.Drawing.Size(88, 21)
+        Me.lblStudentID.TabIndex = 50
+        Me.lblStudentID.Text = "Student ID"
+        '
+        'maskTxtStudentID
+        '
+        Me.maskTxtStudentID.Location = New System.Drawing.Point(166, 283)
+        Me.maskTxtStudentID.Mask = "S0000"
+        Me.maskTxtStudentID.Name = "maskTxtStudentID"
+        Me.maskTxtStudentID.Size = New System.Drawing.Size(45, 20)
+        Me.maskTxtStudentID.TabIndex = 51
         '
         'Overlay1
         '
@@ -268,6 +295,8 @@ Partial Class orderSubForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.IndianRed
         Me.ClientSize = New System.Drawing.Size(800, 461)
+        Me.Controls.Add(Me.maskTxtStudentID)
+        Me.Controls.Add(Me.lblStudentID)
         Me.Controls.Add(Me.listBoxNameView)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.listBoxName)
@@ -293,8 +322,8 @@ Partial Class orderSubForm
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "orderSubForm"
         Me.Text = "Order"
-        CType(Me.btnAddProduct, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numQuant, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnAddProduct, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -320,4 +349,6 @@ Partial Class orderSubForm
     Friend WithEvents listBoxName As ListBox
     Friend WithEvents btnUpdate As Button
     Friend WithEvents listBoxNameView As ListBox
+    Friend WithEvents lblStudentID As Label
+    Friend WithEvents maskTxtStudentID As MaskedTextBox
 End Class

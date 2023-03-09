@@ -209,6 +209,7 @@ Partial Class Suppliers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.IndianRed
         Me.ClientSize = New System.Drawing.Size(800, 461)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.lblSupplierIDView)

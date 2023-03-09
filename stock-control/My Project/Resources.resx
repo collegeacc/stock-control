@@ -121,29 +121,35 @@
   <data name="suppliers" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\suppliers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="addproduct" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addproduct.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PLACEHOLDERLOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PLACEHOLDERLOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pressedUserManag" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pressedUserManag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="log-in" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\log-in.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pressedSuppliers" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pressedSuppliers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pressedOrders" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pressedOrders.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Orders" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Orders.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="addproduct" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\addproduct.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pressedUserManag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pressedUserManag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sjr_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sjr_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pressedStatistics" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pressedStatistics.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sjr_logo_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sjr_logo_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="house-and-home-icon-symbol-sign-free-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\house-and-home-icon-symbol-sign-free-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="title" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\title.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,14 +172,11 @@
   <data name="orderplacholder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\orderplacholder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="house-and-home-icon-symbol-sign-free-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\house-and-home-icon-symbol-sign-free-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Orders1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Orders.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="log-in" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\log-in.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pressedOrders" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pressedOrders.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pressedProducts" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pressedProducts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,7 +184,7 @@
   <data name="statistics" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\statistics.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sjr_logo_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sjr_logo_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="exit_app" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit_app.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -72,6 +72,7 @@ Public Class LogIn
                         If (txtBoxPassword.Text = ds.Tables("Employee").Rows(curRow).Item(2)) Then
                             userLoggedIn = ds.Tables("Employee").Rows(curRow).Item(1)
                             employeeID = ds.Tables("Employee").Rows(curRow).Item(0)
+                            accessLevel = ds.Tables("Employee").Rows(curRow).Item(5)
                             Me.Hide()
                             MainMenu.Show()
                             userFound = True
@@ -127,8 +128,34 @@ Public Class LogIn
         End If
     End Sub
 
-    Private Sub txtBoxUsername_TextChanged(sender As Object, e As EventArgs) Handles txtBoxUsername.TextChanged
 
+
+    Private Sub btnStaff_Click(sender As Object, e As EventArgs) Handles btnStaff.Click
+        txtBoxUsername.Visible = True
+        txtBoxPassword.Visible = True
+        btnLogin.Visible = True
+        btnForgotPassword.Visible = True
+        btnLogin.Visible = True
+        btnHideShow.Visible = True
+        PictureBox2.Visible = True
+        PictureBox3.Visible = True
+        Label1.Visible = False
+        btnStaff.Visible = False
+        btnStudent.Visible = False
     End Sub
+
+    Private Sub btnStudent_Click(sender As Object, e As EventArgs) Handles btnStudent.Click
+        accessLevel = 0
+        Me.Hide()
+        MainMenu.Show()
+    End Sub
+
+
+    Private Sub txtBoxPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles txtBoxPassword.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Call btnLogIn_Click(sender, e) 'makes it so you can log in by pressing the enter key
+        End If
+    End Sub
+
 
 End Class

@@ -1,6 +1,9 @@
 ﻿Imports System.Data.OleDb
 
 Module codePool
+    Public accessLevel As Integer
+
+
 
     Public openForm As String
     Public MaxRows As Integer 'maxiumum rows

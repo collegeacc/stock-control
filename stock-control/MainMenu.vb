@@ -18,6 +18,13 @@ Public Class MainMenu
         cmbxProduct.ValueMember = "Ammount Left In Stock"
     End Sub
     Private Sub MainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        If accessLevel = 0 Then
+            Chart1.Location = New Point(155, 153)
+        End If
+
+
+
         Call fillCmbx()
 
         Me.TblProductsTableAdapter.Fill(Me._stock_controlDBDataSet.tblProducts)

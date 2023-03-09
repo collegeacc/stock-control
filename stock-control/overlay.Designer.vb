@@ -22,6 +22,7 @@ Partial Class overlay
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.pbBtnUserManag = New System.Windows.Forms.PictureBox()
         Me.pbBtnSuppliers = New System.Windows.Forms.PictureBox()
@@ -29,8 +30,10 @@ Partial Class overlay
         Me.pbBtnProducts = New System.Windows.Forms.PictureBox()
         Me.pbBtnOrder = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.pbBtnShutdown = New System.Windows.Forms.PictureBox()
         Me.lblSJR = New System.Windows.Forms.Label()
         Me.pbLogo = New System.Windows.Forms.PictureBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel2.SuspendLayout()
         CType(Me.pbBtnUserManag, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbBtnSuppliers, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -38,6 +41,7 @@ Partial Class overlay
         CType(Me.pbBtnProducts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbBtnOrder, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.pbBtnShutdown, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -53,7 +57,7 @@ Partial Class overlay
         Me.Panel2.Location = New System.Drawing.Point(0, 140)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(148, 396)
+        Me.Panel2.Size = New System.Drawing.Size(148, 339)
         Me.Panel2.TabIndex = 3
         '
         'pbBtnUserManag
@@ -67,6 +71,7 @@ Partial Class overlay
         Me.pbBtnUserManag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.pbBtnUserManag.TabIndex = 4
         Me.pbBtnUserManag.TabStop = False
+        Me.pbBtnUserManag.Visible = False
         '
         'pbBtnSuppliers
         '
@@ -79,6 +84,7 @@ Partial Class overlay
         Me.pbBtnSuppliers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.pbBtnSuppliers.TabIndex = 3
         Me.pbBtnSuppliers.TabStop = False
+        Me.pbBtnSuppliers.Visible = False
         '
         'pbBtnStatistics
         '
@@ -91,6 +97,7 @@ Partial Class overlay
         Me.pbBtnStatistics.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.pbBtnStatistics.TabIndex = 2
         Me.pbBtnStatistics.TabStop = False
+        Me.pbBtnStatistics.Visible = False
         '
         'pbBtnProducts
         '
@@ -103,6 +110,7 @@ Partial Class overlay
         Me.pbBtnProducts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.pbBtnProducts.TabIndex = 1
         Me.pbBtnProducts.TabStop = False
+        Me.pbBtnProducts.Visible = False
         '
         'pbBtnOrder
         '
@@ -115,18 +123,32 @@ Partial Class overlay
         Me.pbBtnOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.pbBtnOrder.TabIndex = 0
         Me.pbBtnOrder.TabStop = False
+        Me.pbBtnOrder.Visible = False
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.pbBtnShutdown)
         Me.Panel1.Controls.Add(Me.lblSJR)
         Me.Panel1.Controls.Add(Me.pbLogo)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(666, 140)
+        Me.Panel1.Size = New System.Drawing.Size(801, 140)
         Me.Panel1.TabIndex = 2
+        '
+        'pbBtnShutdown
+        '
+        Me.pbBtnShutdown.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pbBtnShutdown.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pbBtnShutdown.Image = Global.stock_control.My.Resources.Resources.exit_app
+        Me.pbBtnShutdown.Location = New System.Drawing.Point(718, 48)
+        Me.pbBtnShutdown.Name = "pbBtnShutdown"
+        Me.pbBtnShutdown.Size = New System.Drawing.Size(47, 51)
+        Me.pbBtnShutdown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbBtnShutdown.TabIndex = 2
+        Me.pbBtnShutdown.TabStop = False
         '
         'lblSJR
         '
@@ -161,8 +183,9 @@ Partial Class overlay
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.DoubleBuffered = True
         Me.Name = "overlay"
-        Me.Size = New System.Drawing.Size(666, 536)
+        Me.Size = New System.Drawing.Size(801, 479)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.pbBtnUserManag, System.ComponentModel.ISupportInitialize).EndInit()
@@ -172,6 +195,7 @@ Partial Class overlay
         CType(Me.pbBtnOrder, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.pbBtnShutdown, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -186,4 +210,6 @@ Partial Class overlay
     Friend WithEvents pbBtnSuppliers As PictureBox
     Friend WithEvents pbBtnUserManag As PictureBox
     Friend WithEvents lblSJR As Label
+    Friend WithEvents pbBtnShutdown As PictureBox
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

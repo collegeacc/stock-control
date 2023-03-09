@@ -126,6 +126,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="codePool.vb" />
+    <Compile Include="employee.Designer.vb">
+      <DependentUpon>employee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employee.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LogIn.Designer.vb">
       <DependentUpon>LogIn.vb</DependentUpon>
     </Compile>
@@ -172,12 +178,24 @@
     <Compile Include="products.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="productsDataGrid.Designer.vb">
+      <DependentUpon>productsDataGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="productsDataGrid.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Program.vb" />
     <Compile Include="report.vb" />
     <Compile Include="Statistics.Designer.vb">
       <DependentUpon>Statistics.vb</DependentUpon>
     </Compile>
     <Compile Include="Statistics.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="student.Designer.vb">
+      <DependentUpon>student.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Suppliers.Designer.vb">
@@ -199,6 +217,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="employee.resx">
+      <DependentUpon>employee.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.vb</DependentUpon>
     </EmbeddedResource>
@@ -220,8 +241,14 @@
     <EmbeddedResource Include="products.resx">
       <DependentUpon>products.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="productsDataGrid.resx">
+      <DependentUpon>productsDataGrid.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Statistics.resx">
       <DependentUpon>Statistics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student.resx">
+      <DependentUpon>student.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Suppliers.resx">
       <DependentUpon>Suppliers.vb</DependentUpon>
@@ -292,6 +319,7 @@
     <None Include="Resources\userManag.png" />
     <None Include="Resources\pressedUserManag.png" />
     <None Include="Resources\sjr_logo_black.png" />
+    <None Include="Resources\exit_app.png" />
     <Content Include="sjrlogo.ico" />
     <Content Include="stock-controlDB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

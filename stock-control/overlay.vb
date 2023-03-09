@@ -1,6 +1,31 @@
 ﻿Public Class overlay
 
     Private Sub overlay_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+
+        ToolTip1.SetToolTip(pbBtnShutdown, "Close application")
+        ToolTip1.SetToolTip(pbLogo, "Return to home")
+
+
+        Select Case accessLevel
+            Case 0
+                Panel2.Visible = False
+            Case 1
+                pbBtnOrder.Visible = True
+            Case 2
+                pbBtnOrder.Visible = True
+                pbBtnProducts.Visible = True
+                pbBtnSuppliers.Visible = True
+                pbBtnSuppliers.Location = New Point(8, 148)
+            Case 3
+                pbBtnOrder.Visible = True
+                pbBtnProducts.Visible = True
+                pbBtnSuppliers.Visible = True
+                pbBtnStatistics.Visible = True
+                pbBtnUserManag.Visible = True
+        End Select
+
+
         Select Case openForm
             Case "Order"
                 pbBtnOrder.Image = stock_control.My.Resources.Resources.pressedOrders 'this case is when the order form is clicked, this shows the pressed in button to show that the current form is infact the order form.
@@ -56,5 +81,9 @@
 
     Private Sub pbLogo_MouseLeave(sender As Object, e As EventArgs) Handles pbLogo.MouseLeave
         pbLogo.Image = stock_control.My.Resources.Resources.sjr_logo
+    End Sub
+
+    Private Sub pbBtnShutdown_Click(sender As Object, e As EventArgs) Handles pbBtnShutdown.Click
+        Application.Exit()
     End Sub
 End Class

@@ -3,6 +3,10 @@
 		simpleSQL("SELECT tblSupplier.SupplierID, tblSupplier.[Supplier Name] FROM tblSupplier;", "DSSupplierID")
 		simpleSQL("SELECT * FROM tblProducts", "DSProduct")
 
+		If accessLevel = 2 Then
+			btnDataGridViewOpen.Visible = False
+		End If
+
 		cmbxSupplier.DataSource = ds.Tables("DSSupplierID")
 		cmbxSupplier.DisplayMember = "Supplier Name"
         cmbxSupplier.ValueMember = "SupplierID"
@@ -26,5 +30,9 @@
 		da.Update(ds, "DSProduct")
 		MsgBox("New product added")
 
+	End Sub
+
+	Private Sub btnDataGridViewOpen_Click(sender As Object, e As EventArgs) Handles btnDataGridViewOpen.Click
+		productsDataGrid.Show()
 	End Sub
 End Class

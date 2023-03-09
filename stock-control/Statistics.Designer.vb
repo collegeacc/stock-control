@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Statistics
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,21 +20,11 @@ Partial Class Statistics
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Statistics))
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Overlay1 = New stock_control.overlay()
         Me.SuspendLayout()
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(417, 328)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Overlay1
         '
@@ -51,8 +41,8 @@ Partial Class Statistics
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.IndianRed
         Me.ClientSize = New System.Drawing.Size(800, 461)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Overlay1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Statistics"
@@ -62,5 +52,4 @@ Partial Class Statistics
     End Sub
 
     Friend WithEvents Overlay1 As overlay
-    Friend WithEvents Button1 As Button
 End Class

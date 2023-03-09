@@ -23,7 +23,6 @@ Partial Class products
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(products))
-        Me.Overlay1 = New stock_control.overlay()
         Me.lblProductName = New System.Windows.Forms.Label()
         Me.lblSupplier = New System.Windows.Forms.Label()
         Me.lblPrice = New System.Windows.Forms.Label()
@@ -33,20 +32,11 @@ Partial Class products
         Me.cmbxSupplier = New System.Windows.Forms.ComboBox()
         Me.txtProductName = New System.Windows.Forms.TextBox()
         Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnDataGridViewOpen = New System.Windows.Forms.Button()
+        Me.Overlay1 = New stock_control.overlay()
         CType(Me.numQuant, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numPrice, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Overlay1
-        '
-        Me.Overlay1.BackColor = System.Drawing.Color.Transparent
-        Me.Overlay1.BackgroundImage = CType(resources.GetObject("Overlay1.BackgroundImage"), System.Drawing.Image)
-        Me.Overlay1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Overlay1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Overlay1.Location = New System.Drawing.Point(0, 0)
-        Me.Overlay1.Name = "Overlay1"
-        Me.Overlay1.Size = New System.Drawing.Size(800, 461)
-        Me.Overlay1.TabIndex = 0
         '
         'lblProductName
         '
@@ -136,6 +126,7 @@ Partial Class products
         '
         'btnAdd
         '
+        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btnAdd.Location = New System.Drawing.Point(171, 319)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(155, 72)
@@ -143,11 +134,34 @@ Partial Class products
         Me.btnAdd.Text = "Add Product"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
+        'btnDataGridViewOpen
+        '
+        Me.btnDataGridViewOpen.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnDataGridViewOpen.Location = New System.Drawing.Point(332, 319)
+        Me.btnDataGridViewOpen.Name = "btnDataGridViewOpen"
+        Me.btnDataGridViewOpen.Size = New System.Drawing.Size(155, 72)
+        Me.btnDataGridViewOpen.TabIndex = 15
+        Me.btnDataGridViewOpen.Text = "Edit and Delete Products"
+        Me.btnDataGridViewOpen.UseVisualStyleBackColor = True
+        '
+        'Overlay1
+        '
+        Me.Overlay1.BackColor = System.Drawing.Color.Transparent
+        Me.Overlay1.BackgroundImage = CType(resources.GetObject("Overlay1.BackgroundImage"), System.Drawing.Image)
+        Me.Overlay1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Overlay1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Overlay1.Location = New System.Drawing.Point(0, 0)
+        Me.Overlay1.Name = "Overlay1"
+        Me.Overlay1.Size = New System.Drawing.Size(800, 461)
+        Me.Overlay1.TabIndex = 0
+        '
         'products
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.IndianRed
         Me.ClientSize = New System.Drawing.Size(800, 461)
+        Me.Controls.Add(Me.btnDataGridViewOpen)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.txtProductName)
         Me.Controls.Add(Me.cmbxSupplier)
@@ -178,4 +192,5 @@ Partial Class products
     Friend WithEvents cmbxSupplier As ComboBox
     Friend WithEvents txtProductName As TextBox
     Friend WithEvents btnAdd As Button
+    Friend WithEvents btnDataGridViewOpen As Button
 End Class
