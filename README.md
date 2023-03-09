@@ -1,3 +1,3 @@
-# stock-control
+# stock-control prototype
 stock control for IT project
-Pull when you start VB.NET, push at the end yadayada. Also be careful editing the database, best leave it to me
+this will be used for developing the prototype, this is so if we need to change the prototype document after we have moved onwards, we can use this
