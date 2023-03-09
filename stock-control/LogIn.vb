@@ -1,5 +1,6 @@
 ﻿Module SUsername
     Public userLoggedIn As String
+    Public userLoggedFullName As String
     Public employeeID As Int32
 End Module
 
@@ -71,6 +72,7 @@ Public Class LogIn
                     If (txtBoxUsername.Text = ds.Tables("Employee").Rows(curRow).Item(1)) Then
                         If (txtBoxPassword.Text = ds.Tables("Employee").Rows(curRow).Item(2)) Then
                             userLoggedIn = ds.Tables("Employee").Rows(curRow).Item(1)
+                            userLoggedFullName = ds.Tables("Employee").Rows(curRow).Item(3) & " " & ds.Tables("Employee").Rows(curRow).Item(4)
                             employeeID = ds.Tables("Employee").Rows(curRow).Item(0)
                             accessLevel = ds.Tables("Employee").Rows(curRow).Item(5)
                             Me.Hide()

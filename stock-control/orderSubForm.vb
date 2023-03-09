@@ -1,4 +1,8 @@
 ﻿Imports System.ComponentModel
+Imports System.IO
+
+
+
 
 Public Class orderSubForm
 	Dim productList As New List(Of String)
@@ -6,6 +10,8 @@ Public Class orderSubForm
 	Dim priceTotal As Decimal
 	Dim orderID As Int32
 	Dim productMaxRow As Integer
+	Dim uniqueProductNames() As String
+	Dim uniqueProductQuantities() As Integer
 
 
 	Private Sub orderSubForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -113,11 +119,139 @@ Public Class orderSubForm
 			'orderLine section :)
 			simpleSQL("SELECT OrderID FROM tblOrder", "orderID")
 			orderID = ds.Tables("orderID").Rows(MaxRows - 1).Item(0) 'this small bit grabs the correct orderID that is needed for the orderLine table
+			Call receiptMake()
 			Call orderLine()
 		Else
 			MsgBox("Please enter a valid payment type and/or add atleast one product")
 		End If
 	End Sub
+
+	Sub receiptMake()
+		Dim FileToCopy As String
+		Dim NewCopy As String
+		Dim dateTimeNow As String
+
+
+		FileToCopy = "..\..\receipt\devrec\TEMPATE_receipt.txt" 'here we copy the template receipt to the folder which holds ordinary receipts
+		dateTimeNow = Today & "_" & TimeString
+		dateTimeNow = dateTimeNow.Replace(":", "-")
+		dateTimeNow = dateTimeNow.Replace("/", "-")
+		NewCopy = "..\..\receipt\" & dateTimeNow & "_receipt.txt" 'names the file the current date and time, so that duplicate filename issues arent a problem
+
+		If System.IO.File.Exists(FileToCopy) = True Then
+
+			System.IO.File.Copy(FileToCopy, NewCopy)
+			Console.WriteLine("DEV// receipt made succesfuly")
+
+		End If
+
+		File.AppendAllText("..\..\receipt\" & dateTimeNow & "_receipt.txt", Environment.NewLine + "") 'new line
+		File.AppendAllText("..\..\receipt\" & dateTimeNow & "_receipt.txt", Environment.NewLine + "Order ID: " & orderID & " | Cashier: " & userLoggedFullName & " | Student: " & maskTxtStudentID.Text & " | Payment Method: " & cmbxPaymentType.SelectedItem & " | Date Ordered : " & dateTimeNow)
+		File.AppendAllText("..\..\receipt\" & dateTimeNow & "_receipt.txt", Environment.NewLine + "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
+
+		'we need to create a seperate list that is sorted so we can calculate the quantity of all products bought
+		Dim receiptList As List(Of String) = productListName
+		receiptList.Sort()
+		' now we need to count the products in the list, so if the first object is "A" we up the quantity of "A" +1, if the next one is "A", the quantity of A increases again. If "B" or any other object is seen, "A" is to be printed.
+		Dim ProductDictionary As New Dictionary(Of String, Integer)
+		Call productListToDictionary(ProductDictionary)
+
+		Dim lengthString As String
+		For Each kvp In ProductDictionary
+
+
+			lengthString = StrDup(60 - kvp.Key.Length, " ")
+
+
+			Dim intCounter As Integer
+
+
+
+
+			File.AppendAllText("..\..\receipt\" & dateTimeNow & "_receipt.txt", Environment.NewLine + kvp.Key & lengthString & "| " & kvp.Value & "x " & FormatCurrency(getPrice(kvp.Key, kvp.Value)))
+
+
+		Next
+		lengthString = StrDup(60 - 13, " ")
+		File.AppendAllText("..\..\receipt\" & dateTimeNow & "_receipt.txt", Environment.NewLine + "Total Price: " & lengthString & "| " & FormatCurrency(priceTotal))
+
+	End Sub
+
+	Function getPrice(productName As String, Quantity As Integer)
+		Dim intCounter As Integer
+		While intCounter < ds.Tables("ProductsPrice").Rows.Count
+
+
+			If ds.Tables("ProductsPrice").Rows(intCounter).Item(1) = productName Then
+				Return Quantity * ds.Tables("ProductsPrice").Rows(intCounter).Item(2)
+			End If
+
+			intCounter = intCounter + 1
+		End While
+	End Function
+
+	Sub productListToDictionary(ProductDictionary As Dictionary(Of String, Integer))
+		' Initialize the ProductDictionary
+
+
+		' Loop through each item in the ProductList
+		For Each item In productListName
+			' Check if the item is already in the ProductDictionary
+			If ProductDictionary.ContainsKey(item) Then
+				' If it is, increment the value of that key by 1
+				ProductDictionary(item) += 1
+			Else
+				' If it isn't, add it to the ProductDictionary as a new key with a value of 1
+				ProductDictionary.Add(item, 1)
+			End If
+		Next
+
+		' Display the contents of the ProductDictionary as a receipt
+		Console.WriteLine("Product    Quantity")
+		Console.WriteLine("-------------------")
+		For Each kvp In ProductDictionary
+			Console.WriteLine(kvp.Key.PadRight(10) & kvp.Value)
+		Next
+	End Sub
+
+
+	'Function count(receiptList As List(Of String))
+	'	Dim intCounter As Integer
+	'	Dim quantity As Integer
+	'	While intCounter < receiptList.Count - 1
+	'		If receiptList(intCounter) = receiptList(intCounter + 1) Then 'here we know that location 0 and 1 are the same. We do need to add +1 IF intCounter is 0
+	'			If intCounter = 0 Then
+	'				quantity = quantity + 1
+	'			End If
+	'			quantity = quantity + 1 'increments the quantity
+	'		Else
+	'			Return 0 '0 is used as a null, if it is 0 we next line
+	'		End If
+	'		intCounter = intCounter + 1
+	'	End While
+	'	Return quantity  'returns the quantity of product bought
+	'End Function
+
+	'Function productNameAndQuantity(receiptList As List(Of String), quantity As Integer)
+	'	Dim intCounter As Integer
+	'	While intCounter < receiptList.Count - 1
+	'		If intCounter = 0 Then
+	'			Return receiptList(intCounter) & " " * 60 - productList(intCounter).Length & "| " & quantity & " " & quantity
+	'		End If
+	'	End While
+	'End Function
+
+	'Function priceXQ(receiptList As List(Of String), quantity As Integer)
+	'	While curRow < MaxRows
+	'		If ds.Tables("ProductsPrice").Rows(curRow).Item(0) = receiptList(receiptList.Count - 1) Then 'if the selected product record has the same ID, then select the price and add it to the total
+	'			priceTotal = priceTotal + ds.Tables("ProductsPrice").Rows(curRow).Item(2)
+	'			lblPriceTotal.Text = "Total Price: " & FormatCurrency(priceTotal)
+	'			Exit While
+	'		Else
+	'			curRow = curRow + 1
+	'		End If
+	'	End While
+	'End Function
 	Sub orderLine()
 		simpleSQL("SELECT * FROM tblOrderLine", "DSOrderLine")
 		Dim cb As New OleDb.OleDbCommandBuilder(da)
@@ -139,7 +273,7 @@ Public Class orderSubForm
 	End Sub
 	Sub Clear()
 		priceTotal = 0
-		lblPriceTotal.Text = "Total Price: "
+		lblPriceTotal.Text = "Total Price:  "
 		productList.Clear() 'clears the list so new product can be added
 	End Sub
 

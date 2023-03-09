@@ -159,7 +159,7 @@ Partial Class Suppliers
         Me.btnEditDelete.Name = "btnEditDelete"
         Me.btnEditDelete.Size = New System.Drawing.Size(190, 55)
         Me.btnEditDelete.TabIndex = 43
-        Me.btnEditDelete.Text = "View Orders"
+        Me.btnEditDelete.Text = "View Suppliers"
         Me.btnEditDelete.UseVisualStyleBackColor = True
         '
         'lblSupplierIDView
