@@ -39,6 +39,8 @@ Partial Class Suppliers
         Me.txtBoxSupplierIDView = New System.Windows.Forms.TextBox()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.Overlay1 = New stock_control.overlay()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtSupplierName
@@ -205,12 +207,36 @@ Partial Class Suppliers
         Me.Overlay1.Size = New System.Drawing.Size(800, 461)
         Me.Overlay1.TabIndex = 0
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Lime
+        Me.Label2.Location = New System.Drawing.Point(424, 198)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(20, 25)
+        Me.Label2.TabIndex = 47
+        Me.Label2.Text = "*"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Lime
+        Me.Label3.Location = New System.Drawing.Point(354, 233)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(20, 25)
+        Me.Label3.TabIndex = 48
+        Me.Label3.Text = "*"
+        '
         'Suppliers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.IndianRed
         Me.ClientSize = New System.Drawing.Size(800, 461)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.lblSupplierIDView)
         Me.Controls.Add(Me.txtBoxSupplierIDView)
@@ -251,4 +277,6 @@ Partial Class Suppliers
     Friend WithEvents lblSupplierIDView As Label
     Friend WithEvents txtBoxSupplierIDView As TextBox
     Friend WithEvents btnUpdate As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
 End Class

@@ -597,6 +597,23 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="qStockTableAdapter" GeneratorDataComponentClassName="qStockTableAdapter" Name="qStock" UserDataComponentName="qStockTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="stock_controlDBConnectionString (MySettings)" DbObjectName="qStock" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Product Name], Stock FROM qStock</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Product Name" DataSetColumn="Product Name" />
+              <Mapping SourceColumn="Stock" DataSetColumn="Stock" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -957,6 +974,20 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Reviews_x0020_Per_x0020_Employee" msprop:Generator_ColumnPropNameInRow="Reviews_Per_Employee" msprop:Generator_ColumnPropNameInTable="Reviews_Per_EmployeeColumn" msprop:Generator_ColumnVarNameInTable="columnReviews_Per_Employee" msprop:Generator_UserColumnName="Reviews Per Employee" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="qStock" msprop:Generator_RowEvHandlerName="qStockRowChangeEventHandler" msprop:Generator_RowDeletedName="qStockRowDeleted" msprop:Generator_RowDeletingName="qStockRowDeleting" msprop:Generator_RowEvArgName="qStockRowChangeEvent" msprop:Generator_TablePropName="qStock" msprop:Generator_RowChangedName="qStockRowChanged" msprop:Generator_RowChangingName="qStockRowChanging" msprop:Generator_TableClassName="qStockDataTable" msprop:Generator_RowClassName="qStockRow" msprop:Generator_TableVarName="tableqStock" msprop:Generator_UserTableName="qStock">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Product_x0020_Name" msprop:Generator_ColumnPropNameInRow="Product_Name" msprop:Generator_ColumnPropNameInTable="Product_NameColumn" msprop:Generator_ColumnVarNameInTable="columnProduct_Name" msprop:Generator_UserColumnName="Product Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Stock" msprop:Generator_ColumnPropNameInRow="Stock" msprop:Generator_ColumnPropNameInTable="StockColumn" msprop:Generator_ColumnVarNameInTable="columnStock" msprop:Generator_UserColumnName="Stock" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

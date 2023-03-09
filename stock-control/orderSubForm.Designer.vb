@@ -46,6 +46,10 @@ Partial Class orderSubForm
         Me.lblStudentID = New System.Windows.Forms.Label()
         Me.maskTxtStudentID = New System.Windows.Forms.MaskedTextBox()
         Me.Overlay1 = New stock_control.overlay()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.numQuant, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnAddProduct, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -53,7 +57,7 @@ Partial Class orderSubForm
         'cmbxProductName
         '
         Me.cmbxProductName.FormattingEnabled = True
-        Me.cmbxProductName.Location = New System.Drawing.Point(166, 236)
+        Me.cmbxProductName.Location = New System.Drawing.Point(183, 236)
         Me.cmbxProductName.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbxProductName.Name = "cmbxProductName"
         Me.cmbxProductName.Size = New System.Drawing.Size(139, 21)
@@ -63,7 +67,7 @@ Partial Class orderSubForm
         '
         Me.lblPriceTotal.AutoSize = True
         Me.lblPriceTotal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.lblPriceTotal.Location = New System.Drawing.Point(309, 283)
+        Me.lblPriceTotal.Location = New System.Drawing.Point(326, 283)
         Me.lblPriceTotal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblPriceTotal.Name = "lblPriceTotal"
         Me.lblPriceTotal.Size = New System.Drawing.Size(93, 21)
@@ -74,7 +78,7 @@ Partial Class orderSubForm
         '
         Me.cmbxPaymentType.FormattingEnabled = True
         Me.cmbxPaymentType.Items.AddRange(New Object() {"Debit", "Cash", "PayPal"})
-        Me.cmbxPaymentType.Location = New System.Drawing.Point(166, 182)
+        Me.cmbxPaymentType.Location = New System.Drawing.Point(183, 182)
         Me.cmbxPaymentType.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbxPaymentType.Name = "cmbxPaymentType"
         Me.cmbxPaymentType.Size = New System.Drawing.Size(139, 21)
@@ -84,7 +88,7 @@ Partial Class orderSubForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(162, 159)
+        Me.Label1.Location = New System.Drawing.Point(179, 159)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(112, 21)
@@ -94,7 +98,7 @@ Partial Class orderSubForm
         'btnNewOrder
         '
         Me.btnNewOrder.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnNewOrder.Location = New System.Drawing.Point(166, 373)
+        Me.btnNewOrder.Location = New System.Drawing.Point(183, 373)
         Me.btnNewOrder.Margin = New System.Windows.Forms.Padding(2)
         Me.btnNewOrder.Name = "btnNewOrder"
         Me.btnNewOrder.Size = New System.Drawing.Size(187, 57)
@@ -203,7 +207,7 @@ Partial Class orderSubForm
         '
         Me.lblProd.AutoSize = True
         Me.lblProd.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.lblProd.Location = New System.Drawing.Point(162, 211)
+        Me.lblProd.Location = New System.Drawing.Point(179, 211)
         Me.lblProd.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblProd.Name = "lblProd"
         Me.lblProd.Size = New System.Drawing.Size(135, 21)
@@ -212,7 +216,7 @@ Partial Class orderSubForm
         '
         'numQuant
         '
-        Me.numQuant.Location = New System.Drawing.Point(312, 319)
+        Me.numQuant.Location = New System.Drawing.Point(329, 319)
         Me.numQuant.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
         Me.numQuant.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numQuant.Name = "numQuant"
@@ -223,7 +227,7 @@ Partial Class orderSubForm
         'listBoxName
         '
         Me.listBoxName.FormattingEnabled = True
-        Me.listBoxName.Location = New System.Drawing.Point(313, 159)
+        Me.listBoxName.Location = New System.Drawing.Point(330, 159)
         Me.listBoxName.Name = "listBoxName"
         Me.listBoxName.Size = New System.Drawing.Size(120, 95)
         Me.listBoxName.TabIndex = 42
@@ -252,7 +256,7 @@ Partial Class orderSubForm
         '
         Me.btnAddProduct.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAddProduct.Image = Global.stock_control.My.Resources.Resources.addproduct
-        Me.btnAddProduct.Location = New System.Drawing.Point(166, 309)
+        Me.btnAddProduct.Location = New System.Drawing.Point(183, 309)
         Me.btnAddProduct.Name = "btnAddProduct"
         Me.btnAddProduct.Size = New System.Drawing.Size(139, 40)
         Me.btnAddProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -263,7 +267,7 @@ Partial Class orderSubForm
         '
         Me.lblStudentID.AutoSize = True
         Me.lblStudentID.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.lblStudentID.Location = New System.Drawing.Point(162, 259)
+        Me.lblStudentID.Location = New System.Drawing.Point(179, 259)
         Me.lblStudentID.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblStudentID.Name = "lblStudentID"
         Me.lblStudentID.Size = New System.Drawing.Size(88, 21)
@@ -272,7 +276,7 @@ Partial Class orderSubForm
         '
         'maskTxtStudentID
         '
-        Me.maskTxtStudentID.Location = New System.Drawing.Point(166, 283)
+        Me.maskTxtStudentID.Location = New System.Drawing.Point(183, 283)
         Me.maskTxtStudentID.Mask = "S0000"
         Me.maskTxtStudentID.Name = "maskTxtStudentID"
         Me.maskTxtStudentID.Size = New System.Drawing.Size(45, 20)
@@ -289,12 +293,60 @@ Partial Class orderSubForm
         Me.Overlay1.Size = New System.Drawing.Size(800, 461)
         Me.Overlay1.TabIndex = 38
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Lime
+        Me.Label2.Location = New System.Drawing.Point(158, 182)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(20, 25)
+        Me.Label2.TabIndex = 52
+        Me.Label2.Text = "*"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Lime
+        Me.Label3.Location = New System.Drawing.Point(158, 236)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(20, 25)
+        Me.Label3.TabIndex = 53
+        Me.Label3.Text = "*"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Lime
+        Me.Label4.Location = New System.Drawing.Point(158, 283)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(20, 25)
+        Me.Label4.TabIndex = 54
+        Me.Label4.Text = "*"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Lime
+        Me.Label5.Location = New System.Drawing.Point(381, 319)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(20, 25)
+        Me.Label5.TabIndex = 55
+        Me.Label5.Text = "*"
+        '
         'orderSubForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.IndianRed
         Me.ClientSize = New System.Drawing.Size(800, 461)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.maskTxtStudentID)
         Me.Controls.Add(Me.lblStudentID)
         Me.Controls.Add(Me.listBoxNameView)
@@ -351,4 +403,8 @@ Partial Class orderSubForm
     Friend WithEvents listBoxNameView As ListBox
     Friend WithEvents lblStudentID As Label
     Friend WithEvents maskTxtStudentID As MaskedTextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
 End Class

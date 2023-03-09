@@ -8,7 +8,7 @@
 _________________________________________________________________________________________________________________________________________________________
 
 
-Order ID: 41 | Cashier: First Name Works Last Name Works | Student: S2 | Payment Method: Cash | Date Ordered : 09-03-2023_21-10-15
+Order ID: 48 | Cashier: First Name Works Last Name Works | Student: S2 | Payment Method: Cash | Date Ordered : 09-03-2023_21-59-53
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Pears                                                       | 3x £2.97
-Pineapple                                                   | 1x £2.30
+Large Boxes                                                 | 4x £39.96
+Total Price:                                                | £39.96

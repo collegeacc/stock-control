@@ -26,22 +26,23 @@ Partial Class userMgmt
         Me.btnStudent = New System.Windows.Forms.Button()
         Me.btnEmployee = New System.Windows.Forms.Button()
         Me.Overlay1 = New stock_control.overlay()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnStudent
         '
-        Me.btnStudent.Location = New System.Drawing.Point(228, 210)
+        Me.btnStudent.Location = New System.Drawing.Point(194, 194)
         Me.btnStudent.Name = "btnStudent"
-        Me.btnStudent.Size = New System.Drawing.Size(119, 110)
+        Me.btnStudent.Size = New System.Drawing.Size(186, 110)
         Me.btnStudent.TabIndex = 3
         Me.btnStudent.Text = "Students"
         Me.btnStudent.UseVisualStyleBackColor = True
         '
         'btnEmployee
         '
-        Me.btnEmployee.Location = New System.Drawing.Point(397, 210)
+        Me.btnEmployee.Location = New System.Drawing.Point(386, 194)
         Me.btnEmployee.Name = "btnEmployee"
-        Me.btnEmployee.Size = New System.Drawing.Size(119, 110)
+        Me.btnEmployee.Size = New System.Drawing.Size(186, 110)
         Me.btnEmployee.TabIndex = 4
         Me.btnEmployee.Text = "Employees"
         Me.btnEmployee.UseVisualStyleBackColor = True
@@ -57,12 +58,24 @@ Partial Class userMgmt
         Me.Overlay1.Size = New System.Drawing.Size(732, 480)
         Me.Overlay1.TabIndex = 2
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Museo Slab 500", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(126, 166)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(554, 25)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Please select what type of users you'd like to manage"
+        '
         'userMgmt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.IndianRed
         Me.ClientSize = New System.Drawing.Size(732, 480)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnEmployee)
         Me.Controls.Add(Me.btnStudent)
         Me.Controls.Add(Me.Overlay1)
@@ -70,9 +83,11 @@ Partial Class userMgmt
         Me.Name = "userMgmt"
         Me.Text = "User Management"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Overlay1 As overlay
     Friend WithEvents btnStudent As Button
     Friend WithEvents btnEmployee As Button
+    Friend WithEvents Label1 As Label
 End Class
