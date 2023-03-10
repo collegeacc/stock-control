@@ -1,5 +1,4 @@
-﻿Imports System.ComponentModel
-Imports System.IO
+﻿Imports System.IO
 
 
 
@@ -159,17 +158,9 @@ Public Class orderSubForm
 		Dim lengthString As String
 		For Each kvp In ProductDictionary
 
-
 			lengthString = StrDup(60 - kvp.Key.Length, " ")
 
-
-			Dim intCounter As Integer
-
-
-
-
 			File.AppendAllText("..\..\receipt\" & dateTimeNow & "_receipt.txt", Environment.NewLine + kvp.Key & lengthString & "| " & kvp.Value & "x " & FormatCurrency(getPrice(kvp.Key, kvp.Value)))
-
 
 		Next
 		lengthString = StrDup(60 - 13, " ")
