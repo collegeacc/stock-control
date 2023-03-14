@@ -153,6 +153,8 @@ Public Class orderSubForm
 		receiptList.Sort()
 		' now we need to count the products in the list, so if the first object is "A" we up the quantity of "A" +1, if the next one is "A", the quantity of A increases again. If "B" or any other object is seen, "A" is to be printed.
 		Dim ProductDictionary As New Dictionary(Of String, Integer)
+
+
 		Call productListToDictionary(ProductDictionary)
 
 		Dim lengthString As String

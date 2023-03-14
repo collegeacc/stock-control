@@ -63,7 +63,7 @@ Partial Class userMgmt
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Museo Slab 500", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(126, 166)
+        Me.Label1.Location = New System.Drawing.Point(166, 166)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(554, 25)
         Me.Label1.TabIndex = 5
