@@ -45,17 +45,18 @@ Partial Class orderSubForm
         Me.btnAddProduct = New System.Windows.Forms.PictureBox()
         Me.lblStudentID = New System.Windows.Forms.Label()
         Me.maskTxtStudentID = New System.Windows.Forms.MaskedTextBox()
-        Me.Overlay1 = New stock_control.overlay()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Overlay1 = New stock_control.overlay()
         CType(Me.numQuant, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnAddProduct, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmbxProductName
         '
+        Me.cmbxProductName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbxProductName.FormattingEnabled = True
         Me.cmbxProductName.Location = New System.Drawing.Point(183, 236)
         Me.cmbxProductName.Margin = New System.Windows.Forms.Padding(2)
@@ -282,17 +283,6 @@ Partial Class orderSubForm
         Me.maskTxtStudentID.Size = New System.Drawing.Size(45, 20)
         Me.maskTxtStudentID.TabIndex = 51
         '
-        'Overlay1
-        '
-        Me.Overlay1.BackColor = System.Drawing.Color.Transparent
-        Me.Overlay1.BackgroundImage = CType(resources.GetObject("Overlay1.BackgroundImage"), System.Drawing.Image)
-        Me.Overlay1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Overlay1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Overlay1.Location = New System.Drawing.Point(0, 0)
-        Me.Overlay1.Name = "Overlay1"
-        Me.Overlay1.Size = New System.Drawing.Size(800, 461)
-        Me.Overlay1.TabIndex = 38
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -336,6 +326,17 @@ Partial Class orderSubForm
         Me.Label5.Size = New System.Drawing.Size(20, 25)
         Me.Label5.TabIndex = 55
         Me.Label5.Text = "*"
+        '
+        'Overlay1
+        '
+        Me.Overlay1.BackColor = System.Drawing.Color.Transparent
+        Me.Overlay1.BackgroundImage = CType(resources.GetObject("Overlay1.BackgroundImage"), System.Drawing.Image)
+        Me.Overlay1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Overlay1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Overlay1.Location = New System.Drawing.Point(0, 0)
+        Me.Overlay1.Name = "Overlay1"
+        Me.Overlay1.Size = New System.Drawing.Size(800, 461)
+        Me.Overlay1.TabIndex = 38
         '
         'orderSubForm
         '

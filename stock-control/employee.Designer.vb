@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class employee
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,302 +20,593 @@ Partial Class employee
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(employee))
-        Me._stock_controlDBDataSet = New stock_control._stock_controlDBDataSet()
-        Me.QEmployeeQBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.QEmployeeQTableAdapter = New stock_control._stock_controlDBDataSetTableAdapters.qEmployeeQTableAdapter()
-        Me.TableAdapterManager = New stock_control._stock_controlDBDataSetTableAdapters.TableAdapterManager()
-        Me.QEmployeeQBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.QEmployeeQBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.QEmployeeQDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me._stock_controlDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.QEmployeeQBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.QEmployeeQBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.QEmployeeQBindingNavigator.SuspendLayout()
-        CType(Me.QEmployeeQDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.txtAnswerV = New System.Windows.Forms.TextBox()
+        Me.lblSecQV = New System.Windows.Forms.Label()
+        Me.cmbxSecIDV = New System.Windows.Forms.ComboBox()
+        Me.txtAnswer = New System.Windows.Forms.TextBox()
+        Me.lblSecurityA = New System.Windows.Forms.Label()
+        Me.lblSecurityQ = New System.Windows.Forms.Label()
+        Me.cmbxSecID = New System.Windows.Forms.ComboBox()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.lblFirstLastV = New System.Windows.Forms.Label()
+        Me.txtFirstNameView = New System.Windows.Forms.TextBox()
+        Me.pbBtnShutdown = New System.Windows.Forms.PictureBox()
+        Me.btnEditView = New System.Windows.Forms.Button()
+        Me.lblSJR = New System.Windows.Forms.Label()
+        Me.txtLastNameView = New System.Windows.Forms.TextBox()
+        Me.btnNext = New System.Windows.Forms.Button()
+        Me.btnPrev = New System.Windows.Forms.Button()
+        Me.lblFirstNameV = New System.Windows.Forms.Label()
+        Me.pbLogo = New System.Windows.Forms.PictureBox()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.lblEmployeeIDView = New System.Windows.Forms.Label()
+        Me.txtBoxEmployeeIDView = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lblAccessLevel = New System.Windows.Forms.Label()
+        Me.txtEmailV = New System.Windows.Forms.TextBox()
+        Me.lblEmailV = New System.Windows.Forms.Label()
+        Me.txtUsernameV = New System.Windows.Forms.TextBox()
+        Me.lblUsernameV = New System.Windows.Forms.Label()
+        Me.txtFirstName = New System.Windows.Forms.TextBox()
+        Me.lblFirstName = New System.Windows.Forms.Label()
+        Me.lblLastName = New System.Windows.Forms.Label()
+        Me.txtLastName = New System.Windows.Forms.TextBox()
+        Me.lblAccess = New System.Windows.Forms.Label()
+        Me.lblUsername = New System.Windows.Forms.Label()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
+        Me.lblPasswordV = New System.Windows.Forms.Label()
+        Me.txtPasswordV = New System.Windows.Forms.TextBox()
+        Me.lblPassword = New System.Windows.Forms.Label()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.numAccessLevelV = New System.Windows.Forms.NumericUpDown()
+        Me.numAccessLevel = New System.Windows.Forms.NumericUpDown()
+        CType(Me.pbBtnShutdown, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        CType(Me.numAccessLevelV, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numAccessLevel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        '_stock_controlDBDataSet
+        'txtAnswerV
         '
-        Me._stock_controlDBDataSet.DataSetName = "_stock_controlDBDataSet"
-        Me._stock_controlDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.txtAnswerV.Location = New System.Drawing.Point(576, 306)
+        Me.txtAnswerV.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtAnswerV.Name = "txtAnswerV"
+        Me.txtAnswerV.Size = New System.Drawing.Size(174, 20)
+        Me.txtAnswerV.TabIndex = 99
+        Me.txtAnswerV.Visible = False
         '
-        'QEmployeeQBindingSource
+        'lblSecQV
         '
-        Me.QEmployeeQBindingSource.DataMember = "qEmployeeQ"
-        Me.QEmployeeQBindingSource.DataSource = Me._stock_controlDBDataSet
+        Me.lblSecQV.AutoSize = True
+        Me.lblSecQV.BackColor = System.Drawing.Color.IndianRed
+        Me.lblSecQV.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.lblSecQV.Location = New System.Drawing.Point(356, 282)
+        Me.lblSecQV.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSecQV.Name = "lblSecQV"
+        Me.lblSecQV.Size = New System.Drawing.Size(139, 21)
+        Me.lblSecQV.TabIndex = 98
+        Me.lblSecQV.Text = "Security Question"
+        Me.lblSecQV.Visible = False
         '
-        'QEmployeeQTableAdapter
+        'cmbxSecIDV
         '
-        Me.QEmployeeQTableAdapter.ClearBeforeFill = True
+        Me.cmbxSecIDV.FormattingEnabled = True
+        Me.cmbxSecIDV.Items.AddRange(New Object() {"What was your childhood pet's name?", "What was your primary school called?", "What is your mother's maiden name?", "How old where you when you had your first kiss?", "What was your favourite childhood hobby?"})
+        Me.cmbxSecIDV.Location = New System.Drawing.Point(397, 306)
+        Me.cmbxSecIDV.Name = "cmbxSecIDV"
+        Me.cmbxSecIDV.Size = New System.Drawing.Size(174, 21)
+        Me.cmbxSecIDV.TabIndex = 97
+        Me.cmbxSecIDV.Visible = False
         '
-        'TableAdapterManager
+        'txtAnswer
         '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.Connection = Nothing
-        Me.TableAdapterManager.tblEmployeeTableAdapter = Nothing
-        Me.TableAdapterManager.tblOrderLineTableAdapter = Nothing
-        Me.TableAdapterManager.tblOrderTableAdapter = Nothing
-        Me.TableAdapterManager.tblPRecoveryTableAdapter = Nothing
-        Me.TableAdapterManager.tblProductsTableAdapter = Nothing
-        Me.TableAdapterManager.tblStudentTableAdapter = Nothing
-        Me.TableAdapterManager.tblSupplierTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = stock_control._stock_controlDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.txtAnswer.Location = New System.Drawing.Point(47, 324)
+        Me.txtAnswer.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtAnswer.Name = "txtAnswer"
+        Me.txtAnswer.Size = New System.Drawing.Size(174, 20)
+        Me.txtAnswer.TabIndex = 96
         '
-        'QEmployeeQBindingNavigator
+        'lblSecurityA
         '
-        Me.QEmployeeQBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.QEmployeeQBindingNavigator.BackColor = System.Drawing.Color.Transparent
-        Me.QEmployeeQBindingNavigator.BindingSource = Me.QEmployeeQBindingSource
-        Me.QEmployeeQBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.QEmployeeQBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.QEmployeeQBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.QEmployeeQBindingNavigatorSaveItem})
-        Me.QEmployeeQBindingNavigator.Location = New System.Drawing.Point(0, 0)
-        Me.QEmployeeQBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.QEmployeeQBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.QEmployeeQBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.QEmployeeQBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.QEmployeeQBindingNavigator.Name = "QEmployeeQBindingNavigator"
-        Me.QEmployeeQBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.QEmployeeQBindingNavigator.Size = New System.Drawing.Size(800, 25)
-        Me.QEmployeeQBindingNavigator.TabIndex = 0
-        Me.QEmployeeQBindingNavigator.Text = "BindingNavigator1"
+        Me.lblSecurityA.AutoSize = True
+        Me.lblSecurityA.BackColor = System.Drawing.Color.IndianRed
+        Me.lblSecurityA.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.lblSecurityA.Location = New System.Drawing.Point(43, 301)
+        Me.lblSecurityA.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSecurityA.Name = "lblSecurityA"
+        Me.lblSecurityA.Size = New System.Drawing.Size(127, 21)
+        Me.lblSecurityA.TabIndex = 95
+        Me.lblSecurityA.Text = "Security Answer"
         '
-        'BindingNavigatorAddNewItem
+        'lblSecurityQ
         '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        Me.lblSecurityQ.AutoSize = True
+        Me.lblSecurityQ.BackColor = System.Drawing.Color.IndianRed
+        Me.lblSecurityQ.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.lblSecurityQ.Location = New System.Drawing.Point(43, 253)
+        Me.lblSecurityQ.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSecurityQ.Name = "lblSecurityQ"
+        Me.lblSecurityQ.Size = New System.Drawing.Size(139, 21)
+        Me.lblSecurityQ.TabIndex = 94
+        Me.lblSecurityQ.Text = "Security Question"
         '
-        'BindingNavigatorCountItem
+        'cmbxSecID
         '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        Me.cmbxSecID.FormattingEnabled = True
+        Me.cmbxSecID.Items.AddRange(New Object() {"What was your childhood pet's name?", "What was your primary school called?", "What is your mother's maiden name?", "How old where you when you had your first kiss?", "What was your favourite childhood hobby?"})
+        Me.cmbxSecID.Location = New System.Drawing.Point(47, 277)
+        Me.cmbxSecID.Name = "cmbxSecID"
+        Me.cmbxSecID.Size = New System.Drawing.Size(174, 21)
+        Me.cmbxSecID.TabIndex = 93
         '
-        'BindingNavigatorDeleteItem
+        'btnAdd
         '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.btnAdd.Location = New System.Drawing.Point(95, 354)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
+        Me.btnAdd.TabIndex = 92
+        Me.btnAdd.Text = "Add Employee"
+        Me.btnAdd.UseVisualStyleBackColor = True
         '
-        'BindingNavigatorMoveFirstItem
+        'lblFirstLastV
         '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
+        Me.lblFirstLastV.AutoSize = True
+        Me.lblFirstLastV.BackColor = System.Drawing.Color.IndianRed
+        Me.lblFirstLastV.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.lblFirstLastV.Location = New System.Drawing.Point(587, 171)
+        Me.lblFirstLastV.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblFirstLastV.Name = "lblFirstLastV"
+        Me.lblFirstLastV.Size = New System.Drawing.Size(86, 21)
+        Me.lblFirstLastV.TabIndex = 91
+        Me.lblFirstLastV.Text = "Last Name"
+        Me.lblFirstLastV.Visible = False
         '
-        'BindingNavigatorMovePreviousItem
+        'txtFirstNameView
         '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
+        Me.txtFirstNameView.Location = New System.Drawing.Point(499, 194)
+        Me.txtFirstNameView.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtFirstNameView.Name = "txtFirstNameView"
+        Me.txtFirstNameView.Size = New System.Drawing.Size(84, 20)
+        Me.txtFirstNameView.TabIndex = 86
+        Me.txtFirstNameView.Visible = False
         '
-        'BindingNavigatorSeparator
+        'pbBtnShutdown
         '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.pbBtnShutdown.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pbBtnShutdown.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pbBtnShutdown.Image = Global.stock_control.My.Resources.Resources.exit_app
+        Me.pbBtnShutdown.Location = New System.Drawing.Point(717, 48)
+        Me.pbBtnShutdown.Name = "pbBtnShutdown"
+        Me.pbBtnShutdown.Size = New System.Drawing.Size(47, 51)
+        Me.pbBtnShutdown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbBtnShutdown.TabIndex = 2
+        Me.pbBtnShutdown.TabStop = False
         '
-        'BindingNavigatorPositionItem
+        'btnEditView
         '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.BackColor = System.Drawing.Color.IndianRed
-        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
+        Me.btnEditView.Location = New System.Drawing.Point(62, 383)
+        Me.btnEditView.Name = "btnEditView"
+        Me.btnEditView.Size = New System.Drawing.Size(140, 23)
+        Me.btnEditView.TabIndex = 85
+        Me.btnEditView.Text = "Edit/View Students"
+        Me.btnEditView.UseVisualStyleBackColor = True
         '
-        'BindingNavigatorSeparator1
+        'lblSJR
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.lblSJR.AutoSize = True
+        Me.lblSJR.Font = New System.Drawing.Font("Museo Slab 700", 47.99999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSJR.ForeColor = System.Drawing.Color.White
+        Me.lblSJR.Location = New System.Drawing.Point(144, 32)
+        Me.lblSJR.Name = "lblSJR"
+        Me.lblSJR.Size = New System.Drawing.Size(479, 77)
+        Me.lblSJR.TabIndex = 1
+        Me.lblSJR.Text = "St John Rigby"
         '
-        'BindingNavigatorMoveNextItem
+        'txtLastNameView
         '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Move next"
+        Me.txtLastNameView.Location = New System.Drawing.Point(591, 194)
+        Me.txtLastNameView.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtLastNameView.Name = "txtLastNameView"
+        Me.txtLastNameView.Size = New System.Drawing.Size(84, 20)
+        Me.txtLastNameView.TabIndex = 90
+        Me.txtLastNameView.Visible = False
         '
-        'BindingNavigatorMoveLastItem
+        'btnNext
         '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Move last"
+        Me.btnNext.Location = New System.Drawing.Point(611, 381)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(69, 20)
+        Me.btnNext.TabIndex = 89
+        Me.btnNext.Text = "Next"
+        Me.btnNext.UseVisualStyleBackColor = True
+        Me.btnNext.Visible = False
         '
-        'BindingNavigatorSeparator2
+        'btnPrev
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        Me.btnPrev.Location = New System.Drawing.Point(500, 381)
+        Me.btnPrev.Name = "btnPrev"
+        Me.btnPrev.Size = New System.Drawing.Size(69, 20)
+        Me.btnPrev.TabIndex = 88
+        Me.btnPrev.Text = "Previous"
+        Me.btnPrev.UseVisualStyleBackColor = True
+        Me.btnPrev.Visible = False
         '
-        'QEmployeeQBindingNavigatorSaveItem
+        'lblFirstNameV
         '
-        Me.QEmployeeQBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.QEmployeeQBindingNavigatorSaveItem.Enabled = False
-        Me.QEmployeeQBindingNavigatorSaveItem.Image = CType(resources.GetObject("QEmployeeQBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.QEmployeeQBindingNavigatorSaveItem.Name = "QEmployeeQBindingNavigatorSaveItem"
-        Me.QEmployeeQBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
-        Me.QEmployeeQBindingNavigatorSaveItem.Text = "Save Data"
+        Me.lblFirstNameV.AutoSize = True
+        Me.lblFirstNameV.BackColor = System.Drawing.Color.IndianRed
+        Me.lblFirstNameV.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.lblFirstNameV.Location = New System.Drawing.Point(495, 171)
+        Me.lblFirstNameV.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblFirstNameV.Name = "lblFirstNameV"
+        Me.lblFirstNameV.Size = New System.Drawing.Size(88, 21)
+        Me.lblFirstNameV.TabIndex = 87
+        Me.lblFirstNameV.Text = "First Name"
+        Me.lblFirstNameV.Visible = False
         '
-        'QEmployeeQDataGridView
+        'pbLogo
         '
-        Me.QEmployeeQDataGridView.AutoGenerateColumns = False
-        Me.QEmployeeQDataGridView.BackgroundColor = System.Drawing.Color.IndianRed
-        Me.QEmployeeQDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken
-        Me.QEmployeeQDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.QEmployeeQDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
-        Me.QEmployeeQDataGridView.DataSource = Me.QEmployeeQBindingSource
-        Me.QEmployeeQDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.QEmployeeQDataGridView.GridColor = System.Drawing.Color.Black
-        Me.QEmployeeQDataGridView.Location = New System.Drawing.Point(0, 25)
-        Me.QEmployeeQDataGridView.Name = "QEmployeeQDataGridView"
-        Me.QEmployeeQDataGridView.Size = New System.Drawing.Size(800, 425)
-        Me.QEmployeeQDataGridView.TabIndex = 1
+        Me.pbLogo.BackColor = System.Drawing.Color.Transparent
+        Me.pbLogo.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pbLogo.Image = Global.stock_control.My.Resources.Resources.sjr_logo
+        Me.pbLogo.Location = New System.Drawing.Point(14, 2)
+        Me.pbLogo.Margin = New System.Windows.Forms.Padding(2)
+        Me.pbLogo.Name = "pbLogo"
+        Me.pbLogo.Size = New System.Drawing.Size(116, 138)
+        Me.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbLogo.TabIndex = 0
+        Me.pbLogo.TabStop = False
         '
-        'DataGridViewTextBoxColumn1
+        'btnUpdate
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "EmployeeID"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "EmployeeID"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.btnUpdate.Location = New System.Drawing.Point(551, 407)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
+        Me.btnUpdate.TabIndex = 82
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
+        Me.btnUpdate.Visible = False
         '
-        'DataGridViewTextBoxColumn2
+        'lblEmployeeIDView
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Username"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Username"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.lblEmployeeIDView.AutoSize = True
+        Me.lblEmployeeIDView.BackColor = System.Drawing.Color.IndianRed
+        Me.lblEmployeeIDView.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.lblEmployeeIDView.Location = New System.Drawing.Point(393, 171)
+        Me.lblEmployeeIDView.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblEmployeeIDView.Name = "lblEmployeeIDView"
+        Me.lblEmployeeIDView.Size = New System.Drawing.Size(102, 21)
+        Me.lblEmployeeIDView.TabIndex = 81
+        Me.lblEmployeeIDView.Text = "Employee ID"
+        Me.lblEmployeeIDView.Visible = False
         '
-        'DataGridViewTextBoxColumn3
+        'txtBoxEmployeeIDView
         '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Password"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Password"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.txtBoxEmployeeIDView.Location = New System.Drawing.Point(426, 194)
+        Me.txtBoxEmployeeIDView.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtBoxEmployeeIDView.Name = "txtBoxEmployeeIDView"
+        Me.txtBoxEmployeeIDView.Size = New System.Drawing.Size(69, 20)
+        Me.txtBoxEmployeeIDView.TabIndex = 80
+        Me.txtBoxEmployeeIDView.Visible = False
         '
-        'DataGridViewTextBoxColumn4
+        'Panel1
         '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "First Name"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "First Name"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.pbBtnShutdown)
+        Me.Panel1.Controls.Add(Me.lblSJR)
+        Me.Panel1.Controls.Add(Me.pbLogo)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(800, 140)
+        Me.Panel1.TabIndex = 77
         '
-        'DataGridViewTextBoxColumn5
+        'lblAccessLevel
         '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Last Name"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Last Name"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.lblAccessLevel.AutoSize = True
+        Me.lblAccessLevel.BackColor = System.Drawing.Color.IndianRed
+        Me.lblAccessLevel.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.lblAccessLevel.Location = New System.Drawing.Point(677, 171)
+        Me.lblAccessLevel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAccessLevel.Name = "lblAccessLevel"
+        Me.lblAccessLevel.Size = New System.Drawing.Size(102, 21)
+        Me.lblAccessLevel.TabIndex = 101
+        Me.lblAccessLevel.Text = "Access Level"
+        Me.lblAccessLevel.Visible = False
         '
-        'DataGridViewTextBoxColumn6
+        'txtEmailV
         '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Access Level"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Access Level"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.txtEmailV.Location = New System.Drawing.Point(360, 357)
+        Me.txtEmailV.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtEmailV.Name = "txtEmailV"
+        Me.txtEmailV.Size = New System.Drawing.Size(390, 20)
+        Me.txtEmailV.TabIndex = 102
+        Me.txtEmailV.Visible = False
         '
-        'DataGridViewTextBoxColumn7
+        'lblEmailV
         '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Email"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Email"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.lblEmailV.AutoSize = True
+        Me.lblEmailV.BackColor = System.Drawing.Color.IndianRed
+        Me.lblEmailV.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.lblEmailV.Location = New System.Drawing.Point(356, 330)
+        Me.lblEmailV.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblEmailV.Name = "lblEmailV"
+        Me.lblEmailV.Size = New System.Drawing.Size(112, 21)
+        Me.lblEmailV.TabIndex = 103
+        Me.lblEmailV.Text = "Email Address"
+        Me.lblEmailV.Visible = False
         '
-        'DataGridViewTextBoxColumn8
+        'txtUsernameV
         '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "Security Question"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "Security Question"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.txtUsernameV.Location = New System.Drawing.Point(576, 219)
+        Me.txtUsernameV.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtUsernameV.Name = "txtUsernameV"
+        Me.txtUsernameV.Size = New System.Drawing.Size(174, 20)
+        Me.txtUsernameV.TabIndex = 104
+        Me.txtUsernameV.Visible = False
         '
-        'DataGridViewTextBoxColumn9
+        'lblUsernameV
         '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "Security Answer"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "Security Answer"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.lblUsernameV.AutoSize = True
+        Me.lblUsernameV.BackColor = System.Drawing.Color.IndianRed
+        Me.lblUsernameV.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.lblUsernameV.Location = New System.Drawing.Point(492, 219)
+        Me.lblUsernameV.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblUsernameV.Name = "lblUsernameV"
+        Me.lblUsernameV.Size = New System.Drawing.Size(83, 21)
+        Me.lblUsernameV.TabIndex = 105
+        Me.lblUsernameV.Text = "Username"
+        Me.lblUsernameV.Visible = False
+        '
+        'txtFirstName
+        '
+        Me.txtFirstName.Location = New System.Drawing.Point(47, 184)
+        Me.txtFirstName.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.Size = New System.Drawing.Size(84, 20)
+        Me.txtFirstName.TabIndex = 106
+        '
+        'lblFirstName
+        '
+        Me.lblFirstName.AutoSize = True
+        Me.lblFirstName.BackColor = System.Drawing.Color.IndianRed
+        Me.lblFirstName.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.lblFirstName.Location = New System.Drawing.Point(43, 161)
+        Me.lblFirstName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblFirstName.Name = "lblFirstName"
+        Me.lblFirstName.Size = New System.Drawing.Size(88, 21)
+        Me.lblFirstName.TabIndex = 107
+        Me.lblFirstName.Text = "First Name"
+        '
+        'lblLastName
+        '
+        Me.lblLastName.AutoSize = True
+        Me.lblLastName.BackColor = System.Drawing.Color.IndianRed
+        Me.lblLastName.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.lblLastName.Location = New System.Drawing.Point(135, 161)
+        Me.lblLastName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblLastName.Name = "lblLastName"
+        Me.lblLastName.Size = New System.Drawing.Size(86, 21)
+        Me.lblLastName.TabIndex = 109
+        Me.lblLastName.Text = "Last Name"
+        '
+        'txtLastName
+        '
+        Me.txtLastName.Location = New System.Drawing.Point(139, 184)
+        Me.txtLastName.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.Size = New System.Drawing.Size(84, 20)
+        Me.txtLastName.TabIndex = 108
+        '
+        'lblAccess
+        '
+        Me.lblAccess.AutoSize = True
+        Me.lblAccess.BackColor = System.Drawing.Color.IndianRed
+        Me.lblAccess.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.lblAccess.Location = New System.Drawing.Point(225, 161)
+        Me.lblAccess.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblAccess.Name = "lblAccess"
+        Me.lblAccess.Size = New System.Drawing.Size(102, 21)
+        Me.lblAccess.TabIndex = 111
+        Me.lblAccess.Text = "Access Level"
+        '
+        'lblUsername
+        '
+        Me.lblUsername.AutoSize = True
+        Me.lblUsername.BackColor = System.Drawing.Color.IndianRed
+        Me.lblUsername.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.lblUsername.Location = New System.Drawing.Point(40, 208)
+        Me.lblUsername.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblUsername.Name = "lblUsername"
+        Me.lblUsername.Size = New System.Drawing.Size(83, 21)
+        Me.lblUsername.TabIndex = 113
+        Me.lblUsername.Text = "Username"
+        '
+        'txtUsername
+        '
+        Me.txtUsername.Location = New System.Drawing.Point(124, 208)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(174, 20)
+        Me.txtUsername.TabIndex = 112
+        '
+        'lblPasswordV
+        '
+        Me.lblPasswordV.AutoSize = True
+        Me.lblPasswordV.BackColor = System.Drawing.Color.IndianRed
+        Me.lblPasswordV.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.lblPasswordV.Location = New System.Drawing.Point(492, 243)
+        Me.lblPasswordV.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblPasswordV.Name = "lblPasswordV"
+        Me.lblPasswordV.Size = New System.Drawing.Size(79, 21)
+        Me.lblPasswordV.TabIndex = 115
+        Me.lblPasswordV.Text = "Password"
+        Me.lblPasswordV.Visible = False
+        '
+        'txtPasswordV
+        '
+        Me.txtPasswordV.Location = New System.Drawing.Point(576, 243)
+        Me.txtPasswordV.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtPasswordV.Name = "txtPasswordV"
+        Me.txtPasswordV.Size = New System.Drawing.Size(174, 20)
+        Me.txtPasswordV.TabIndex = 114
+        Me.txtPasswordV.Visible = False
+        '
+        'lblPassword
+        '
+        Me.lblPassword.AutoSize = True
+        Me.lblPassword.BackColor = System.Drawing.Color.IndianRed
+        Me.lblPassword.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.lblPassword.Location = New System.Drawing.Point(40, 231)
+        Me.lblPassword.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblPassword.Name = "lblPassword"
+        Me.lblPassword.Size = New System.Drawing.Size(79, 21)
+        Me.lblPassword.TabIndex = 117
+        Me.lblPassword.Text = "Password"
+        '
+        'txtPassword
+        '
+        Me.txtPassword.Location = New System.Drawing.Point(124, 231)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(174, 20)
+        Me.txtPassword.TabIndex = 116
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.Transparent
+        Me.Panel2.BackgroundImage = Global.stock_control.My.Resources.Resources.background
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel2.Controls.Add(Me.numAccessLevel)
+        Me.Panel2.Controls.Add(Me.numAccessLevelV)
+        Me.Panel2.Controls.Add(Me.lblPassword)
+        Me.Panel2.Controls.Add(Me.lblEmployeeIDView)
+        Me.Panel2.Controls.Add(Me.txtPassword)
+        Me.Panel2.Controls.Add(Me.txtBoxEmployeeIDView)
+        Me.Panel2.Controls.Add(Me.lblPasswordV)
+        Me.Panel2.Controls.Add(Me.btnUpdate)
+        Me.Panel2.Controls.Add(Me.txtPasswordV)
+        Me.Panel2.Controls.Add(Me.lblFirstNameV)
+        Me.Panel2.Controls.Add(Me.lblUsername)
+        Me.Panel2.Controls.Add(Me.btnPrev)
+        Me.Panel2.Controls.Add(Me.txtUsername)
+        Me.Panel2.Controls.Add(Me.btnNext)
+        Me.Panel2.Controls.Add(Me.lblAccess)
+        Me.Panel2.Controls.Add(Me.txtLastNameView)
+        Me.Panel2.Controls.Add(Me.btnEditView)
+        Me.Panel2.Controls.Add(Me.lblLastName)
+        Me.Panel2.Controls.Add(Me.txtFirstNameView)
+        Me.Panel2.Controls.Add(Me.txtLastName)
+        Me.Panel2.Controls.Add(Me.lblFirstLastV)
+        Me.Panel2.Controls.Add(Me.txtFirstName)
+        Me.Panel2.Controls.Add(Me.btnAdd)
+        Me.Panel2.Controls.Add(Me.lblFirstName)
+        Me.Panel2.Controls.Add(Me.cmbxSecID)
+        Me.Panel2.Controls.Add(Me.lblUsernameV)
+        Me.Panel2.Controls.Add(Me.lblSecurityQ)
+        Me.Panel2.Controls.Add(Me.txtUsernameV)
+        Me.Panel2.Controls.Add(Me.lblSecurityA)
+        Me.Panel2.Controls.Add(Me.lblEmailV)
+        Me.Panel2.Controls.Add(Me.txtAnswer)
+        Me.Panel2.Controls.Add(Me.txtEmailV)
+        Me.Panel2.Controls.Add(Me.cmbxSecIDV)
+        Me.Panel2.Controls.Add(Me.lblAccessLevel)
+        Me.Panel2.Controls.Add(Me.lblSecQV)
+        Me.Panel2.Controls.Add(Me.txtAnswerV)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(800, 450)
+        Me.Panel2.TabIndex = 118
+        '
+        'numAccessLevelV
+        '
+        Me.numAccessLevelV.Location = New System.Drawing.Point(681, 194)
+        Me.numAccessLevelV.Maximum = New Decimal(New Integer() {3, 0, 0, 0})
+        Me.numAccessLevelV.Name = "numAccessLevelV"
+        Me.numAccessLevelV.Size = New System.Drawing.Size(30, 20)
+        Me.numAccessLevelV.TabIndex = 118
+        Me.numAccessLevelV.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'numAccessLevel
+        '
+        Me.numAccessLevel.Location = New System.Drawing.Point(228, 184)
+        Me.numAccessLevel.Maximum = New Decimal(New Integer() {3, 0, 0, 0})
+        Me.numAccessLevel.Name = "numAccessLevel"
+        Me.numAccessLevel.Size = New System.Drawing.Size(30, 20)
+        Me.numAccessLevel.TabIndex = 119
+        Me.numAccessLevel.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'employee
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.IndianRed
+        Me.BackgroundImage = Global.stock_control.My.Resources.Resources.background
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.QEmployeeQDataGridView)
-        Me.Controls.Add(Me.QEmployeeQBindingNavigator)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "employee"
         Me.Text = "Employee"
-        CType(Me._stock_controlDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.QEmployeeQBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.QEmployeeQBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.QEmployeeQBindingNavigator.ResumeLayout(False)
-        Me.QEmployeeQBindingNavigator.PerformLayout()
-        CType(Me.QEmployeeQDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbBtnShutdown, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.numAccessLevelV, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numAccessLevel, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents _stock_controlDBDataSet As _stock_controlDBDataSet
-    Friend WithEvents QEmployeeQBindingSource As BindingSource
-    Friend WithEvents QEmployeeQTableAdapter As _stock_controlDBDataSetTableAdapters.qEmployeeQTableAdapter
-    Friend WithEvents TableAdapterManager As _stock_controlDBDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents QEmployeeQBindingNavigator As BindingNavigator
-    Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
-    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
-    Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
-    Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
-    Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
-    Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
-    Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
-    Friend WithEvents QEmployeeQBindingNavigatorSaveItem As ToolStripButton
-    Friend WithEvents QEmployeeQDataGridView As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents txtAnswerV As TextBox
+    Friend WithEvents lblSecQV As Label
+    Friend WithEvents cmbxSecIDV As ComboBox
+    Friend WithEvents txtAnswer As TextBox
+    Friend WithEvents lblSecurityA As Label
+    Friend WithEvents lblSecurityQ As Label
+    Friend WithEvents cmbxSecID As ComboBox
+    Friend WithEvents btnAdd As Button
+    Friend WithEvents lblFirstLastV As Label
+    Friend WithEvents txtFirstNameView As TextBox
+    Friend WithEvents pbBtnShutdown As PictureBox
+    Friend WithEvents btnEditView As Button
+    Friend WithEvents lblSJR As Label
+    Friend WithEvents txtLastNameView As TextBox
+    Friend WithEvents btnNext As Button
+    Friend WithEvents btnPrev As Button
+    Friend WithEvents lblFirstNameV As Label
+    Friend WithEvents pbLogo As PictureBox
+    Friend WithEvents btnUpdate As Button
+    Friend WithEvents lblEmployeeIDView As Label
+    Friend WithEvents txtBoxEmployeeIDView As TextBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents lblAccessLevel As Label
+    Friend WithEvents txtEmailV As TextBox
+    Friend WithEvents lblEmailV As Label
+    Friend WithEvents txtUsernameV As TextBox
+    Friend WithEvents lblUsernameV As Label
+    Friend WithEvents txtFirstName As TextBox
+    Friend WithEvents lblFirstName As Label
+    Friend WithEvents lblLastName As Label
+    Friend WithEvents txtLastName As TextBox
+    Friend WithEvents lblAccess As Label
+    Friend WithEvents lblUsername As Label
+    Friend WithEvents txtUsername As TextBox
+    Friend WithEvents lblPasswordV As Label
+    Friend WithEvents txtPasswordV As TextBox
+    Friend WithEvents lblPassword As Label
+    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents numAccessLevel As NumericUpDown
+    Friend WithEvents numAccessLevelV As NumericUpDown
 End Class
