@@ -12,7 +12,7 @@ Public Class student
         Return "S" & ID 'creates the new string for student ID
     End Function
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        If validation() = True Then
+        If validation() Then
             Dim cb As New OleDb.OleDbCommandBuilder(da)
             cb.QuotePrefix = "["
             cb.QuoteSuffix = "]"
@@ -51,34 +51,32 @@ Public Class student
 
     Private Sub btnEditView_Click(sender As Object, e As EventArgs) Handles btnEditView.Click
 
-        lblFirstNameV.Visible = True
-        lblFirstLastV.Visible = True
-        lblStudentIDView.Visible = True
-        txtFirstNameView.Visible = True
-        txtLastNameView.Visible = True
-        lblSecQV.Visible = True
-        cmbxSecIDV.Visible = True
-        txtAnswerV.Visible = True
-        btnNext.Visible = True
-        btnPrev.Visible = True
-        btnUpdate.Visible = True
-        txtBoxStudentIDView.Visible = True
-
-        btnAdd.Visible = False
-        btnEditView.Visible = False
-        lblFirstName.Visible = False
-        lblLastName.Visible = False
-        txtFirstName.Visible = False
-        txtLastName.Visible = False
-        lblSecurityQ.Visible = False
-        cmbxSecID.Visible = False
-        lblSecurityA.Visible = False
-        txtAnswer.Visible = False
+        swapVisible()
 
         curRow = 0
         navigateRecords()
     End Sub
+    Private Sub swapVisible()
+        For Each c As TextBox In Panel2.Controls.OfType(Of TextBox)
+            c.Visible = c.Visible <> True
+        Next
 
+        For Each c As Label In Panel2.Controls.OfType(Of Label)
+            c.Visible = c.Visible <> True
+        Next
+
+        For Each c As Button In Panel2.Controls.OfType(Of Button)
+            c.Visible = c.Visible <> True
+        Next
+
+        For Each c As ComboBox In Panel2.Controls.OfType(Of ComboBox)
+            c.Visible = c.Visible <> True
+        Next
+
+        For Each c As NumericUpDown In Panel2.Controls.OfType(Of NumericUpDown)
+            c.Visible = c.Visible <> True
+        Next
+    End Sub
     Private Sub navigateRecords()
         txtBoxStudentIDView.Text = ds.Tables("DSStudent").Rows(curRow).Item(0)
         txtFirstNameView.Text = ds.Tables("DSStudent").Rows(curRow).Item(1)

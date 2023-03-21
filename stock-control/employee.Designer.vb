@@ -62,14 +62,14 @@ Partial Class employee
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.numAccessLevelV = New System.Windows.Forms.NumericUpDown()
         Me.numAccessLevel = New System.Windows.Forms.NumericUpDown()
+        Me.numAccessLevelV = New System.Windows.Forms.NumericUpDown()
         CType(Me.pbBtnShutdown, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.numAccessLevelV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numAccessLevel, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numAccessLevelV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtAnswerV
@@ -96,6 +96,7 @@ Partial Class employee
         '
         'cmbxSecIDV
         '
+        Me.cmbxSecIDV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbxSecIDV.FormattingEnabled = True
         Me.cmbxSecIDV.Items.AddRange(New Object() {"What was your childhood pet's name?", "What was your primary school called?", "What is your mother's maiden name?", "How old where you when you had your first kiss?", "What was your favourite childhood hobby?"})
         Me.cmbxSecIDV.Location = New System.Drawing.Point(397, 306)
@@ -138,6 +139,7 @@ Partial Class employee
         '
         'cmbxSecID
         '
+        Me.cmbxSecID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbxSecID.FormattingEnabled = True
         Me.cmbxSecID.Items.AddRange(New Object() {"What was your childhood pet's name?", "What was your primary school called?", "What is your mother's maiden name?", "How old where you when you had your first kiss?", "What was your favourite childhood hobby?"})
         Me.cmbxSecID.Location = New System.Drawing.Point(47, 277)
@@ -422,7 +424,7 @@ Partial Class employee
         Me.lblUsername.AutoSize = True
         Me.lblUsername.BackColor = System.Drawing.Color.IndianRed
         Me.lblUsername.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.lblUsername.Location = New System.Drawing.Point(40, 208)
+        Me.lblUsername.Location = New System.Drawing.Point(44, 208)
         Me.lblUsername.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblUsername.Name = "lblUsername"
         Me.lblUsername.Size = New System.Drawing.Size(83, 21)
@@ -431,7 +433,7 @@ Partial Class employee
         '
         'txtUsername
         '
-        Me.txtUsername.Location = New System.Drawing.Point(124, 208)
+        Me.txtUsername.Location = New System.Drawing.Point(128, 208)
         Me.txtUsername.Margin = New System.Windows.Forms.Padding(2)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(174, 20)
@@ -464,7 +466,7 @@ Partial Class employee
         Me.lblPassword.AutoSize = True
         Me.lblPassword.BackColor = System.Drawing.Color.IndianRed
         Me.lblPassword.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.lblPassword.Location = New System.Drawing.Point(40, 231)
+        Me.lblPassword.Location = New System.Drawing.Point(44, 231)
         Me.lblPassword.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(79, 21)
@@ -473,7 +475,7 @@ Partial Class employee
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(124, 231)
+        Me.txtPassword.Location = New System.Drawing.Point(128, 231)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(174, 20)
@@ -526,15 +528,6 @@ Partial Class employee
         Me.Panel2.Size = New System.Drawing.Size(800, 450)
         Me.Panel2.TabIndex = 118
         '
-        'numAccessLevelV
-        '
-        Me.numAccessLevelV.Location = New System.Drawing.Point(681, 194)
-        Me.numAccessLevelV.Maximum = New Decimal(New Integer() {3, 0, 0, 0})
-        Me.numAccessLevelV.Name = "numAccessLevelV"
-        Me.numAccessLevelV.Size = New System.Drawing.Size(30, 20)
-        Me.numAccessLevelV.TabIndex = 118
-        Me.numAccessLevelV.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        '
         'numAccessLevel
         '
         Me.numAccessLevel.Location = New System.Drawing.Point(228, 184)
@@ -543,6 +536,16 @@ Partial Class employee
         Me.numAccessLevel.Size = New System.Drawing.Size(30, 20)
         Me.numAccessLevel.TabIndex = 119
         Me.numAccessLevel.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'numAccessLevelV
+        '
+        Me.numAccessLevelV.Location = New System.Drawing.Point(681, 194)
+        Me.numAccessLevelV.Maximum = New Decimal(New Integer() {3, 0, 0, 0})
+        Me.numAccessLevelV.Name = "numAccessLevelV"
+        Me.numAccessLevelV.Size = New System.Drawing.Size(30, 20)
+        Me.numAccessLevelV.TabIndex = 118
+        Me.numAccessLevelV.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.numAccessLevelV.Visible = False
         '
         'employee
         '
@@ -563,8 +566,8 @@ Partial Class employee
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.numAccessLevelV, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numAccessLevel, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numAccessLevelV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

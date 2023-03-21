@@ -23,6 +23,8 @@ Public Class employee
             dsNewRow.Item("Last Name") = txtLastName.Text
             dsNewRow.Item("Access Level") = numAccessLevel.Value
             dsNewRow.Item("Email") = txtFirstName.Text & txtLastName.Text.Substring(0, 1) & "@email.com"
+            dsNewRow.Item("SecID") = cmbxSecID.SelectedIndex + 1
+            dsNewRow.Item("Security Answer") = txtAnswer.Text
 
 
             da.Update(ds, "DSEmployee")
@@ -54,35 +56,23 @@ Public Class employee
     End Sub
     Private Sub swapVisible()
         For Each c As TextBox In Panel2.Controls.OfType(Of TextBox)
-            If c.Visible = True Then
-                c.Visible = False
-            Else
-                c.Visible = True
-            End If
+            c.Visible = c.Visible <> True
         Next
 
         For Each c As Label In Panel2.Controls.OfType(Of Label)
-            If c.Visible = True Then
-                c.Visible = False
-            Else
-                c.Visible = True
-            End If
+            c.Visible = c.Visible <> True
         Next
 
         For Each c As Button In Panel2.Controls.OfType(Of Button)
-            If c.Visible = True Then
-                c.Visible = False
-            Else
-                c.Visible = True
-            End If
+            c.Visible = c.Visible <> True
         Next
 
         For Each c As ComboBox In Panel2.Controls.OfType(Of ComboBox)
-            If c.Visible = True Then
-                c.Visible = False
-            Else
-                c.Visible = True
-            End If
+            c.Visible = c.Visible <> True
+        Next
+
+        For Each c As NumericUpDown In Panel2.Controls.OfType(Of NumericUpDown)
+            c.Visible = c.Visible <> True
         Next
     End Sub
     Private Sub btnEditView_Click(sender As Object, e As EventArgs) Handles btnEditView.Click
