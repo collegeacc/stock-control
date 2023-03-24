@@ -130,7 +130,9 @@ Public Class employee
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Dim cb As New OleDb.OleDbCommandBuilder(da)
 
-        If presenceCheckView() = True Then
+
+
+        If presenceCheckView() Then
 
             ' sql will not work without prefixes and suffixes
             cb.QuotePrefix = "["

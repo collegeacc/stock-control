@@ -60,11 +60,6 @@ Public Class orderSubForm
 					Exit Sub
 				End If
 
-
-
-
-
-				Exit While
 			End If
 			intCounter = intCounter + 1
 		End While

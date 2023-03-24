@@ -13,7 +13,7 @@ Public Class LogIn
         simpleSQL("SELECT * FROM tblEmployee", "Employee")
     End Sub
     Private Sub HideShow(sender As Object, e As EventArgs) Handles btnHideShow.Click
-        If txtBoxPassword.UseSystemPasswordChar = True Then
+        If txtBoxPassword.UseSystemPasswordChar Then
             txtBoxPassword.UseSystemPasswordChar = False
         Else
             txtBoxPassword.UseSystemPasswordChar = True
@@ -64,7 +64,7 @@ Public Class LogIn
                     curRow = curRow + 1
                 End While
 
-            ElseIf forgotMode = False And recoveryMode = False Then 'this is when the user is logging in normally, it checks if it is not in forgot mode and not in recovery mode
+            ElseIf forgotMode = False AndAlso recoveryMode = False Then 'this is when the user is logging in normally, it checks if it is not in forgot mode and not in recovery mode
                 'Log-In mode
                 curRow = 0
                 Dim userFound As Boolean = False
@@ -89,7 +89,7 @@ Public Class LogIn
                     MsgBox("Error, username or password incorrect")
                 End If
 
-            ElseIf recoveryMode = True Then 'this is executed when the user has been given their security question
+            ElseIf recoveryMode Then 'this is executed when the user has been given their security question
                 If ds.Tables("DSRecovery").Rows(curRow).Item(5) = txtBoxPassword.Text Then
                     txtBoxUsername.Text = ds.Tables("DSRecovery").Rows(curRow).Item(1)
                     txtBoxPassword.Text = ds.Tables("DSRecovery").Rows(curRow).Item(2)

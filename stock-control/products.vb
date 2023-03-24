@@ -13,22 +13,28 @@
 
     End Sub
 
-    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-		Dim cb As New OleDb.OleDbCommandBuilder(da)
-		cb.QuotePrefix = "["
-		cb.QuoteSuffix = "]"
-		Dim dsNewRow As DataRow
-		dsNewRow = ds.Tables("DSProduct").NewRow()
+	Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+		If presenceCheck(txtProductName.Text) Then
 
-		'now we need to fill out the new prices of data
-		dsNewRow.Item("ProductID") = 0 'autonumber cringe
-		dsNewRow.Item("Product Name") = txtProductName.Text
-		dsNewRow.Item("SupplierID") = cmbxSupplier.SelectedValue
-		dsNewRow.Item("Price") = numPrice.Value
-		dsNewRow.Item("Stock") = numQuant.Value
-		ds.Tables("DSProduct").Rows.Add(dsNewRow)
-		da.Update(ds, "DSProduct")
-		MsgBox("New product added")
+
+			Dim cb As New OleDb.OleDbCommandBuilder(da)
+			cb.QuotePrefix = "["
+			cb.QuoteSuffix = "]"
+			Dim dsNewRow As DataRow
+			dsNewRow = ds.Tables("DSProduct").NewRow()
+
+			'now we need to fill out the new prices of data
+			dsNewRow.Item("ProductID") = 0 'autonumber cringe
+			dsNewRow.Item("Product Name") = txtProductName.Text
+			dsNewRow.Item("SupplierID") = cmbxSupplier.SelectedValue
+			dsNewRow.Item("Price") = numPrice.Value
+			dsNewRow.Item("Stock") = numQuant.Value
+			ds.Tables("DSProduct").Rows.Add(dsNewRow)
+			da.Update(ds, "DSProduct")
+			MsgBox("New product added")
+		Else
+			MsgBox("Please enter a valid product name in the product name field.")
+		End If
 
 	End Sub
 
