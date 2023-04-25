@@ -32,19 +32,19 @@ Partial Class Statistics
         Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Overlay1 = New stock_control.overlay()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me._stock_controlDBDataSet = New stock_control._stock_controlDBDataSet()
         Me.QReviewsPerEmpBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me._stock_controlDBDataSet = New stock_control._stock_controlDBDataSet()
         Me.QReviewsPerEmpTableAdapter = New stock_control._stock_controlDBDataSetTableAdapters.qReviewsPerEmpTableAdapter()
         Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me._stock_controlDBDataSet1 = New stock_control._stock_controlDBDataSet()
         Me.QStockBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me._stock_controlDBDataSet1 = New stock_control._stock_controlDBDataSet()
         Me.QStockTableAdapter = New stock_control._stock_controlDBDataSetTableAdapters.qStockTableAdapter()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me._stock_controlDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QReviewsPerEmpBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me._stock_controlDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me._stock_controlDBDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.QStockBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me._stock_controlDBDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Overlay1
@@ -80,15 +80,15 @@ Partial Class Statistics
         Me.Chart1.TabIndex = 1
         Me.Chart1.Text = "Chart1"
         '
-        '_stock_controlDBDataSet
-        '
-        Me._stock_controlDBDataSet.DataSetName = "_stock_controlDBDataSet"
-        Me._stock_controlDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'QReviewsPerEmpBindingSource
         '
         Me.QReviewsPerEmpBindingSource.DataMember = "qReviewsPerEmp"
         Me.QReviewsPerEmpBindingSource.DataSource = Me._stock_controlDBDataSet
+        '
+        '_stock_controlDBDataSet
+        '
+        Me._stock_controlDBDataSet.DataSetName = "_stock_controlDBDataSet"
+        Me._stock_controlDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'QReviewsPerEmpTableAdapter
         '
@@ -116,15 +116,15 @@ Partial Class Statistics
         Me.Chart2.TabIndex = 2
         Me.Chart2.Text = "Chart2"
         '
-        '_stock_controlDBDataSet1
-        '
-        Me._stock_controlDBDataSet1.DataSetName = "_stock_controlDBDataSet"
-        Me._stock_controlDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'QStockBindingSource
         '
         Me.QStockBindingSource.DataMember = "qStock"
         Me.QStockBindingSource.DataSource = Me._stock_controlDBDataSet1
+        '
+        '_stock_controlDBDataSet1
+        '
+        Me._stock_controlDBDataSet1.DataSetName = "_stock_controlDBDataSet"
+        Me._stock_controlDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'QStockTableAdapter
         '
@@ -143,11 +143,11 @@ Partial Class Statistics
         Me.Name = "Statistics"
         Me.Text = "Statistics"
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me._stock_controlDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.QReviewsPerEmpBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me._stock_controlDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me._stock_controlDBDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.QStockBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me._stock_controlDBDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

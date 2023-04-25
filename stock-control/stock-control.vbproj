@@ -50,7 +50,8 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>sjrlogo.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFrameworkCore.Jet.Data, Version=3.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
@@ -192,22 +193,10 @@
     <Compile Include="Statistics.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="student.Designer.vb">
-      <DependentUpon>student.vb</DependentUpon>
-    </Compile>
-    <Compile Include="student.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Suppliers.Designer.vb">
       <DependentUpon>Suppliers.vb</DependentUpon>
     </Compile>
     <Compile Include="Suppliers.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="userMgmt.Designer.vb">
-      <DependentUpon>userMgmt.vb</DependentUpon>
-    </Compile>
-    <Compile Include="userMgmt.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="_stock_controlDBDataSet.Designer.vb">
@@ -247,14 +236,8 @@
     <EmbeddedResource Include="Statistics.resx">
       <DependentUpon>Statistics.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="student.resx">
-      <DependentUpon>student.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Suppliers.resx">
       <DependentUpon>Suppliers.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="userMgmt.resx">
-      <DependentUpon>userMgmt.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -320,7 +303,7 @@
     <None Include="Resources\pressedUserManag.png" />
     <None Include="Resources\sjr_logo_black.png" />
     <None Include="Resources\exit_app.png" />
-    <Content Include="sjrlogo.ico" />
+    <Content Include="Resources\logo.ico" />
     <Content Include="stock-controlDB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

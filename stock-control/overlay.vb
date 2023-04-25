@@ -4,7 +4,7 @@
 
 
         ToolTip1.SetToolTip(pbBtnShutdown, "Close application")
-        ToolTip1.SetToolTip(pbLogo, "Return to home")
+        ToolTip1.SetToolTip(lblSJR, "Return to home")
 
 
         Select Case accessLevel
@@ -57,11 +57,6 @@
         Statistics.Show()
     End Sub
 
-    Private Sub pbLogo_Click(sender As Object, e As EventArgs) Handles pbLogo.Click
-        openForm = "" 'this is when the logo/home button is pressed, since no buttons need to be pressed, it changes the variable to be empty
-        ParentForm.Close()
-        MainMenu.Show()
-    End Sub
 
     Private Sub pbBtnSuppliers_Click(sender As Object, e As EventArgs) Handles pbBtnSuppliers.Click
         openForm = "Suppliers"
@@ -71,19 +66,17 @@
 
     Private Sub pbBtnUserManag_Click(sender As Object, e As EventArgs) Handles pbBtnUserManag.Click
         openForm = "Users"
-        ParentForm.Close()
-        userMgmt.Show()
-    End Sub
-
-    Private Sub pbLogo_MouseHover(sender As Object, e As EventArgs) Handles pbLogo.MouseHover
-        pbLogo.Image = stock_control.My.Resources.Resources.sjr_logo_black 'makes the logo black to show it is a button more clearly
-    End Sub
-
-    Private Sub pbLogo_MouseLeave(sender As Object, e As EventArgs) Handles pbLogo.MouseLeave
-        pbLogo.Image = stock_control.My.Resources.Resources.sjr_logo
+        'ParentForm.Close()
+        employee.Show()
     End Sub
 
     Private Sub pbBtnShutdown_Click(sender As Object, e As EventArgs) Handles pbBtnShutdown.Click
         Application.Exit()
+    End Sub
+
+    Private Sub lblSJR_Click(sender As Object, e As EventArgs) Handles lblSJR.Click
+        openForm = "" 'this is when the logo/home button is pressed, since no buttons need to be pressed, it changes the variable to be empty
+        ParentForm.Close()
+        MainMenu.Show()
     End Sub
 End Class

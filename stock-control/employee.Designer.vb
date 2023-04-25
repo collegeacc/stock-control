@@ -35,16 +35,15 @@ Partial Class employee
         Me.txtFirstNameView = New System.Windows.Forms.TextBox()
         Me.pbBtnShutdown = New System.Windows.Forms.PictureBox()
         Me.btnEditView = New System.Windows.Forms.Button()
-        Me.lblSJR = New System.Windows.Forms.Label()
         Me.txtLastNameView = New System.Windows.Forms.TextBox()
         Me.btnNext = New System.Windows.Forms.Button()
         Me.btnPrev = New System.Windows.Forms.Button()
         Me.lblFirstNameV = New System.Windows.Forms.Label()
-        Me.pbLogo = New System.Windows.Forms.PictureBox()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.lblEmployeeIDView = New System.Windows.Forms.Label()
         Me.txtBoxEmployeeIDView = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lblSJR = New System.Windows.Forms.Label()
         Me.lblAccessLevel = New System.Windows.Forms.Label()
         Me.txtEmailV = New System.Windows.Forms.TextBox()
         Me.lblEmailV = New System.Windows.Forms.Label()
@@ -65,7 +64,6 @@ Partial Class employee
         Me.numAccessLevel = New System.Windows.Forms.NumericUpDown()
         Me.numAccessLevelV = New System.Windows.Forms.NumericUpDown()
         CType(Me.pbBtnShutdown, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.numAccessLevel, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -196,19 +194,8 @@ Partial Class employee
         Me.btnEditView.Name = "btnEditView"
         Me.btnEditView.Size = New System.Drawing.Size(140, 23)
         Me.btnEditView.TabIndex = 85
-        Me.btnEditView.Text = "Edit/View Students"
+        Me.btnEditView.Text = "Edit/View Employee"
         Me.btnEditView.UseVisualStyleBackColor = True
-        '
-        'lblSJR
-        '
-        Me.lblSJR.AutoSize = True
-        Me.lblSJR.Font = New System.Drawing.Font("Museo Slab 700", 47.99999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSJR.ForeColor = System.Drawing.Color.White
-        Me.lblSJR.Location = New System.Drawing.Point(144, 32)
-        Me.lblSJR.Name = "lblSJR"
-        Me.lblSJR.Size = New System.Drawing.Size(479, 77)
-        Me.lblSJR.TabIndex = 1
-        Me.lblSJR.Text = "St John Rigby"
         '
         'txtLastNameView
         '
@@ -252,19 +239,6 @@ Partial Class employee
         Me.lblFirstNameV.Text = "First Name"
         Me.lblFirstNameV.Visible = False
         '
-        'pbLogo
-        '
-        Me.pbLogo.BackColor = System.Drawing.Color.Transparent
-        Me.pbLogo.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pbLogo.Image = Global.stock_control.My.Resources.Resources.sjr_logo
-        Me.pbLogo.Location = New System.Drawing.Point(14, 2)
-        Me.pbLogo.Margin = New System.Windows.Forms.Padding(2)
-        Me.pbLogo.Name = "pbLogo"
-        Me.pbLogo.Size = New System.Drawing.Size(116, 138)
-        Me.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbLogo.TabIndex = 0
-        Me.pbLogo.TabStop = False
-        '
         'btnUpdate
         '
         Me.btnUpdate.Location = New System.Drawing.Point(551, 407)
@@ -300,15 +274,25 @@ Partial Class employee
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.pbBtnShutdown)
         Me.Panel1.Controls.Add(Me.lblSJR)
-        Me.Panel1.Controls.Add(Me.pbLogo)
+        Me.Panel1.Controls.Add(Me.pbBtnShutdown)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(800, 140)
         Me.Panel1.TabIndex = 77
+        '
+        'lblSJR
+        '
+        Me.lblSJR.AutoSize = True
+        Me.lblSJR.Font = New System.Drawing.Font("Times New Roman", 72.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSJR.ForeColor = System.Drawing.Color.White
+        Me.lblSJR.Location = New System.Drawing.Point(15, 9)
+        Me.lblSJR.Name = "lblSJR"
+        Me.lblSJR.Size = New System.Drawing.Size(560, 109)
+        Me.lblSJR.TabIndex = 3
+        Me.lblSJR.Text = "Wigan News"
         '
         'lblAccessLevel
         '
@@ -561,7 +545,6 @@ Partial Class employee
         Me.Name = "employee"
         Me.Text = "Employee"
         CType(Me.pbBtnShutdown, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
@@ -583,12 +566,10 @@ Partial Class employee
     Friend WithEvents txtFirstNameView As TextBox
     Friend WithEvents pbBtnShutdown As PictureBox
     Friend WithEvents btnEditView As Button
-    Friend WithEvents lblSJR As Label
     Friend WithEvents txtLastNameView As TextBox
     Friend WithEvents btnNext As Button
     Friend WithEvents btnPrev As Button
     Friend WithEvents lblFirstNameV As Label
-    Friend WithEvents pbLogo As PictureBox
     Friend WithEvents btnUpdate As Button
     Friend WithEvents lblEmployeeIDView As Label
     Friend WithEvents txtBoxEmployeeIDView As TextBox
@@ -612,4 +593,5 @@ Partial Class employee
     Friend WithEvents Panel2 As Panel
     Friend WithEvents numAccessLevel As NumericUpDown
     Friend WithEvents numAccessLevelV As NumericUpDown
+    Friend WithEvents lblSJR As Label
 End Class

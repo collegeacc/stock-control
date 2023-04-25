@@ -102,7 +102,7 @@ Public Class orderSubForm
 			dsNewRow.Item("EmployeeID") = employeeID 'this is the current user logged in
 			dsNewRow.Item("Payment Type") = cmbxPaymentType.SelectedItem
 			dsNewRow.Item("Cost") = priceTotal 'this is the total price of all added items
-			dsNewRow.Item("StudentID") = maskTxtStudentID.Text
+			dsNewRow.Item("StudentID") = "S1"
 			da.Update(ds, "DSOrder")
 
 			Dim cb2 As New OleDb.OleDbCommandBuilder(da2)
@@ -140,7 +140,7 @@ Public Class orderSubForm
 		End If
 
 		File.AppendAllText("..\..\receipt\" & dateTimeNow & "_receipt.txt", Environment.NewLine + "") 'new line
-		File.AppendAllText("..\..\receipt\" & dateTimeNow & "_receipt.txt", Environment.NewLine + "Order ID: " & orderID & " | Cashier: " & userLoggedFullName & " | Student: " & maskTxtStudentID.Text & " | Payment Method: " & cmbxPaymentType.SelectedItem & " | Date Ordered : " & dateTimeNow)
+		File.AppendAllText("..\..\receipt\" & dateTimeNow & "_receipt.txt", Environment.NewLine + "Order ID: " & orderID & " | Cashier: " & userLoggedFullName & " | Payment Method: " & cmbxPaymentType.SelectedItem & " | Date Ordered : " & dateTimeNow)
 		File.AppendAllText("..\..\receipt\" & dateTimeNow & "_receipt.txt", Environment.NewLine + "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -")
 
 		'we need to create a seperate list that is sorted so we can calculate the quantity of all products bought
@@ -278,8 +278,7 @@ Public Class orderSubForm
 		btnUpdate.Visible = True
 		listBoxNameView.Visible = True
 
-		lblStudentID.Visible = False
-		maskTxtStudentID.Visible = False
+
 		lblProd.Visible = False
 		btnAddProduct.Visible = False
 		numQuant.Visible = False

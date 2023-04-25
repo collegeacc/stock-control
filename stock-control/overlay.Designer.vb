@@ -32,7 +32,6 @@ Partial Class overlay
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.pbBtnShutdown = New System.Windows.Forms.PictureBox()
         Me.lblSJR = New System.Windows.Forms.Label()
-        Me.pbLogo = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel2.SuspendLayout()
         CType(Me.pbBtnUserManag, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -42,7 +41,6 @@ Partial Class overlay
         CType(Me.pbBtnOrder, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.pbBtnShutdown, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -130,7 +128,6 @@ Partial Class overlay
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Panel1.Controls.Add(Me.pbBtnShutdown)
         Me.Panel1.Controls.Add(Me.lblSJR)
-        Me.Panel1.Controls.Add(Me.pbLogo)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
@@ -153,26 +150,13 @@ Partial Class overlay
         'lblSJR
         '
         Me.lblSJR.AutoSize = True
-        Me.lblSJR.Font = New System.Drawing.Font("Museo Slab 700", 47.99999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSJR.Font = New System.Drawing.Font("Times New Roman", 72.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSJR.ForeColor = System.Drawing.Color.White
-        Me.lblSJR.Location = New System.Drawing.Point(144, 32)
+        Me.lblSJR.Location = New System.Drawing.Point(3, 10)
         Me.lblSJR.Name = "lblSJR"
-        Me.lblSJR.Size = New System.Drawing.Size(479, 77)
+        Me.lblSJR.Size = New System.Drawing.Size(560, 109)
         Me.lblSJR.TabIndex = 1
-        Me.lblSJR.Text = "St John Rigby"
-        '
-        'pbLogo
-        '
-        Me.pbLogo.BackColor = System.Drawing.Color.Transparent
-        Me.pbLogo.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pbLogo.Image = Global.stock_control.My.Resources.Resources.sjr_logo
-        Me.pbLogo.Location = New System.Drawing.Point(14, 2)
-        Me.pbLogo.Margin = New System.Windows.Forms.Padding(2)
-        Me.pbLogo.Name = "pbLogo"
-        Me.pbLogo.Size = New System.Drawing.Size(116, 138)
-        Me.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbLogo.TabIndex = 0
-        Me.pbLogo.TabStop = False
+        Me.lblSJR.Text = "Wigan News"
         '
         'overlay
         '
@@ -196,7 +180,6 @@ Partial Class overlay
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.pbBtnShutdown, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -204,7 +187,6 @@ Partial Class overlay
     Friend WithEvents Panel2 As Panel
     Friend WithEvents pbBtnOrder As PictureBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents pbLogo As PictureBox
     Friend WithEvents pbBtnProducts As PictureBox
     Friend WithEvents pbBtnStatistics As PictureBox
     Friend WithEvents pbBtnSuppliers As PictureBox
